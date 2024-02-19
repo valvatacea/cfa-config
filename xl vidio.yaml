@@ -1,0 +1,63 @@
+
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+bind-address: "*"
+ipv6: false
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7894
+  fallback-filter:
+    geoip: false
+    ipcidr:
+    - 240.0.0.0/4
+  nameserver:
+    - https://puredns.org/dns-query
+    - tls://puredns.org:853
+  fallback:
+    - tcp://108.137.44.39
+    - tcp://108.137.44.9
+    - 108.137.44.39
+    - 108.137.44.9
+tun:
+  enable: true
+  stack: system 
+  macOS-auto-route: true
+  macOS-auto-detect-interface: true
+  dns-hijack:
+    - tcp://108.137.44.39:53
+experimental:
+  interface-name: en0
+
+proxies:
+  - {name: "lb.vhax.net [1102]", server: quiz.staging.vidio.com, port: 80, type: vmess, uuid: 6fea1649-425b-4092-bf53-29792152c925, sni: lb.vhax.net, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /sshkit/val96/65bef1c8d99fa/, headers: {Host: lb.vhax.net}}}
+  - {name: "vmess-nl1.sshkit.org [0503]", server: quiz.staging.vidio.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, sni: vmess-nl1.sshkit.org, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /sshkit/5123803164/65bef08ae4112/, headers: {Host: vmess-nl1.sshkit.org}}}
+  - {name: "vmess-fr1.sshkit.org [0503]", server: quiz.staging.vidio.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, sni: vmess-fr1.sshkit.org, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /sshkit/5123803164/65bef068c5306/, headers: {Host: vmess-fr1.sshkit.org}}}
+  - {name: "vmess-us1.sshkit.org [0503]", server: quiz.staging.vidio.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, sni: vmess-us1.sshkit.org, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /sshkit/5123803164/65bef01bde071/, headers: {Host: vmess-us1.sshkit.org}}}
+  - {name: "vmess-sg1.sshkit.org [0103]", server: quiz.staging.vidio.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, sni: vmess-sg1.sshkit.org, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /sshkit/492399897/65ba272998a68/, headers: {Host: vmess-sg1.sshkit.org}}}
+  - {name: "vmess-sg1.sshkit.org [2502]", server: quiz.staging.vidio.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, sni: vmess-sg1.sshkit.org, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /sshkit/5123803164/65b352ac06150/, headers: {Host: vmess-sg1.sshkit.org}}}
+
+proxy-groups:
+  - name: quiz.staging.vidio.com
+    type: select
+    proxies:
+      - lb.vhax.net [1102]
+      - vmess-nl1.sshkit.org [0503]
+      - vmess-fr1.sshkit.org [0503]
+      - vmess-us1.sshkit.org [0503]
+      - vmess-sg1.sshkit.org [0103]
+      - vmess-sg1.sshkit.org [2502]
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    lazy: false
+    timeout: 5000
+
+rules:
+ - MATCH,quiz.staging.vidio.com
