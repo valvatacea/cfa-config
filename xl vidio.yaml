@@ -34,8 +34,7 @@ dns:
 proxies:
   - {name: "[VMess] vmess-sg1.sshkit.org [2507] [0]", server: img.email1.vidio.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: vmess-sg1.sshkit.org, network: ws, ws-opts: {path: /sshkit/7064800868/667a9d2f2d310/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
   - {name: "[VMess] vmess-sg1.sshkit.org [2507] [1]", server: nontontv.vidio.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: vmess-sg1.sshkit.org, network: ws, ws-opts: {path: /sshkit/7064800868/667a9d2f2d310/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
-  - {name: "[VMess] vmess-sg1.sshkit.org [2507] [0] 2", server: static-web.prod.vidiocdn.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: vmess-sg1.sshkit.org, network: ws, ws-opts: {path: /sshkit/7064800868/667a9d2f2d310/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
-  - {name: "[VMess] vmess-sg1.sshkit.org [2507] [0] 3", server: 104.22.5.240, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: vmess-sg1.sshkit.org, network: ws, ws-opts: {path: /sshkit/7064800868/667a9d2f2d310/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
+  - {name: "[VMess] vmess-sg1.sshkit.org [2507] [0] 2", server: 104.22.5.240, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: vmess-sg1.sshkit.org, network: ws, ws-opts: {path: /sshkit/7064800868/667a9d2f2d310/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
 proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
     type: select
@@ -43,7 +42,6 @@ proxy-groups:
       - "[VMess] vmess-sg1.sshkit.org [2507] [0]"
       - "[VMess] vmess-sg1.sshkit.org [2507] [1]"
       - "[VMess] vmess-sg1.sshkit.org [2507] [0] 2"
-      - "[VMess] vmess-sg1.sshkit.org [2507] [0] 3"
       - DIRECT
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
