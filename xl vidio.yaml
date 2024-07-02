@@ -32,60 +32,18 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - {name: xl vidio, server: img.email1.vidio.com, port: 80, type: vmess, uuid: be1f8b56-c9cb-4f6a-80a2-9f2715427ed7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: id1.ubaistore.my.id, network: ws, ws-opts: {path: /vmessws, headers: {Host: id1.ubaistore.my.id}}, udp: true}
-  - {name: "free1 [2407]", server: img.email1.vidio.com, port: 80, type: vmess, uuid: 54a62432-40d9-414e-933e-384727b7556e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: nay.ricstore.my.id, network: ws, ws-opts: {path: /worryfree, headers: {Host: nay.ricstore.my.id}}, udp: true}
-  - {name: "vmess-sg1.sshkit.org (0607) [1]", server: nontontv.vidio.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: vmess-sg1.sshkit.org, network: ws, ws-opts: {path: /sshkit/492399897/6661770cd0a82/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
-  - {name: "vmess-sg1.sshkit.org (0607) [0]", server: img.email1.vidio.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: vmess-sg1.sshkit.org, network: ws, ws-opts: {path: /sshkit/492399897/6661770cd0a82/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
-  - {name: "vmess-sg1.sshkit.org [2507] [0]", server: img.email1.vidio.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: vmess-sg1.sshkit.org, network: ws, ws-opts: {path: /sshkit/7064800868/667a9d2f2d310/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
-  - {name: "vmess-sg1.sshkit.org [2507] [1]", server: nontontv.vidio.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: vmess-sg1.sshkit.org, network: ws, ws-opts: {path: /sshkit/7064800868/667a9d2f2d310/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
+  - {name: "[VMess] vmess-sg1.sshkit.org [2507] [0]", server: img.email1.vidio.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: vmess-sg1.sshkit.org, network: ws, ws-opts: {path: /sshkit/7064800868/667a9d2f2d310/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
+  - {name: "[VMess] vmess-sg1.sshkit.org [2507] [1]", server: nontontv.vidio.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: vmess-sg1.sshkit.org, network: ws, ws-opts: {path: /sshkit/7064800868/667a9d2f2d310/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
+  - {name: "[VMess] vmess-sg1.sshkit.org [2507] [0] 2", server: static-web.prod.vidiocdn.com, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: vmess-sg1.sshkit.org, network: ws, ws-opts: {path: /sshkit/7064800868/667a9d2f2d310/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
+  - {name: "[VMess] vmess-sg1.sshkit.org [2507] [0] 3", server: 104.22.5.240, port: 80, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: vmess-sg1.sshkit.org, network: ws, ws-opts: {path: /sshkit/7064800868/667a9d2f2d310/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
 proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
     type: select
     proxies:
-      - xl vidio
-      - free1 [2407]
-      - vmess-sg1.sshkit.org (0607) [1]
-      - vmess-sg1.sshkit.org (0607) [0]
-      - vmess-sg1.sshkit.org [2507] [0]
-      - vmess-sg1.sshkit.org [2507] [1]
-      - LOAD-BALANCE
-      - BEST-PING
-      - FALLBACK
+      - "[VMess] vmess-sg1.sshkit.org [2507] [0]"
+      - "[VMess] vmess-sg1.sshkit.org [2507] [1]"
+      - "[VMess] vmess-sg1.sshkit.org [2507] [0] 2"
+      - "[VMess] vmess-sg1.sshkit.org [2507] [0] 3"
       - DIRECT
-  - name: LOAD-BALANCE
-    type: load-balance
-    strategy: consistent-hashing
-    url: http://hi.bonds.id/ping
-    interval: 300
-    proxies:
-      - xl vidio
-      - free1 [2407]
-      - vmess-sg1.sshkit.org (0607) [1]
-      - vmess-sg1.sshkit.org (0607) [0]
-      - vmess-sg1.sshkit.org [2507] [0]
-      - vmess-sg1.sshkit.org [2507] [1]
-  - name: BEST-PING
-    type: url-test
-    url: http://hi.bonds.id/ping
-    interval: 300
-    tolerance: 50
-    proxies:
-      - xl vidio
-      - free1 [2407]
-      - vmess-sg1.sshkit.org (0607) [1]
-      - vmess-sg1.sshkit.org (0607) [0]
-      - vmess-sg1.sshkit.org [2507] [0]
-      - vmess-sg1.sshkit.org [2507] [1]
-  - name: FALLBACK
-    type: fallback
-    url: http://hi.bonds.id/ping
-    interval: 300
-    proxies:
-      - xl vidio
-      - free1 [2407]
-      - vmess-sg1.sshkit.org (0607) [1]
-      - vmess-sg1.sshkit.org (0607) [0]
-      - vmess-sg1.sshkit.org [2507] [0]
-      - vmess-sg1.sshkit.org [2507] [1]
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
