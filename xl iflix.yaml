@@ -32,14 +32,14 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
+  - {name: "vmess-sg1.sshkit.org [0610]", server: vmess-sg1.sshkit.org, port: 443, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: live.iflix.com, network: ws, ws-opts: {path: /sshkit/7064800868/66dab64a7bb36/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
   - {name: "vmess-sg1.sshkit.org [1709]", server: vmess-sg1.sshkit.org, port: 443, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: live.iflix.com, network: ws, ws-opts: {path: /sshkit/492399897/66c17ce132f66/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
-  - {name: "vmess-sg1.sshkit.org [0409]", server: vmess-sg1.sshkit.org, port: 443, type: vmess, uuid: e620d600-ee19-4012-a96c-968e85a52de9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: access.iflix.com, network: ws, ws-opts: {path: /sshkit/7064800868/66b0e3441aa1b/, headers: {Host: vmess-sg1.sshkit.org}}, udp: true}
 proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
     type: select
     proxies:
+      - vmess-sg1.sshkit.org [0610]
       - vmess-sg1.sshkit.org [1709]
-      - vmess-sg1.sshkit.org [0409]
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -50,22 +50,22 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
+      - vmess-sg1.sshkit.org [0610]
       - vmess-sg1.sshkit.org [1709]
-      - vmess-sg1.sshkit.org [0409]
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
+      - vmess-sg1.sshkit.org [0610]
       - vmess-sg1.sshkit.org [1709]
-      - vmess-sg1.sshkit.org [0409]
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
+      - vmess-sg1.sshkit.org [0610]
       - vmess-sg1.sshkit.org [1709]
-      - vmess-sg1.sshkit.org [0409]
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
