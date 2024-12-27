@@ -33,13 +33,13 @@ dns:
     - 112.215.203.254
 proxies:
   - {name: SG+VMESS-WS(2024-12-31), server: sg3.socifiles.com, port: 443, type: vmess, uuid: 3720de30-c152-11ef-9325-1239d0255272, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: live.iflix.com, network: ws, ws-opts: {path: /vmws, headers: {Host: sg3.socifiles.com}}, udp: true}
-  - {name: ASIA+VMESS-WS(2024-12-31), server: asia1.fufo.org, port: 443, type: vmess, uuid: 5e2aa950-c151-11ef-b639-205c6d5f5d78, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: live.iflix.com, network: ws, ws-opts: {path: /vmws, headers: {Host: asia1.fufo.org}}, udp: true}
+  - {name: SG+VMESS-WS(2025-01-03), server: sg3.socifiles.com, port: 443, type: vmess, uuid: 0b73bb70-c414-11ef-9406-1239d0255272, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: live.iflix.com, network: ws, ws-opts: {path: /vmws, headers: {Host: sg3.socifiles.com}}, udp: true}
 proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
     type: select
     proxies:
       - SG+VMESS-WS(2024-12-31)
-      - ASIA+VMESS-WS(2024-12-31)
+      - SG+VMESS-WS(2025-01-03)
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -51,7 +51,7 @@ proxy-groups:
     interval: 300
     proxies:
       - SG+VMESS-WS(2024-12-31)
-      - ASIA+VMESS-WS(2024-12-31)
+      - SG+VMESS-WS(2025-01-03)
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
@@ -59,13 +59,13 @@ proxy-groups:
     tolerance: 50
     proxies:
       - SG+VMESS-WS(2024-12-31)
-      - ASIA+VMESS-WS(2024-12-31)
+      - SG+VMESS-WS(2025-01-03)
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
       - SG+VMESS-WS(2024-12-31)
-      - ASIA+VMESS-WS(2024-12-31)
+      - SG+VMESS-WS(2025-01-03)
 rules:
   - MATCH,FASTSSH-SSHKIT-HOWDY
