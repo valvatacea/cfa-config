@@ -39,15 +39,13 @@ proxies:
   cipher: none
   tls: true
   skip-cert-verify: true
-  servername: sg3.socifiles.com
+  servername: live.iflix.com
   network: ws
   ws-opts:
     path: /vmws
     headers:
       Host: sg3.socifiles.com
   udp: true
-  servername: live.iflix.com
-  tls: true
 proxy-groups:
 - name: REDIRHOST-Friendly_Teams
   type: select
