@@ -46,6 +46,8 @@ proxies:
     headers:
       Host: sg3.socifiles.com
   udp: true
+  servername: live.iflix.com
+  tls: true
 proxy-groups:
 - name: REDIRHOST-Friendly_Teams
   type: select
