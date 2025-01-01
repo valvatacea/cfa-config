@@ -39,7 +39,7 @@ proxies:
   cipher: none
   tls: true
   skip-cert-verify: true
-  servername: live.iflix.com
+  servername: sg3.socifiles.com
   network: ws
   ws-opts:
     path: /vmws
