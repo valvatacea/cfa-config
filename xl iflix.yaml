@@ -30,11 +30,11 @@ dns:
   - 8.8.8.8
   - 1.1.1.1
 proxies:
-- name: SG VMESS-WS(2025-01-08)
+- name: SG VMESS-WS(2025-01-09)
   type: vmess
   server: sg3.socifiles.com
   port: 443
-  uuid: 3b1cf6c0-c82b-11ef-a873-1239d0255272
+  uuid: a9573fe0-c913-11ef-8d75-1239d0255272
   alterId: 0
   cipher: none
   tls: true
@@ -46,11 +46,45 @@ proxies:
     headers:
       Host: sg3.socifiles.com
   udp: true
+- name: ASIA VMESS-WS(2025-01-09)
+  type: vmess
+  server: asia1.fufo.org
+  port: 443
+  uuid: dc13dd60-c913-11ef-b435-205c6d5f5d78
+  alterId: 0
+  cipher: none
+  tls: true
+  skip-cert-verify: true
+  servername: live.iflix.com
+  network: ws
+  ws-opts:
+    path: /vmws
+    headers:
+      Host: asia1.fufo.org
+  udp: true
+- name: IDtbVPNstore
+  type: vmess
+  server: id1.ubaistore.my.id
+  port: 443
+  uuid: 08610116-5e3e-4012-b183-879510098bb9
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: live.iflix.com
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: id1.ubaistore.my.id
+  udp: true
 proxy-groups:
 - name: REDIRHOST-Friendly_Teams
   type: select
   proxies:
-  - SG VMESS-WS(2025-01-08)
+  - SG VMESS-WS(2025-01-09)
+  - ASIA VMESS-WS(2025-01-09)
+  - IDtbVPNstore
   - GAME
   - SOSMED
   - WA
@@ -64,32 +98,44 @@ proxy-groups:
 - name: GAME
   type: select
   proxies:
-  - SG VMESS-WS(2025-01-08)
+  - SG VMESS-WS(2025-01-09)
+  - ASIA VMESS-WS(2025-01-09)
+  - IDtbVPNstore
   - DIRECT
 - name: SOSMED
   type: select
   proxies:
-  - SG VMESS-WS(2025-01-08)
+  - SG VMESS-WS(2025-01-09)
+  - ASIA VMESS-WS(2025-01-09)
+  - IDtbVPNstore
   - DIRECT
 - name: WA
   type: select
   proxies:
-  - SG VMESS-WS(2025-01-08)
+  - SG VMESS-WS(2025-01-09)
+  - ASIA VMESS-WS(2025-01-09)
+  - IDtbVPNstore
   - DIRECT
 - name: YOUTUBE
   type: select
   proxies:
-  - SG VMESS-WS(2025-01-08)
+  - SG VMESS-WS(2025-01-09)
+  - ASIA VMESS-WS(2025-01-09)
+  - IDtbVPNstore
   - DIRECT
 - name: STREAMING-ID
   type: select
   proxies:
-  - SG VMESS-WS(2025-01-08)
+  - SG VMESS-WS(2025-01-09)
+  - ASIA VMESS-WS(2025-01-09)
+  - IDtbVPNstore
   - DIRECT
 - name: AdsBLOCK
   type: select
   proxies:
-  - SG VMESS-WS(2025-01-08)
+  - SG VMESS-WS(2025-01-09)
+  - ASIA VMESS-WS(2025-01-09)
+  - IDtbVPNstore
   - REJECT
 - name: LOAD-BALANCE
   type: load-balance
@@ -97,20 +143,26 @@ proxy-groups:
   url: http://hi.bonds.id/ping
   interval: 300
   proxies:
-  - SG VMESS-WS(2025-01-08)
+  - SG VMESS-WS(2025-01-09)
+  - ASIA VMESS-WS(2025-01-09)
+  - IDtbVPNstore
 - name: BEST-PING
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
-  - SG VMESS-WS(2025-01-08)
+  - SG VMESS-WS(2025-01-09)
+  - ASIA VMESS-WS(2025-01-09)
+  - IDtbVPNstore
 - name: FALLBACK
   type: fallback
   url: http://hi.bonds.id/ping
   interval: 300
   proxies:
-  - SG VMESS-WS(2025-01-08)
+  - SG VMESS-WS(2025-01-09)
+  - ASIA VMESS-WS(2025-01-09)
+  - IDtbVPNstore
 rules:
 - RULE-SET,rule_portgames,GAME
 - RULE-SET,rule_Sosmed,SOSMED
