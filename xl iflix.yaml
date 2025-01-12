@@ -62,11 +62,11 @@ proxies:
     headers:
       Host: asia1.fufo.org
   udp: true
-- name: IDtbVPNstore
+- name: rmwb.tepllovpn.eu.org
   type: vmess
-  server: id1.ubaistore.my.id
+  server: rmwb.tepllovpn.eu.org
   port: 443
-  uuid: 546be317-b5ec-4575-ab9f-b785e3ac06a6
+  uuid: d059ed14-fb5a-4bfb-a359-0c0c5c4a226f
   alterId: 0
   cipher: auto
   tls: true
@@ -74,9 +74,9 @@ proxies:
   servername: live.iflix.com
   network: ws
   ws-opts:
-    path: /vmessws
+    path: /whatever/vmess
     headers:
-      Host: id1.ubaistore.my.id
+      Host: rmwb.tepllovpn.eu.org
   udp: true
 proxy-groups:
 - name: REDIRHOST-Friendly_Teams
@@ -84,7 +84,7 @@ proxy-groups:
   proxies:
   - SG VMESS-WS(2025-01-09)
   - ASIA VMESS-WS(2025-01-09)
-  - IDtbVPNstore
+  - rmwb.tepllovpn.eu.org
   - GAME
   - SOSMED
   - WA
