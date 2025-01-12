@@ -62,7 +62,7 @@ proxies:
     headers:
       Host: asia1.fufo.org
   udp: true
-- name: rmwb.tepllovpn.eu.org
+- name: IDtbVPNstore
   type: vmess
   server: rmwb.tepllovpn.eu.org
   port: 443
@@ -84,7 +84,7 @@ proxy-groups:
   proxies:
   - SG VMESS-WS(2025-01-09)
   - ASIA VMESS-WS(2025-01-09)
-  - rmwb.tepllovpn.eu.org
+  - IDtbVPNstore
   - GAME
   - SOSMED
   - WA
