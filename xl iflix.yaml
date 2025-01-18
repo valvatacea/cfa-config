@@ -36,7 +36,7 @@ proxies:
   type: vmess
   server: sg3.socifiles.com
   port: 443
-  uuid: ea508030-d4c7-11ef-9818-1239d0255272
+  uuid: 188509a0-d5a8-11ef-af21-1239d0255272
   alterId: 0
   cipher: none
   tls: true
@@ -52,7 +52,7 @@ proxies:
   type: vmess
   server: asia1.fufo.org
   port: 443
-  uuid: c419bc10-d4c7-11ef-b131-205c6d5f5d78
+  uuid: 80fd5420-d5a8-11ef-b033-205c6d5f5d78
   alterId: 0
   cipher: none
   tls: true
