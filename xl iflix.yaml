@@ -13,7 +13,7 @@ bind-address: '*'
 unified-delay: true
 profile:
   store-selected: true
-dns:
+# dns:
   enable: true
   ipv6: false
   enhanced-mode: redir-host
