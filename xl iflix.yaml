@@ -32,43 +32,11 @@ dns:
   - 1.1.1.1
   - 112.215.203.254
 proxies:
-- name: SG VMESS-WS(2025-01-18)
+- name: gbajabang
   type: vmess
-  server: sg3.socifiles.com
+  server: pm.bfme.web.id
   port: 443
-  uuid: c17d8f20-d8e7-11ef-9014-1239d0255272
-  alterId: 0
-  cipher: none
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  servername: live.iflix.com
-  ws-opts:
-    path: /vmws
-    headers:
-      Host: sg3.socifiles.com
-  udp: true
-- name: ASIA VMESS-WS(2025-01-19)
-  type: vmess
-  server: asia1.fufo.org
-  port: 443
-  uuid: ddb146a0-d8e7-11ef-b239-205c6d5f5d78
-  alterId: 0
-  cipher: none
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  servername: live.iflix.com
-  ws-opts:
-    path: /vmws
-    headers:
-      Host: asia1.fufo.org
-  udp: true
-- name: Used2 WS (CDN) TLS
-  type: vmess
-  server: rmwb.tepllovpn.eu.org
-  port: 443
-  uuid: d059ed14-fb5a-4bfb-a359-0c0c5c4a226f
+  uuid: bcc96d8e-e573-435d-aa02-4e58456524ed
   alterId: 0
   cipher: auto
   tls: true
@@ -76,17 +44,64 @@ proxies:
   network: ws
   servername: live.iflix.com
   ws-opts:
-    path: /whatever/vmess
+    path: /vmess
     headers:
-      Host: rmwb.tepllovpn.eu.org
+      Host: pm.bfme.web.id
+  udp: true
+- name: VMESS-val132-grpc [1802]
+  type: vmess
+  server: sg3.v4vmess.xyz
+  port: 443
+  uuid: b5fff2be-697d-4dca-9bc2-ca9bb6bdf613
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: grpc
+  servername: live.iflix.com
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
+- name: serverssh-valva132 [1802]
+  type: vmess
+  server: sg1ray.serverssh.us.kg
+  port: 443
+  uuid: 95598b3d-4700-42d0-be1e-590dc058aa5f
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  servername: live.iflix.com
+  ws-opts:
+    path: /serverssh.net
+    headers:
+      Host: sg1ray.serverssh.us.kg
+  udp: true
+- name: natanvpn
+  type: vmess
+  server: 2.round.web.id
+  port: 443
+  uuid: 6aad74e7-0180-4775-b2d3-2992f2d4c756
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  servername: live.iflix.com
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: 2.round.web.id
   udp: true
 proxy-groups:
 - name: Friendly_Teams
   type: select
   proxies:
-  - SG VMESS-WS(2025-01-18)
-  - ASIA VMESS-WS(2025-01-19)
-  - Used2 WS (CDN) TLS
+  - gbajabang
+  - VMESS-val132-grpc [1802]
+  - serverssh-valva132 [1802]
+  - natanvpn
   - GAME
   - SOSMED
   - WA
@@ -100,44 +115,50 @@ proxy-groups:
 - name: GAME
   type: select
   proxies:
-  - SG VMESS-WS(2025-01-18)
-  - ASIA VMESS-WS(2025-01-19)
-  - Used2 WS (CDN) TLS
+  - gbajabang
+  - VMESS-val132-grpc [1802]
+  - serverssh-valva132 [1802]
+  - natanvpn
   - DIRECT
 - name: SOSMED
   type: select
   proxies:
-  - SG VMESS-WS(2025-01-18)
-  - ASIA VMESS-WS(2025-01-19)
-  - Used2 WS (CDN) TLS
+  - gbajabang
+  - VMESS-val132-grpc [1802]
+  - serverssh-valva132 [1802]
+  - natanvpn
   - DIRECT
 - name: WA
   type: select
   proxies:
-  - SG VMESS-WS(2025-01-18)
-  - ASIA VMESS-WS(2025-01-19)
-  - Used2 WS (CDN) TLS
+  - gbajabang
+  - VMESS-val132-grpc [1802]
+  - serverssh-valva132 [1802]
+  - natanvpn
   - DIRECT
 - name: YOUTUBE
   type: select
   proxies:
-  - SG VMESS-WS(2025-01-18)
-  - ASIA VMESS-WS(2025-01-19)
-  - Used2 WS (CDN) TLS
+  - gbajabang
+  - VMESS-val132-grpc [1802]
+  - serverssh-valva132 [1802]
+  - natanvpn
   - DIRECT
 - name: STREAMING-ID
   type: select
   proxies:
-  - SG VMESS-WS(2025-01-18)
-  - ASIA VMESS-WS(2025-01-19)
-  - Used2 WS (CDN) TLS
+  - gbajabang
+  - VMESS-val132-grpc [1802]
+  - serverssh-valva132 [1802]
+  - natanvpn
   - DIRECT
 - name: AdsBLOCK
   type: select
   proxies:
-  - SG VMESS-WS(2025-01-18)
-  - ASIA VMESS-WS(2025-01-19)
-  - Used2 WS (CDN) TLS
+  - gbajabang
+  - VMESS-val132-grpc [1802]
+  - serverssh-valva132 [1802]
+  - natanvpn
   - REJECT
 - name: LOAD-BALANCE
   type: load-balance
@@ -145,26 +166,29 @@ proxy-groups:
   url: http://hi.bonds.id/ping
   interval: 300
   proxies:
-  - SG VMESS-WS(2025-01-18)
-  - ASIA VMESS-WS(2025-01-19)
-  - Used2 WS (CDN) TLS
+  - gbajabang
+  - VMESS-val132-grpc [1802]
+  - serverssh-valva132 [1802]
+  - natanvpn
 - name: BEST-PING
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
-  - SG VMESS-WS(2025-01-18)
-  - ASIA VMESS-WS(2025-01-19)
-  - Used2 WS (CDN) TLS
+  - gbajabang
+  - VMESS-val132-grpc [1802]
+  - serverssh-valva132 [1802]
+  - natanvpn
 - name: FALLBACK
   type: fallback
   url: http://hi.bonds.id/ping
   interval: 300
   proxies:
-  - SG VMESS-WS(2025-01-18)
-  - ASIA VMESS-WS(2025-01-19)
-  - Used2 WS (CDN) TLS
+  - gbajabang
+  - VMESS-val132-grpc [1802]
+  - serverssh-valva132 [1802]
+  - natanvpn
 rules:
 - RULE-SET,rule_portgames,GAME
 - RULE-SET,rule_Sosmed,SOSMED
