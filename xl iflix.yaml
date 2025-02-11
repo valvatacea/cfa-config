@@ -13,7 +13,7 @@ bind-address: '*'
 unified-delay: true
 profile:
   store-selected: true
-# dns:
+#dns:
   enable: true
   ipv6: false
   enhanced-mode: redir-host
@@ -102,64 +102,10 @@ proxy-groups:
   - VMESS-val132-grpc [1802]
   - serverssh-valva132 [1802]
   - natanvpn
-  - GAME
-  - SOSMED
-  - WA
-  - YOUTUBE
-  - STREAMING-ID
-  - AdsBLOCK
   - LOAD-BALANCE
   - BEST-PING
   - FALLBACK
   - DIRECT
-- name: GAME
-  type: select
-  proxies:
-  - gbajabang
-  - VMESS-val132-grpc [1802]
-  - serverssh-valva132 [1802]
-  - natanvpn
-  - DIRECT
-- name: SOSMED
-  type: select
-  proxies:
-  - gbajabang
-  - VMESS-val132-grpc [1802]
-  - serverssh-valva132 [1802]
-  - natanvpn
-  - DIRECT
-- name: WA
-  type: select
-  proxies:
-  - gbajabang
-  - VMESS-val132-grpc [1802]
-  - serverssh-valva132 [1802]
-  - natanvpn
-  - DIRECT
-- name: YOUTUBE
-  type: select
-  proxies:
-  - gbajabang
-  - VMESS-val132-grpc [1802]
-  - serverssh-valva132 [1802]
-  - natanvpn
-  - DIRECT
-- name: STREAMING-ID
-  type: select
-  proxies:
-  - gbajabang
-  - VMESS-val132-grpc [1802]
-  - serverssh-valva132 [1802]
-  - natanvpn
-  - DIRECT
-- name: AdsBLOCK
-  type: select
-  proxies:
-  - gbajabang
-  - VMESS-val132-grpc [1802]
-  - serverssh-valva132 [1802]
-  - natanvpn
-  - REJECT
 - name: LOAD-BALANCE
   type: load-balance
   strategy: consistent-hashing
@@ -190,22 +136,4 @@ proxy-groups:
   - serverssh-valva132 [1802]
   - natanvpn
 rules:
-- RULE-SET,rule_portgames,GAME
-- RULE-SET,rule_Sosmed,SOSMED
-- RULE-SET,rule_netflix,STREAMING-ID
-- RULE-SET,rule_primevideo,STREAMING-ID
-- RULE-SET,rule_hbo,STREAMING-ID
-- RULE-SET,rule_hboasia,STREAMING-ID
-- RULE-SET,rule_iqiyi,STREAMING-ID
-- RULE-SET,rule_disneyplus,STREAMING-ID
-- RULE-SET,rule_Streaming,STREAMING-ID
-- RULE-SET,rule_basicads,AdsBLOCK
-- RULE-SET,rule_Youtube,YOUTUBE
-- DOMAIN-SUFFIX,static.whatsapp.net,WA
-- DOMAIN-SUFFIX,docker.whatsapp.biz,WA
-- DOMAIN-SUFFIX,whatsapp.com,WA
-- DOMAIN-SUFFIX,whatsapp.net,WA
-- DOMAIN-SUFFIX,g.whatsapp.net,WA
-- DOMAIN-SUFFIX,v.whatsapp.net,WA
-- DOMAIN-SUFFIX,mmg.whatsapp.net,WA
 - MATCH,Friendly_Teams
