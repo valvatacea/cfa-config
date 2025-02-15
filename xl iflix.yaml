@@ -1,0 +1,102 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ''
+bind-address: '*'
+unified-delay: true
+profile:
+  store-selected: true
+#dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+  - 8.8.8.8
+  - 1.0.0.1
+  - https://dns.google/dns-query
+  fallback:
+  - 1.1.1.1
+  - 8.8.4.4
+  - https://cloudflare-dns.com/dns-query
+  - 112.215.203.254
+  default-nameserver:
+  - 8.8.8.8
+  - 1.1.1.1
+  - 112.215.203.254
+proxies:
+- name: serverssh-valva133 [2302]
+  type: vmess
+  server: sg1ray.serverssh.us.kg
+  port: 443
+  uuid: 97af3e9a-378c-4278-8355-1fae3c75d0e4
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  servername: live.iflix.com
+  ws-opts:
+    path: /serverssh.net
+    headers:
+      Host: sg1ray.serverssh.us.kg
+  udp: true
+- name: SG VMESS-WS(2025-02-23)
+  type: vmess
+  server: sg3.socifiles.com
+  port: 443
+  uuid: f6db1160-ebc1-11ef-855a-1239d0255272
+  alterId: 0
+  cipher: none
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  servername: live.iflix.com
+  ws-opts:
+    path: /vmws
+    headers:
+      Host: sg3.socifiles.com
+  udp: true
+- name: Uburlele WS (CDN) TLS [1702]
+  type: vmess
+  server: free-dewa.vip-latunv.biz.id
+  port: 443
+  uuid: ae2f53cb-5fa3-4f87-9900-49b81c65a1b0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  servername: live.iflix.com
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: free-dewa.vip-latunv.biz.id
+  udp: true
+proxy-groups:
+- name: Friendly_Teams
+  type: select
+  proxies:
+  - serverssh-valva133 [2302]
+  - SG VMESS-WS(2025-02-23)
+  - Uburlele WS (CDN) TLS [1702]
+  - BEST-PING
+  - DIRECT
+- name: BEST-PING
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - serverssh-valva133 [2302]
+  - SG VMESS-WS(2025-02-23)
+  - Uburlele WS (CDN) TLS [1702]
+rules:
+- MATCH,Friendly_Teams
