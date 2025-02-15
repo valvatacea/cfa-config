@@ -32,41 +32,11 @@ profile:
   - 1.1.1.1
   - 112.215.203.254
 proxies:
-- name: gbajabang
-  type: vmess
-  server: pm.bfme.web.id
-  port: 443
-  uuid: bcc96d8e-e573-435d-aa02-4e58456524ed
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  servername: live.iflix.com
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: pm.bfme.web.id
-  udp: true
-- name: VMESS-val132-grpc [1802]
-  type: vmess
-  server: sg3.v4vmess.xyz
-  port: 443
-  uuid: b5fff2be-697d-4dca-9bc2-ca9bb6bdf613
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: grpc
-  servername: live.iflix.com
-  grpc-opts:
-    grpc-service-name: vmess-grpc
-  udp: true
-- name: serverssh-valva132 [1802]
+- name: serverssh-valva133 [2302]
   type: vmess
   server: sg1ray.serverssh.us.kg
   port: 443
-  uuid: 95598b3d-4700-42d0-be1e-590dc058aa5f
+  uuid: 97af3e9a-378c-4278-8355-1fae3c75d0e4
   alterId: 0
   cipher: auto
   tls: true
@@ -78,11 +48,43 @@ proxies:
     headers:
       Host: sg1ray.serverssh.us.kg
   udp: true
-- name: natanvpn
+- name: rsvofcstore [2002]
   type: vmess
-  server: 2.round.web.id
+  server: germany.axelnet.tech
   port: 443
-  uuid: 6aad74e7-0180-4775-b2d3-2992f2d4c756
+  uuid: l7baoghcd67zvfiyxda6zhim68rriz
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  servername: live.iflix.com
+  ws-opts:
+    path: /rsv
+    headers:
+      Host: germany.axelnet.tech
+  udp: true
+- name: SG VMESS-WS(2025-02-23)
+  type: vmess
+  server: sg3.socifiles.com
+  port: 443
+  uuid: f6db1160-ebc1-11ef-855a-1239d0255272
+  alterId: 0
+  cipher: none
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  servername: live.iflix.com
+  ws-opts:
+    path: /vmws
+    headers:
+      Host: sg3.socifiles.com
+  udp: true
+- name: Uburlele WS (CDN) TLS [1702]
+  type: vmess
+  server: free-dewa.vip-latunv.biz.id
+  port: 443
+  uuid: ae2f53cb-5fa3-4f87-9900-49b81c65a1b0
   alterId: 0
   cipher: auto
   tls: true
@@ -92,48 +94,27 @@ proxies:
   ws-opts:
     path: /vmess
     headers:
-      Host: 2.round.web.id
+      Host: free-dewa.vip-latunv.biz.id
   udp: true
 proxy-groups:
 - name: Friendly_Teams
   type: select
   proxies:
-  - gbajabang
-  - VMESS-val132-grpc [1802]
-  - serverssh-valva132 [1802]
-  - natanvpn
-  - LOAD-BALANCE
+  - serverssh-valva133 [2302]
+  - rsvofcstore [2002]
+  - SG VMESS-WS(2025-02-23)
+  - Uburlele WS (CDN) TLS [1702]
   - BEST-PING
-  - FALLBACK
   - DIRECT
-- name: LOAD-BALANCE
-  type: load-balance
-  strategy: consistent-hashing
-  url: http://hi.bonds.id/ping
-  interval: 300
-  proxies:
-  - gbajabang
-  - VMESS-val132-grpc [1802]
-  - serverssh-valva132 [1802]
-  - natanvpn
 - name: BEST-PING
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
-  - gbajabang
-  - VMESS-val132-grpc [1802]
-  - serverssh-valva132 [1802]
-  - natanvpn
-- name: FALLBACK
-  type: fallback
-  url: http://hi.bonds.id/ping
-  interval: 300
-  proxies:
-  - gbajabang
-  - VMESS-val132-grpc [1802]
-  - serverssh-valva132 [1802]
-  - natanvpn
+  - serverssh-valva133 [2302]
+  - rsvofcstore [2002]
+  - SG VMESS-WS(2025-02-23)
+  - Uburlele WS (CDN) TLS [1702]
 rules:
 - MATCH,Friendly_Teams
