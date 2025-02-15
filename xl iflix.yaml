@@ -48,22 +48,6 @@ proxies:
     headers:
       Host: sg1ray.serverssh.us.kg
   udp: true
-- name: rsvofcstore [2002]
-  type: vmess
-  server: germany.axelnet.tech
-  port: 443
-  uuid: l7baoghcd67zvfiyxda6zhim68rriz
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  servername: live.iflix.com
-  ws-opts:
-    path: /rsv
-    headers:
-      Host: germany.axelnet.tech
-  udp: true
 - name: SG VMESS-WS(2025-02-23)
   type: vmess
   server: sg3.socifiles.com
@@ -101,7 +85,6 @@ proxy-groups:
   type: select
   proxies:
   - serverssh-valva133 [2302]
-  - rsvofcstore [2002]
   - SG VMESS-WS(2025-02-23)
   - Uburlele WS (CDN) TLS [1702]
   - BEST-PING
@@ -113,7 +96,6 @@ proxy-groups:
   tolerance: 50
   proxies:
   - serverssh-valva133 [2302]
-  - rsvofcstore [2002]
   - SG VMESS-WS(2025-02-23)
   - Uburlele WS (CDN) TLS [1702]
 rules:
