@@ -48,28 +48,11 @@ proxies:
     headers:
       Host: sg1ray.serverssh.us.kg
   udp: true
-- name: rsvofcstore [2002]
-  type: vmess
-  server: germany.axelnet.tech
-  port: 443
-  uuid: l7baoghcd67zvfiyxda6zhim68rriz
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  servername: live.iflix.com
-  ws-opts:
-    path: /rsv
-    headers:
-      Host: germany.axelnet.tech
-  udp: true
 proxy-groups:
 - name: Friendly_Teams
   type: select
   proxies:
   - serverssh-valva133 [2302]
-  - rsvofcstore [2002]
   - LOAD-BALANCE
   - BEST-PING
   - FALLBACK
@@ -81,7 +64,6 @@ proxy-groups:
   interval: 300
   proxies:
   - serverssh-valva133 [2302]
-  - rsvofcstore [2002]
 - name: BEST-PING
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -89,13 +71,11 @@ proxy-groups:
   tolerance: 50
   proxies:
   - serverssh-valva133 [2302]
-  - rsvofcstore [2002]
 - name: FALLBACK
   type: fallback
   url: http://hi.bonds.id/ping
   interval: 300
   proxies:
   - serverssh-valva133 [2302]
-  - rsvofcstore [2002]
 rules:
 - MATCH,Friendly_Teams
