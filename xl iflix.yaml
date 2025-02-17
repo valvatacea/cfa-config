@@ -13,7 +13,7 @@ bind-address: '*'
 unified-delay: true
 profile:
   store-selected: true
-#dns:
+dns:
   enable: true
   ipv6: false
   enhanced-mode: redir-host
@@ -48,27 +48,11 @@ proxies:
     headers:
       Host: sg1ray.serverssh.us.kg
   udp: true
-- name: SG VMESS-WS(2025-02-23)
+- name: rsvofcstore [2002]
   type: vmess
-  server: sg3.socifiles.com
+  server: germany.axelnet.tech
   port: 443
-  uuid: f6db1160-ebc1-11ef-855a-1239d0255272
-  alterId: 0
-  cipher: none
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  servername: live.iflix.com
-  ws-opts:
-    path: /vmws
-    headers:
-      Host: sg3.socifiles.com
-  udp: true
-- name: Uburlele WS (CDN) TLS [1702]
-  type: vmess
-  server: free-dewa.vip-latunv.biz.id
-  port: 443
-  uuid: ae2f53cb-5fa3-4f87-9900-49b81c65a1b0
+  uuid: l7baoghcd67zvfiyxda6zhim68rriz
   alterId: 0
   cipher: auto
   tls: true
@@ -76,19 +60,28 @@ proxies:
   network: ws
   servername: live.iflix.com
   ws-opts:
-    path: /vmess
+    path: /rsv
     headers:
-      Host: free-dewa.vip-latunv.biz.id
+      Host: germany.axelnet.tech
   udp: true
 proxy-groups:
 - name: Friendly_Teams
   type: select
   proxies:
   - serverssh-valva133 [2302]
-  - SG VMESS-WS(2025-02-23)
-  - Uburlele WS (CDN) TLS [1702]
+  - rsvofcstore [2002]
+  - LOAD-BALANCE
   - BEST-PING
+  - FALLBACK
   - DIRECT
+- name: LOAD-BALANCE
+  type: load-balance
+  strategy: consistent-hashing
+  url: http://hi.bonds.id/ping
+  interval: 300
+  proxies:
+  - serverssh-valva133 [2302]
+  - rsvofcstore [2002]
 - name: BEST-PING
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -96,7 +89,13 @@ proxy-groups:
   tolerance: 50
   proxies:
   - serverssh-valva133 [2302]
-  - SG VMESS-WS(2025-02-23)
-  - Uburlele WS (CDN) TLS [1702]
+  - rsvofcstore [2002]
+- name: FALLBACK
+  type: fallback
+  url: http://hi.bonds.id/ping
+  interval: 300
+  proxies:
+  - serverssh-valva133 [2302]
+  - rsvofcstore [2002]
 rules:
 - MATCH,Friendly_Teams
