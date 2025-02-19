@@ -5,7 +5,7 @@ mixed-port: 7893
 tproxy-port: 7895
 ipv6: false
 mode: rule
-log-level: debug
+log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
 secret: ''
@@ -68,6 +68,16 @@ proxy-groups:
   - serverssh-valva134 [2702]
   - GiveVpne518 [2402]
   - GiveVpnz332 [2402]
+  - BEST-PING
   - DIRECT
+- name: BEST-PING
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - serverssh-valva134 [2702]
+  - GiveVpne518 [2402]
+  - GiveVpnz332 [2402]
 rules:
 - MATCH,Friendly_Teams
