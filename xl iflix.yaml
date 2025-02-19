@@ -62,19 +62,3 @@ proxies:
     headers:
       Host: deneva.litestore.cloud
   udp: true
-proxy-groups:
-- name: Friendly_Teams
-  type: select
-  proxies:
-  - serverssh-valva133 [2302]
-  - BEST-PING
-  - DIRECT
-- name: BEST-PING
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  proxies:
-  - serverssh-valva133 [2302]
-rules:
-- MATCH,Friendly_Teams
