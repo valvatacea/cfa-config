@@ -61,3 +61,13 @@ proxies:
     headers:
       Host: deneva.litestore.cloud
   udp: true
+proxy-groups:
+- name: Friendly_Teams
+  type: select
+  proxies:
+  - serverssh-valva134 [2702]
+  - GiveVpne518 [2402]
+  - GiveVpnz332 [2402]
+  - DIRECT
+rules:
+- MATCH,Friendly_Teams
