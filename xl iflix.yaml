@@ -62,6 +62,21 @@ proxies:
     headers:
       Host: deneva.litestore.cloud
   udp: true
+- name: PT. Telekomunikasi (ID)
+  server: kgstaging-multisite.onvanilla.net
+  port: 443
+  type: vless
+  uuid: c89be9f7-aa02-40bd-aa9b-7d68ae0448e1
+  cipher: auto
+  tls: true
+  udp: true
+  skip-cert-verify: true
+  network: ws
+  servername: mau.bansos.Biz.id
+  ws-opts:
+    path: /36.95.152.58=12137
+    headers:
+      Host: mau.bansos.Biz.id
 proxy-groups:
 - name: Friendly_Teams
   type: select
@@ -69,6 +84,7 @@ proxy-groups:
   - serverssh-valva134 [2702]
   - GiveVpne518 [2402]
   - GiveVpnz332 [2402]
+  - PT. Telekomunikasi (ID)
   - BEST-PING
   - DIRECT
 - name: BEST-PING
@@ -80,5 +96,6 @@ proxy-groups:
   - serverssh-valva134 [2702]
   - GiveVpne518 [2402]
   - GiveVpnz332 [2402]
+  - PT. Telekomunikasi (ID)
 rules:
 - MATCH,Friendly_Teams
