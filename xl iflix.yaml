@@ -72,7 +72,7 @@ proxies:
   udp: true
   skip-cert-verify: true
   network: ws
-  servername: mau.bansos.Biz.id
+  servername: live.iflix.com
   ws-opts:
     path: /36.95.152.58=12137
     headers:
