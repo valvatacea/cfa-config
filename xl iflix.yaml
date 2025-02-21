@@ -62,6 +62,22 @@ proxies:
     headers:
       Host: deneva.litestore.cloud
   udp: true
+- name: natanvpn
+  type: vmess
+  server: 1.round.web.id
+  port: 443
+  uuid: 3fcf68e4-a027-4d4c-a4cd-6c1595a8bc4e
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  servername: live.iflix.com
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: 1.round.web.id
+  udp: true
 - name: PT. Telekomunikasi (ID)
   server: kgstaging-multisite.onvanilla.net
   port: 443
@@ -84,6 +100,7 @@ proxy-groups:
   - serverssh-valva134 [2702]
   - GiveVpne518 [2402]
   - GiveVpnz332 [2402]
+  - natanvpn
   - PT. Telekomunikasi (ID)
   - BEST-PING
   - DIRECT
@@ -96,6 +113,7 @@ proxy-groups:
   - serverssh-valva134 [2702]
   - GiveVpne518 [2402]
   - GiveVpnz332 [2402]
+  - natanvpn
   - PT. Telekomunikasi (ID)
 rules:
 - MATCH,Friendly_Teams
