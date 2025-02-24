@@ -15,53 +15,6 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
-- name: serverssh-valva134 [2702]
-  type: vmess
-  server: sg1ray.serverssh.us.kg
-  port: 443
-  uuid: 3d4a0208-a2f9-43da-813e-f92d2cfab130
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  servername: live.iflix.com
-  ws-opts:
-    path: /serverssh.net
-    headers:
-      Host: sg1ray.serverssh.us.kg
-  udp: true
-- name: GiveVpne518 [2402]
-  type: vmess
-  server: deneva.litestore.cloud
-  port: 443
-  uuid: b40587b3-0be1-4819-944b-0da1ffb5042e
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  servername: live.iflix.com
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: deneva.litestore.cloud
-  udp: true
-- name: GiveVpnz332 [2402]
-  server: deneva.litestore.cloud
-  port: 443
-  type: vless
-  uuid: 231f6a65-76dc-4cde-a6d9-286204a99d5f
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: live.iflix.com
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: deneva.litestore.cloud
-  udp: true
 - name: natanvpn
   type: vmess
   server: 1.round.web.id
@@ -72,36 +25,51 @@ proxies:
   tls: true
   skip-cert-verify: true
   network: ws
-  servername: live.iflix.com
+  servername: 1.round.web.id
   ws-opts:
     path: /vmess
     headers:
       Host: 1.round.web.id
   udp: true
-- name: PT. Telekomunikasi (ID)
-  server: kgstaging-multisite.onvanilla.net
+- name: serverssh-valva135 [0303]
+  type: vmess
+  server: sg1ray.serverssh.web.id
   port: 443
-  type: vless
-  uuid: c89be9f7-aa02-40bd-aa9b-7d68ae0448e1
+  uuid: 56023684-bb37-4f6a-abdb-840ca611e8bc
+  alterId: 0
   cipher: auto
   tls: true
-  udp: true
   skip-cert-verify: true
   network: ws
-  servername: live.iflix.com
+  servername: sg1ray.serverssh.web.id
   ws-opts:
-    path: /36.95.152.58=12137
+    path: /serverssh.net
     headers:
-      Host: mau.bansos.Biz.id
+      Host: sg1ray.serverssh.web.id
+  udp: true
+- name: telekbejret WS (CDN) TLS [2802]
+  type: vmess
+  server: bakrie.ac.id.server-tendo.store
+  port: 443
+  uuid: b5248f0d-9d18-4347-a2cf-a075ecb5ab4f
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  servername: bakrie.ac.id.server-tendo.store
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: bakrie.ac.id.server-tendo.store
+  udp: true
 proxy-groups:
 - name: Friendly_Teams
   type: select
   proxies:
-  - serverssh-valva134 [2702]
-  - GiveVpne518 [2402]
-  - GiveVpnz332 [2402]
   - natanvpn
-  - PT. Telekomunikasi (ID)
+  - serverssh-valva135 [0303]
+  - telekbejret WS (CDN) TLS [2802]
   - BEST-PING
   - DIRECT
 - name: BEST-PING
@@ -110,10 +78,8 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-  - serverssh-valva134 [2702]
-  - GiveVpne518 [2402]
-  - GiveVpnz332 [2402]
   - natanvpn
-  - PT. Telekomunikasi (ID)
+  - serverssh-valva135 [0303]
+  - telekbejret WS (CDN) TLS [2802]
 rules:
 - MATCH,Friendly_Teams
