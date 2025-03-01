@@ -1,0 +1,152 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+proxies:
+  - name: (ID) Akamai Technologies Inc 🇮🇩
+    server: space.byu.id
+    port: 443
+    type: vless
+    uuid: 08bacc83-ef29-42f9-abf3-865340a3447c
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: bjir.telegwkenalimit.us.kg
+    network: ws
+    ws-opts:
+      path: /172.232.239.151=587
+      headers:
+        Host: bjir.telegwkenalimit.us.kg
+    udp: true
+  - name: (ID) Akamai Connected Cloud 🇮🇩
+    server: space.byu.id
+    port: 443
+    type: vless
+    uuid: 8e6753c3-c223-43bb-930f-cba53d1f5bd7
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: open-paid.cloudfeler.xyz
+    network: ws
+    ws-opts:
+      path: /Novan-ID6
+      headers:
+        Host: open-paid.cloudfeler.xyz
+    udp: true
+  - name: (ID) Google Cloud 🇮🇩
+    server: space.byu.id
+    port: 443
+    type: vless
+    uuid: a7961aa1-9f37-4936-87a1-4dbe9cce6531
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: open-paid.cloudfeler.xyz
+    network: ws
+    ws-opts:
+      path: /Novan-ID5
+      headers:
+        Host: open-paid.cloudfeler.xyz
+    udp: true
+  - name: serverssh-valva136
+    server: space.byu.id
+    port: 443
+    type: vmess
+    uuid: 98ab97e6-2252-40e7-9c88-0d8fbe0169ed
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg1ray.serverssh.web.id
+    network: ws
+    ws-opts:
+      path: /serverssh.net
+      headers:
+        Host: sg1ray.serverssh.web.id
+    udp: true
+  - name: natanvpn (1)
+    server: space.byu.id
+    port: 443
+    type: vmess
+    uuid: 3fcf68e4-a027-4d4c-a4cd-6c1595a8bc4e
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 1.round.web.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: 1.round.web.id
+    udp: true
+  - name: natanvpn (2)
+    server: space.byu.id
+    port: 443
+    type: trojan
+    password: b45c3139-f9a6-4526-923b-e7c078a85482
+    skip-cert-verify: true
+    sni: 2.round.web.id
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: 2.round.web.id
+    udp: true
+  - name: natanvpn (3)
+    server: space.byu.id
+    port: 443
+    type: vmess
+    uuid: e11ba0c8-a84d-4ac9-8b52-266db766b71b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 3.round.web.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: 3.round.web.id
+    udp: true
+  - name: natanvpn (4)
+    server: space.byu.id
+    port: 443
+    type: vless
+    uuid: adfb3988-3bb7-4db2-b596-8f8d69aca724
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 4.round.web.id
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: 4.round.web.id
+    udp: true
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - (ID) Akamai Technologies Inc 🇮🇩
+      - (ID) Akamai Connected Cloud 🇮🇩
+      - (ID) Google Cloud 🇮🇩
+      - serverssh-valva136
+      - natanvpn (1)
+      - natanvpn (2)
+      - natanvpn (3)
+      - natanvpn (4)
+      - DIRECT
+rules:
+  - MATCH,PROXY
