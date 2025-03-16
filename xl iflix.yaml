@@ -1,0 +1,105 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: info
+allow-lan: true
+external-controller: 0.0.0.0:9090
+external-ui : '/data/adb/box/clash/dashboard'
+secret: ''
+bind-address: '*'
+unified-delay: true
+profile:
+  store-selected: true
+proxies:
+  - name: natanvpn 1
+    server: 1.round.web.id
+    port: 443
+    type: trojan
+    password: natanvpn
+    skip-cert-verify: true
+    sni: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: 1.round.web.id
+    udp: true
+  - name: natanvpnn 2
+    server: 2.round.web.id
+    port: 443
+    type: vless
+    uuid: 122ede64-44fa-4096-a864-67a1cf120fd5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: 2.round.web.id
+    udp: true
+  - name: natanvpnn 3
+    server: 3.round.web.id
+    port: 443
+    type: vmess
+    uuid: 6f27c70c-f904-4d5a-9b8c-9d54d9c201f8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 3.round.web.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: live.iflix.com
+    udp: true
+  - name: natanvpnn 4
+    server: 4.round.web.id
+    port: 443
+    type: vmess
+    uuid: 30c337a1-3032-4a63-9009-02302c3fa01d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: 4.round.web.id
+    udp: true
+  - name: serverssh-valva137 [2103]
+    server: sg1ray.serverssh.web.id
+    port: 443
+    type: vmess
+    uuid: b09e2b7c-14ed-41d6-9327-5cd56e93cee0
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /serverssh.net
+      headers:
+        Host: sg1ray.serverssh.web.id
+    udp: true
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - natanvpn 1
+      - natanvpnn 2
+      - natanvpnn 3
+      - natanvpnn 4
+      - serverssh-valva137 [2103]
+      - DIRECT
+rules:
+  - MATCH,PROXY
