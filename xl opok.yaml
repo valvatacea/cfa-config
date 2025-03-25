@@ -14,7 +14,7 @@ bind-address: '*'
 unified-delay: true
 profile:
   store-selected: true
-  proxies:
+proxies:
   - name: natanvpn [0404]
     server: chat.xl.co.id
     port: 80
