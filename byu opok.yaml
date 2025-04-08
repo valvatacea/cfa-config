@@ -14,24 +14,11 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
-  - name: 1 🇸🇬 Oracle Cloud WS TLS [nautica]
-    server: space.byu.id
-    port: 443
-    type: trojan
-    password: 9fdac4f7-c295-4e7e-a08b-9146fa136807
-    skip-cert-verify: true
-    sni: nautica.foolvpn.me
-    network: ws
-    ws-opts:
-      path: /129.150.58.86-57621
-      headers:
-        Host: nautica.foolvpn.me
-    udp: true
-  - name: serverssh-valva138 [1204]
+  - name: serverssh-valva139 [1504]
     server: space.byu.id
     port: 443
     type: vmess
-    uuid: d79a7f90-858a-401b-a9f7-80f8c29f829b
+    uuid: fa4ab437-c845-44b2-a5a4-2049407ca949
     alterId: 0
     cipher: auto
     tls: true
@@ -43,27 +30,80 @@ proxies:
       headers:
         Host: sg1ray.serverssh.web.id
     udp: true
-  - name: natanvpn 2
+  - name: 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
     server: space.byu.id
     port: 443
-    type: vmess
-    uuid: 60b37ca2-baec-4543-881f-6bdab9702ac0
-    alterId: 0
+    type: trojan
+    password: a6c195b1-2c32-4296-9310-4cca3d3f1a1c
+    skip-cert-verify: true
+    sni: nautica.foolvpn.me
+    network: ws
+    ws-opts:
+      path: /203.194.112.119-8443
+      headers:
+        Host: nautica.foolvpn.me
+    udp: true
+  - name: 1 🇮🇩 Amazon.com WS TLS [nautica]
+    server: space.byu.id
+    port: 443
+    type: trojan
+    password: a6c195b1-2c32-4296-9310-4cca3d3f1a1c
+    skip-cert-verify: true
+    sni: nautica.foolvpn.me
+    network: ws
+    ws-opts:
+      path: /43.218.77.16-1443
+      headers:
+        Host: nautica.foolvpn.me
+    udp: true
+  - name: natanvpn 6
+    server: space.byu.id
+    port: 443
+    type: trojan
+    password: ef8b98ab-d5c5-4821-a153-a7e2d19b39d1
+    skip-cert-verify: true
+    sni: 6.round.web.id
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: 6.round.web.id
+    udp: true
+  - name: natanvpn 5
+    server: space.byu.id
+    port: 443
+    type: vless
+    uuid: d35a74bc-4f07-4f52-9a9d-d72759fcf5dc
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: 2.round.web.id
+    servername: 5.round.web.id
     network: ws
     ws-opts:
-      path: /vmess
+      path: /vless
       headers:
-        Host: 2.round.web.id
+        Host: 5.round.web.id
+    udp: true
+  - name: natanvpn 4
+    server: space.byu.id
+    port: 443
+    type: vless
+    uuid: a06c0c98-912c-406a-8776-f86f8ce1559d
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 4.round.web.id
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: 4.round.web.id
     udp: true
   - name: natanvpn 3
     server: space.byu.id
     port: 443
     type: vmess
-    uuid: dc91db38-1f56-4ecc-b301-58762734e0ee
+    uuid: 9b1655e7-9872-43c3-a09d-9de8ca8193cf
     alterId: 0
     cipher: auto
     tls: true
@@ -75,60 +115,78 @@ proxies:
       headers:
         Host: 3.round.web.id
     udp: true
-  - name: natanvpn 4
+  - name: natanvpn 2
     server: space.byu.id
     port: 443
-    type: vless
-    uuid: d7a9befc-7f5d-4554-a9f9-bd4f9577d5b0
+    type: vmess
+    uuid: f74d8d4e-f2cc-4cb9-9ebd-eba378eea6fe
+    alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: 4.round.web.id
+    servername: 2.round.web.id
     network: ws
     ws-opts:
-      path: /vless
+      path: /vmess
       headers:
-        Host: 4.round.web.id
-    udp: true
-  - name: natanvpn 5
-    server: space.byu.id
-    port: 443
-    type: vless
-    uuid: 16fdde2b-ec7b-4035-9d69-19a129d9c3cf
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: 5.round.web.id
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: 5.round.web.id
-    udp: true
-  - name: natanvpn 6
-    server: space.byu.id
-    port: 443
-    type: trojan
-    password: natanvpn
-    skip-cert-verify: true
-    sni: 6.round.web.id
-    network: ws
-    ws-opts:
-      path: /trojan
-      headers:
-        Host: 6.round.web.id
+        Host: 2.round.web.id
     udp: true
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - 1 🇸🇬 Oracle Cloud WS TLS [nautica]
-      - serverssh-valva138 [1204]
-      - natanvpn 2
-      - natanvpn 3
-      - natanvpn 4
-      - natanvpn 5
+      - serverssh-valva139 [1504]
+      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
+      - 1 🇮🇩 Amazon.com WS TLS [nautica]
       - natanvpn 6
+      - natanvpn 5
+      - natanvpn 4
+      - natanvpn 3
+      - natanvpn 2
+      - LOAD-BALANCE
+      - BEST-PING
+      - FALLBACK
       - DIRECT
+  - name: LOAD-BALANCE
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - serverssh-valva139 [1504]
+      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
+      - 1 🇮🇩 Amazon.com WS TLS [nautica]
+      - natanvpn 6
+      - natanvpn 5
+      - natanvpn 4
+      - natanvpn 3
+      - natanvpn 2
+  - name: BEST-PING
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+      - serverssh-valva139 [1504]
+      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
+      - 1 🇮🇩 Amazon.com WS TLS [nautica]
+      - natanvpn 6
+      - natanvpn 5
+      - natanvpn 4
+      - natanvpn 3
+      - natanvpn 2
+  - name: FALLBACK
+    type: fallback
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - serverssh-valva139 [1504]
+      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
+      - 1 🇮🇩 Amazon.com WS TLS [nautica]
+      - natanvpn 6
+      - natanvpn 5
+      - natanvpn 4
+      - natanvpn 3
+      - natanvpn 2
 rules:
   - MATCH,PROXY
