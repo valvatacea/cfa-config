@@ -31,19 +31,6 @@ proxies:
       headers:
         Host: sg1ray.serverssh.web.id
     udp: true
-  - name: 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
-    server: nautica.foolvpn.me
-    port: 443
-    type: trojan
-    password: a6c195b1-2c32-4296-9310-4cca3d3f1a1c
-    skip-cert-verify: true
-    sni: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /203.194.112.119-8443
-      headers:
-        Host: nautica.foolvpn.me
-    udp: true
   - name: 1 🇮🇩 Amazon.com WS TLS [nautica]
     server: nautica.foolvpn.me
     port: 443
@@ -57,11 +44,24 @@ proxies:
       headers:
         Host: nautica.foolvpn.me
     udp: true
-  - name: natanvpn 6
+  - name: 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
+    server: nautica.foolvpn.me
+    port: 443
+    type: trojan
+    password: a6c195b1-2c32-4296-9310-4cca3d3f1a1c
+    skip-cert-verify: true
+    sni: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /203.194.112.119-8443
+      headers:
+        Host: nautica.foolvpn.me
+    udp: true
+  - name: natanvpn
     server: 6.round.web.id
     port: 443
     type: trojan
-    password: ef8b98ab-d5c5-4821-a153-a7e2d19b39d1
+    password: 2be274da-a5bf-48a2-be48-e1de7a0c3bf2
     skip-cert-verify: true
     sni: live.iflix.com
     network: ws
@@ -70,11 +70,11 @@ proxies:
       headers:
         Host: 6.round.web.id
     udp: true
-  - name: natanvpn 5
+  - name: natanvpn 2
     server: 5.round.web.id
     port: 443
     type: vless
-    uuid: d35a74bc-4f07-4f52-9a9d-d72759fcf5dc
+    uuid: a29844ff-651d-4f13-a5e6-9f34219cbaa5
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -85,11 +85,11 @@ proxies:
       headers:
         Host: 5.round.web.id
     udp: true
-  - name: natanvpn 4
+  - name: natanvpn 3
     server: 4.round.web.id
     port: 443
     type: vless
-    uuid: a06c0c98-912c-406a-8776-f86f8ce1559d
+    uuid: de0fe916-ca5c-4972-8b64-859f785dcdd4
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -100,11 +100,11 @@ proxies:
       headers:
         Host: 4.round.web.id
     udp: true
-  - name: natanvpn 3
+  - name: natanvpn 4
     server: 3.round.web.id
     port: 443
     type: vmess
-    uuid: 9b1655e7-9872-43c3-a09d-9de8ca8193cf
+    uuid: 6d7a75cd-2178-4d26-8bc4-ab9c735295e7
     alterId: 0
     cipher: auto
     tls: true
@@ -116,11 +116,11 @@ proxies:
       headers:
         Host: 3.round.web.id
     udp: true
-  - name: natanvpn 2
+  - name: natanvpn 5
     server: 2.round.web.id
     port: 443
     type: vmess
-    uuid: f74d8d4e-f2cc-4cb9-9ebd-eba378eea6fe
+    uuid: 3cb69081-8669-4679-bcae-f95020e70878
     alterId: 0
     cipher: auto
     tls: true
@@ -137,13 +137,13 @@ proxy-groups:
     type: select
     proxies:
       - serverssh-valva139 [1504]
-      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
       - 1 🇮🇩 Amazon.com WS TLS [nautica]
-      - natanvpn 6
-      - natanvpn 5
-      - natanvpn 4
-      - natanvpn 3
+      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
+      - natanvpn
       - natanvpn 2
+      - natanvpn 3
+      - natanvpn 4
+      - natanvpn 5
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -155,13 +155,13 @@ proxy-groups:
     interval: 300
     proxies:
       - serverssh-valva139 [1504]
-      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
       - 1 🇮🇩 Amazon.com WS TLS [nautica]
-      - natanvpn 6
-      - natanvpn 5
-      - natanvpn 4
-      - natanvpn 3
+      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
+      - natanvpn
       - natanvpn 2
+      - natanvpn 3
+      - natanvpn 4
+      - natanvpn 5
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
@@ -169,25 +169,25 @@ proxy-groups:
     tolerance: 50
     proxies:
       - serverssh-valva139 [1504]
-      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
       - 1 🇮🇩 Amazon.com WS TLS [nautica]
-      - natanvpn 6
-      - natanvpn 5
-      - natanvpn 4
-      - natanvpn 3
+      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
+      - natanvpn
       - natanvpn 2
+      - natanvpn 3
+      - natanvpn 4
+      - natanvpn 5
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
       - serverssh-valva139 [1504]
-      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
       - 1 🇮🇩 Amazon.com WS TLS [nautica]
-      - natanvpn 6
-      - natanvpn 5
-      - natanvpn 4
-      - natanvpn 3
+      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
+      - natanvpn
       - natanvpn 2
+      - natanvpn 3
+      - natanvpn 4
+      - natanvpn 5
 rules:
   - MATCH,PROXY
