@@ -57,16 +57,50 @@ proxies:
       headers:
         Host: nautica.foolvpn.me
     udp: true
+  - name: freevip WS (CDN) TLS [1704]
+    server: server-tendo.store
+    port: 443
+    type: vmess
+    uuid: 9983624a-ce6c-43ac-bf21-35e1f4523d3b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: server-tendo.store
+    udp: true
+  - name: ftvpn-val138 WS (CDN) TLS [1704]
+    server: idbiz.ftvpn.my.id
+    port: 443
+    type: vmess
+    uuid: 6bde3682-4725-4bab-b83f-fe09461b377b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /whatever/vmess
+      headers:
+        Host: idbiz.ftvpn.my.id
+    udp: true
   - name: natanvpn
     server: 6.round.web.id
     port: 443
-    type: trojan
-    password: 2be274da-a5bf-48a2-be48-e1de7a0c3bf2
+    type: vless
+    uuid: 84bac12b-1a81-45cd-8c15-8fc67ba7c547
+    cipher: auto
+    tls: true
     skip-cert-verify: true
-    sni: live.iflix.com
+    servername: live.iflix.com
     network: ws
     ws-opts:
-      path: /trojan
+      path: /vless
       headers:
         Host: 6.round.web.id
     udp: true
@@ -74,7 +108,7 @@ proxies:
     server: 5.round.web.id
     port: 443
     type: vless
-    uuid: a29844ff-651d-4f13-a5e6-9f34219cbaa5
+    uuid: 3fd9b65d-3515-43f4-b052-b0d551873280
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -88,15 +122,16 @@ proxies:
   - name: natanvpn 3
     server: 4.round.web.id
     port: 443
-    type: vless
-    uuid: de0fe916-ca5c-4972-8b64-859f785dcdd4
+    type: vmess
+    uuid: 47b49f77-3162-4aed-8d84-3f587dcc8731
+    alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
     servername: live.iflix.com
     network: ws
     ws-opts:
-      path: /vless
+      path: /vmess
       headers:
         Host: 4.round.web.id
     udp: true
@@ -104,7 +139,7 @@ proxies:
     server: 3.round.web.id
     port: 443
     type: vmess
-    uuid: 6d7a75cd-2178-4d26-8bc4-ab9c735295e7
+    uuid: a8411736-d0f1-43fb-a0d8-99bb2e70ccf5
     alterId: 0
     cipher: auto
     tls: true
@@ -120,7 +155,7 @@ proxies:
     server: 2.round.web.id
     port: 443
     type: vmess
-    uuid: 3cb69081-8669-4679-bcae-f95020e70878
+    uuid: 76d28f64-a97d-4a4d-8731-d35ae7cf8a7b
     alterId: 0
     cipher: auto
     tls: true
@@ -139,6 +174,8 @@ proxy-groups:
       - serverssh-valva139 [1504]
       - 1 🇮🇩 Amazon.com WS TLS [nautica]
       - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
+      - freevip WS (CDN) TLS [1704]
+      - ftvpn-val138 WS (CDN) TLS [1704]
       - natanvpn
       - natanvpn 2
       - natanvpn 3
@@ -157,6 +194,8 @@ proxy-groups:
       - serverssh-valva139 [1504]
       - 1 🇮🇩 Amazon.com WS TLS [nautica]
       - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
+      - freevip WS (CDN) TLS [1704]
+      - ftvpn-val138 WS (CDN) TLS [1704]
       - natanvpn
       - natanvpn 2
       - natanvpn 3
@@ -171,6 +210,8 @@ proxy-groups:
       - serverssh-valva139 [1504]
       - 1 🇮🇩 Amazon.com WS TLS [nautica]
       - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
+      - freevip WS (CDN) TLS [1704]
+      - ftvpn-val138 WS (CDN) TLS [1704]
       - natanvpn
       - natanvpn 2
       - natanvpn 3
@@ -184,6 +225,8 @@ proxy-groups:
       - serverssh-valva139 [1504]
       - 1 🇮🇩 Amazon.com WS TLS [nautica]
       - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
+      - freevip WS (CDN) TLS [1704]
+      - ftvpn-val138 WS (CDN) TLS [1704]
       - natanvpn
       - natanvpn 2
       - natanvpn 3
