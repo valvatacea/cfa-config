@@ -14,22 +14,6 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
-  - name: serverssh-valva139 [1504]
-    server: space.byu.id
-    port: 443
-    type: vmess
-    uuid: fa4ab437-c845-44b2-a5a4-2049407ca949
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg1ray.serverssh.web.id
-    network: ws
-    ws-opts:
-      path: /serverssh.net
-      headers:
-        Host: sg1ray.serverssh.web.id
-    udp: true
   - name: 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
     server: space.byu.id
     port: 443
@@ -56,93 +40,110 @@ proxies:
       headers:
         Host: nautica.foolvpn.me
     udp: true
-  - name: natanvpn 6
-    server: space.byu.id
-    port: 443
-    type: trojan
-    password: ef8b98ab-d5c5-4821-a153-a7e2d19b39d1
-    skip-cert-verify: true
-    sni: 6.round.web.id
-    network: ws
-    ws-opts:
-      path: /trojan
-      headers:
-        Host: 6.round.web.id
-    udp: true
-  - name: natanvpn 5
+  - name: ID - Rumahweb [ VLESS - TLS ]
     server: space.byu.id
     port: 443
     type: vless
-    uuid: d35a74bc-4f07-4f52-9a9d-d72759fcf5dc
+    uuid: 1169b462-5012-45b3-86eb-cf6b6eee22a1
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: 5.round.web.id
+    servername: inconigto-mode.web.id
     network: ws
     ws-opts:
-      path: /vless
+      path: /Inconigto-Mode/203.194.112.119-2053
       headers:
-        Host: 5.round.web.id
+        Host: inconigto-mode.web.id
     udp: true
-  - name: natanvpn 4
+  - name: ID - Alibaba [ VLESS - TLS ]
     server: space.byu.id
     port: 443
     type: vless
-    uuid: a06c0c98-912c-406a-8776-f86f8ce1559d
+    uuid: 1169b462-5012-45b3-86eb-cf6b6eee22a1
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: 4.round.web.id
+    servername: inconigto-mode.web.id
     network: ws
     ws-opts:
-      path: /vless
+      path: /Inconigto-Mode/8.215.196.18-587
       headers:
-        Host: 4.round.web.id
+        Host: inconigto-mode.web.id
     udp: true
-  - name: natanvpn 3
+  - name: ID - PT Telkom Indonesia [ VLESS - TLS ]
+    server: space.byu.id
+    port: 443
+    type: vless
+    uuid: 1169b462-5012-45b3-86eb-cf6b6eee22a1
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: inconigto-mode.web.id
+    network: ws
+    ws-opts:
+      path: /Inconigto-Mode/36.95.152.58-12137
+      headers:
+        Host: inconigto-mode.web.id
+    udp: true
+  - name: ID - Amazon [ VLESS - TLS ]
+    server: space.byu.id
+    port: 443
+    type: vless
+    uuid: 1169b462-5012-45b3-86eb-cf6b6eee22a1
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: inconigto-mode.web.id
+    network: ws
+    ws-opts:
+      path: /Inconigto-Mode/43.218.77.16-443
+      headers:
+        Host: inconigto-mode.web.id
+    udp: true
+  - name: (free) [VMess - ws] TLS ✅ [1405]
     server: space.byu.id
     port: 443
     type: vmess
-    uuid: 9b1655e7-9872-43c3-a09d-9de8ca8193cf
+    uuid: 69c3b154-de74-4be7-b38c-b3c653c9bc17
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: 3.round.web.id
+    servername: ikd.lolicon.biz.id
     network: ws
     ws-opts:
       path: /vmess
       headers:
-        Host: 3.round.web.id
+        Host: ikd.lolicon.biz.id
     udp: true
-  - name: natanvpn 2
+  - name: serverssh-valva139 [2304]
     server: space.byu.id
     port: 443
     type: vmess
-    uuid: f74d8d4e-f2cc-4cb9-9ebd-eba378eea6fe
+    uuid: 6a44a223-704a-455b-8ed5-e4b336d9f627
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: 2.round.web.id
+    servername: sg1ray.serverssh.web.id
     network: ws
     ws-opts:
-      path: /vmess
+      path: /serverssh.net
       headers:
-        Host: 2.round.web.id
+        Host: sg1ray.serverssh.web.id
     udp: true
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - serverssh-valva139 [1504]
       - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
       - 1 🇮🇩 Amazon.com WS TLS [nautica]
-      - natanvpn 6
-      - natanvpn 5
-      - natanvpn 4
-      - natanvpn 3
-      - natanvpn 2
+      - ID - Rumahweb [ VLESS - TLS ]
+      - ID - Alibaba [ VLESS - TLS ]
+      - ID - PT Telkom Indonesia [ VLESS - TLS ]
+      - ID - Amazon [ VLESS - TLS ]
+      - (free) [VMess - ws] TLS ✅ [1405]
+      - serverssh-valva139 [2304]
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -153,40 +154,40 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - serverssh-valva139 [1504]
       - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
       - 1 🇮🇩 Amazon.com WS TLS [nautica]
-      - natanvpn 6
-      - natanvpn 5
-      - natanvpn 4
-      - natanvpn 3
-      - natanvpn 2
+      - ID - Rumahweb [ VLESS - TLS ]
+      - ID - Alibaba [ VLESS - TLS ]
+      - ID - PT Telkom Indonesia [ VLESS - TLS ]
+      - ID - Amazon [ VLESS - TLS ]
+      - (free) [VMess - ws] TLS ✅ [1405]
+      - serverssh-valva139 [2304]
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - serverssh-valva139 [1504]
       - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
       - 1 🇮🇩 Amazon.com WS TLS [nautica]
-      - natanvpn 6
-      - natanvpn 5
-      - natanvpn 4
-      - natanvpn 3
-      - natanvpn 2
+      - ID - Rumahweb [ VLESS - TLS ]
+      - ID - Alibaba [ VLESS - TLS ]
+      - ID - PT Telkom Indonesia [ VLESS - TLS ]
+      - ID - Amazon [ VLESS - TLS ]
+      - (free) [VMess - ws] TLS ✅ [1405]
+      - serverssh-valva139 [2304]
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - serverssh-valva139 [1504]
       - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
       - 1 🇮🇩 Amazon.com WS TLS [nautica]
-      - natanvpn 6
-      - natanvpn 5
-      - natanvpn 4
-      - natanvpn 3
-      - natanvpn 2
+      - ID - Rumahweb [ VLESS - TLS ]
+      - ID - Alibaba [ VLESS - TLS ]
+      - ID - PT Telkom Indonesia [ VLESS - TLS ]
+      - ID - Amazon [ VLESS - TLS ]
+      - (free) [VMess - ws] TLS ✅ [1405]
+      - serverssh-valva139 [2304]
 rules:
   - MATCH,PROXY
