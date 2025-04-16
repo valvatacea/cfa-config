@@ -15,7 +15,7 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
-  - : 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
+  - name: 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
     server: space.byu.id
     port: 443
     type: trojan
