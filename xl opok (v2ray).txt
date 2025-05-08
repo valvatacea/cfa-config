@@ -1,1 +1,2 @@
-
+vless://e627d2b0-1eb1-4f7b-a862-5770055cff0d@ovo.id:80?path=%2FNovan-ID6&security=none&encryption=none&host=aink.workerz.site&fp=randomized&type=ws&sni=aink.workerz.site#%28ID%29%20Akamai%20Connected%20Cloud%20%F0%9F%87%AE%F0%9F%87%A9
+vless://a90654e1-1237-4446-a985-901b5ce2308b@ovo.id:80?path=%2FNovan-ID2&security=none&encryption=none&host=aink.workerz.site&fp=randomized&type=ws&sni=aink.workerz.site#%28ID%29%20Amazon.com%20%F0%9F%87%AE%F0%9F%87%A9
