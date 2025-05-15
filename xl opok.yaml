@@ -15,78 +15,106 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
-  - name: natanvpn [0404]
-    server: chat.xl.co.id
-    port: 80
-    type: vmess
-    uuid: ba48eff9-bdff-4ee3-939e-df9011ec14e3
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: 6.round.web.id
-    udp: true
-  - name: serverssh-valva137 [0104]
-    server: chat.xl.co.id
-    port: 80
-    type: vmess
-    uuid: 8f1e5326-e1e2-425c-9da5-486127c32508
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /serverssh.net
-      headers:
-        Host: sg1ray.serverssh.web.id
-    udp: true
-  - name: serverssh-valva137 [0104] 2
+  - name: CV. Rumahweb 🇮🇩
     server: ovo.id
     port: 80
-    type: vmess
-    uuid: 8f1e5326-e1e2-425c-9da5-486127c32508
-    alterId: 0
+    type: vless
+    uuid: 7577025e-2e67-4aa5-958a-ba179cfc4849
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: live.iflix.com
+    servername: aio.loophole.biz.id
     network: ws
     ws-opts:
-      path: /serverssh.net
+      path: /aioproxybot/203.194.112.119-8443
       headers:
-        Host: sg1ray.serverssh.web.id
+        Host: aio.loophole.biz.id.
     udp: true
-  - name: natanvpn [0404] 2
+  - name: Shenzhen Tencent 🇯🇵
     server: ovo.id
     port: 80
-    type: vmess
-    uuid: ba48eff9-bdff-4ee3-939e-df9011ec14e3
-    alterId: 0
+    type: vless
+    uuid: ef149c00-2a47-4209-8f82-586342adb4d2
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: live.iflix.com
+    servername: aio.loophole.biz.id
     network: ws
     ws-opts:
-      path: /vmess
+      path: /aioproxybot/43.163.207.12-52025
       headers:
-        Host: 6.round.web.id
+        Host: aio.loophole.biz.id
+    udp: true
+  - name: (ID) Akamai Connected Cloud 🇮🇩
+    server: ovo.id
+    port: 80
+    type: vless
+    uuid: e627d2b0-1eb1-4f7b-a862-5770055cff0d
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: aink.workerz.site
+    network: ws
+    ws-opts:
+      path: /Novan-ID6
+      headers:
+        Host: aink.workerz.site
+    udp: true
+  - name: (ID) Amazon.com 🇮🇩
+    server: ovo.id
+    port: 80
+    type: vless
+    uuid: a90654e1-1237-4446-a985-901b5ce2308b
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: aink.workerz.site
+    network: ws
+    ws-opts:
+      path: /Novan-ID2
+      headers:
+        Host: aink.workerz.site
     udp: true
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - natanvpn [0404]
-      - serverssh-valva137 [0104]
-      - serverssh-valva137 [0104] 2
-      - natanvpn [0404] 2
+      - CV. Rumahweb 🇮🇩
+      - Shenzhen Tencent 🇯🇵
+      - (ID) Akamai Connected Cloud 🇮🇩
+      - (ID) Amazon.com 🇮🇩
+      - LOAD-BALANCE
+      - BEST-PING
+      - FALLBACK
       - DIRECT
+  - name: LOAD-BALANCE
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - CV. Rumahweb 🇮🇩
+      - Shenzhen Tencent 🇯🇵
+      - (ID) Akamai Connected Cloud 🇮🇩
+      - (ID) Amazon.com 🇮🇩
+  - name: BEST-PING
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+      - CV. Rumahweb 🇮🇩
+      - Shenzhen Tencent 🇯🇵
+      - (ID) Akamai Connected Cloud 🇮🇩
+      - (ID) Amazon.com 🇮🇩
+  - name: FALLBACK
+    type: fallback
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - CV. Rumahweb 🇮🇩
+      - Shenzhen Tencent 🇯🇵
+      - (ID) Akamai Connected Cloud 🇮🇩
+      - (ID) Amazon.com 🇮🇩
 rules:
   - MATCH,PROXY
