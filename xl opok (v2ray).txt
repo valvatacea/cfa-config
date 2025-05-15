@@ -1,2 +1,4 @@
+vless://7577025e-2e67-4aa5-958a-ba179cfc4849@ovo.id:80?path=%2Faioproxybot%2F203.194.112.119-8443&security=none&encryption=none&host=aio.loophole.biz.id.&fp=randomized&type=ws&sni=aio.loophole.biz.id#CV.%20Rumahweb%20%F0%9F%87%AE%F0%9F%87%A9
+vless://ef149c00-2a47-4209-8f82-586342adb4d2@ovo.id:80?path=%2Faioproxybot%2F43.163.207.12-52025&security=none&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen%20Tencent%20%F0%9F%87%AF%F0%9F%87%B5
 vless://e627d2b0-1eb1-4f7b-a862-5770055cff0d@ovo.id:80?path=%2FNovan-ID6&security=none&encryption=none&host=aink.workerz.site&fp=randomized&type=ws&sni=aink.workerz.site#%28ID%29%20Akamai%20Connected%20Cloud%20%F0%9F%87%AE%F0%9F%87%A9
 vless://a90654e1-1237-4446-a985-901b5ce2308b@ovo.id:80?path=%2FNovan-ID2&security=none&encryption=none&host=aink.workerz.site&fp=randomized&type=ws&sni=aink.workerz.site#%28ID%29%20Amazon.com%20%F0%9F%87%AE%F0%9F%87%A9
