@@ -14,113 +14,71 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
-  - name: 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
-    server: space.byu.id
-    port: 443
-    type: trojan
-    password: a6c195b1-2c32-4296-9310-4cca3d3f1a1c
-    skip-cert-verify: true
-    sni: nautica.foolvpn.me
-    network: ws
-    ws-opts:
-      path: /203.194.112.119-8443
-      headers:
-        Host: nautica.foolvpn.me
-    udp: true
-  - name: 1 🇮🇩 Amazon.com WS TLS [nautica]
-    server: space.byu.id
-    port: 443
-    type: trojan
-    password: a6c195b1-2c32-4296-9310-4cca3d3f1a1c
-    skip-cert-verify: true
-    sni: nautica.foolvpn.me
-    network: ws
-    ws-opts:
-      path: /43.218.77.16-1443
-      headers:
-        Host: nautica.foolvpn.me
-    udp: true
-  - name: ID - Rumahweb [ VLESS - TLS ]
-    server: space.byu.id
+  - name: CV. Rumahweb 🇮🇩
+    server: 162.159.128.79
     port: 443
     type: vless
-    uuid: 1169b462-5012-45b3-86eb-cf6b6eee22a1
+    uuid: 7577025e-2e67-4aa5-958a-ba179cfc4849
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: inconigto-mode.web.id
+    servername: aio.loophole.biz.id
     network: ws
     ws-opts:
-      path: /Inconigto-Mode/203.194.112.119-2053
+      path: /aioproxybot/203.194.112.119-8443
       headers:
-        Host: inconigto-mode.web.id
+        Host: aio.loophole.biz.id.
     udp: true
-  - name: ID - Alibaba [ VLESS - TLS ]
-    server: space.byu.id
+  - name: Shenzhen Tencent 🇯🇵
+    server: 162.159.128.79
     port: 443
     type: vless
-    uuid: 1169b462-5012-45b3-86eb-cf6b6eee22a1
+    uuid: ef149c00-2a47-4209-8f82-586342adb4d2
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: inconigto-mode.web.id
+    servername: aio.loophole.biz.id
     network: ws
     ws-opts:
-      path: /Inconigto-Mode/8.215.196.18-587
+      path: /aioproxybot/43.163.207.12-52025
       headers:
-        Host: inconigto-mode.web.id
+        Host: aio.loophole.biz.id
     udp: true
-  - name: ID - PT Telkom Indonesia [ VLESS - TLS ]
-    server: space.byu.id
+  - name: (ID) Akamai Connected Cloud 🇮🇩
+    server: 162.159.128.79
     port: 443
     type: vless
-    uuid: 1169b462-5012-45b3-86eb-cf6b6eee22a1
+    uuid: e627d2b0-1eb1-4f7b-a862-5770055cff0d
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: inconigto-mode.web.id
+    servername: aink.workerz.site
     network: ws
     ws-opts:
-      path: /Inconigto-Mode/36.95.152.58-12137
+      path: /Novan-ID6
       headers:
-        Host: inconigto-mode.web.id
+        Host: aink.workerz.site
     udp: true
-  - name: ID - Amazon [ VLESS - TLS ]
-    server: space.byu.id
+  - name: (ID) Amazon.com 🇮🇩
+    server: 162.159.128.79
     port: 443
     type: vless
-    uuid: 1169b462-5012-45b3-86eb-cf6b6eee22a1
+    uuid: a90654e1-1237-4446-a985-901b5ce2308b
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: inconigto-mode.web.id
+    servername: aink.workerz.site
     network: ws
     ws-opts:
-      path: /Inconigto-Mode/43.218.77.16-443
+      path: /Novan-ID2
       headers:
-        Host: inconigto-mode.web.id
+        Host: aink.workerz.site
     udp: true
-  - name: (free) [VMess - ws] TLS ✅ [1405]
-    server: space.byu.id
+  - name: serverssh-valva141 [2205]
+    server: 162.159.128.79
     port: 443
     type: vmess
-    uuid: 69c3b154-de74-4be7-b38c-b3c653c9bc17
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: ikd.lolicon.biz.id
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: ikd.lolicon.biz.id
-    udp: true
-  - name: serverssh-valva139 [2304]
-    server: space.byu.id
-    port: 443
-    type: vmess
-    uuid: 6a44a223-704a-455b-8ed5-e4b336d9f627
+    uuid: 3d8de68e-fdfe-41de-a69a-5632286a735e
     alterId: 0
     cipher: auto
     tls: true
@@ -132,18 +90,32 @@ proxies:
       headers:
         Host: sg1ray.serverssh.web.id
     udp: true
+  - name: liburpanjang [2005]
+    server: 162.159.128.79
+    port: 443
+    type: vmess
+    uuid: 3c0a0fe6-05b3-4d70-bece-83f0877fc30a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: upcloud.jstun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: upcloud.jstun.cloud
+    udp: true
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
-      - 1 🇮🇩 Amazon.com WS TLS [nautica]
-      - ID - Rumahweb [ VLESS - TLS ]
-      - ID - Alibaba [ VLESS - TLS ]
-      - ID - PT Telkom Indonesia [ VLESS - TLS ]
-      - ID - Amazon [ VLESS - TLS ]
-      - (free) [VMess - ws] TLS ✅ [1405]
-      - serverssh-valva139 [2304]
+      - CV. Rumahweb 🇮🇩
+      - Shenzhen Tencent 🇯🇵
+      - (ID) Akamai Connected Cloud 🇮🇩
+      - (ID) Amazon.com 🇮🇩
+      - serverssh-valva141 [2205]
+      - liburpanjang [2005]
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -154,40 +126,34 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
-      - 1 🇮🇩 Amazon.com WS TLS [nautica]
-      - ID - Rumahweb [ VLESS - TLS ]
-      - ID - Alibaba [ VLESS - TLS ]
-      - ID - PT Telkom Indonesia [ VLESS - TLS ]
-      - ID - Amazon [ VLESS - TLS ]
-      - (free) [VMess - ws] TLS ✅ [1405]
-      - serverssh-valva139 [2304]
+      - CV. Rumahweb 🇮🇩
+      - Shenzhen Tencent 🇯🇵
+      - (ID) Akamai Connected Cloud 🇮🇩
+      - (ID) Amazon.com 🇮🇩
+      - serverssh-valva141 [2205]
+      - liburpanjang [2005]
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
-      - 1 🇮🇩 Amazon.com WS TLS [nautica]
-      - ID - Rumahweb [ VLESS - TLS ]
-      - ID - Alibaba [ VLESS - TLS ]
-      - ID - PT Telkom Indonesia [ VLESS - TLS ]
-      - ID - Amazon [ VLESS - TLS ]
-      - (free) [VMess - ws] TLS ✅ [1405]
-      - serverssh-valva139 [2304]
+      - CV. Rumahweb 🇮🇩
+      - Shenzhen Tencent 🇯🇵
+      - (ID) Akamai Connected Cloud 🇮🇩
+      - (ID) Amazon.com 🇮🇩
+      - serverssh-valva141 [2205]
+      - liburpanjang [2005]
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - 2 🇮🇩 First Cagayan Converge Data Center Inc. WS TLS [nautica]
-      - 1 🇮🇩 Amazon.com WS TLS [nautica]
-      - ID - Rumahweb [ VLESS - TLS ]
-      - ID - Alibaba [ VLESS - TLS ]
-      - ID - PT Telkom Indonesia [ VLESS - TLS ]
-      - ID - Amazon [ VLESS - TLS ]
-      - (free) [VMess - ws] TLS ✅ [1405]
-      - serverssh-valva139 [2304]
+      - CV. Rumahweb 🇮🇩
+      - Shenzhen Tencent 🇯🇵
+      - (ID) Akamai Connected Cloud 🇮🇩
+      - (ID) Amazon.com 🇮🇩
+      - serverssh-valva141 [2205]
+      - liburpanjang [2005]
 rules:
   - MATCH,PROXY
