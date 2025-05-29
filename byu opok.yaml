@@ -14,20 +14,35 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
+  - : Alibaba (US) 🇮🇩
+    server: 162.159.128.79
+    port: 443
+    type: vless
+    uuid: 2375f8e0-5739-4200-847a-4a4183cb68c6
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: aio.eth0.dpdns.org
+    network: ws
+    ws-opts:
+      path: /aioproxybot/8.215.59.6-443
+      headers:
+        Host: aio.eth0.dpdns.org
+    udp: true
   - name: CV. Rumahweb 🇮🇩
     server: 162.159.128.79
     port: 443
     type: vless
-    uuid: 7577025e-2e67-4aa5-958a-ba179cfc4849
+    uuid: fbe8907b-664c-4b32-ac35-268cfac636d0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: aio.loophole.biz.id
+    servername: aio.eth0.dpdns.org
     network: ws
     ws-opts:
       path: /aioproxybot/203.194.112.119-8443
       headers:
-        Host: aio.loophole.biz.id.
+        Host: aio.eth0.dpdns.org
     udp: true
   - name: Shenzhen Tencent 🇯🇵
     server: 162.159.128.79
@@ -44,78 +59,39 @@ proxies:
       headers:
         Host: aio.loophole.biz.id
     udp: true
-  - name: (ID) Akamai Connected Cloud 🇮🇩
+  - name: free [2906]
     server: 162.159.128.79
     port: 443
-    type: vless
-    uuid: e627d2b0-1eb1-4f7b-a862-5770055cff0d
-    cipher: auto
-    tls: true
+    type: trojan
+    password: 7dd1383c-a2bb-4d01-9933-f8b18eaadce2
     skip-cert-verify: true
-    servername: aink.workerz.site
-    network: ws
-    ws-opts:
-      path: /Novan-ID6
-      headers:
-        Host: aink.workerz.site
+    sni: aws.parael.me
+    network: grpc
+    grpc-opts:
+      grpc-service-name: trojan-grpc
     udp: true
-  - name: (ID) Amazon.com 🇮🇩
+  - name: free [2906] 2
     server: 162.159.128.79
     port: 443
-    type: vless
-    uuid: a90654e1-1237-4446-a985-901b5ce2308b
-    cipher: auto
-    tls: true
+    type: trojan
+    password: 7dd1383c-a2bb-4d01-9933-f8b18eaadce2
     skip-cert-verify: true
-    servername: aink.workerz.site
+    sni: aws.parael.me
     network: ws
     ws-opts:
-      path: /Novan-ID2
+      path: /xraytrojanws
       headers:
-        Host: aink.workerz.site
-    udp: true
-  - name: serverssh-valva141 [2205]
-    server: 162.159.128.79
-    port: 443
-    type: vmess
-    uuid: 3d8de68e-fdfe-41de-a69a-5632286a735e
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg1ray.serverssh.web.id
-    network: ws
-    ws-opts:
-      path: /serverssh.net
-      headers:
-        Host: sg1ray.serverssh.web.id
-    udp: true
-  - name: liburpanjang [2005]
-    server: 162.159.128.79
-    port: 443
-    type: vmess
-    uuid: 3c0a0fe6-05b3-4d70-bece-83f0877fc30a
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: upcloud.jstun.cloud
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: upcloud.jstun.cloud
+        Host: aws.parael.me
     udp: true
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
+      - Alibaba (US) 🇮🇩
       - CV. Rumahweb 🇮🇩
       - Shenzhen Tencent 🇯🇵
-      - (ID) Akamai Connected Cloud 🇮🇩
-      - (ID) Amazon.com 🇮🇩
-      - serverssh-valva141 [2205]
-      - liburpanjang [2005]
+      - free [2906]
+      - free [2906] 2
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -126,34 +102,31 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
+      - Alibaba (US) 🇮🇩
       - CV. Rumahweb 🇮🇩
       - Shenzhen Tencent 🇯🇵
-      - (ID) Akamai Connected Cloud 🇮🇩
-      - (ID) Amazon.com 🇮🇩
-      - serverssh-valva141 [2205]
-      - liburpanjang [2005]
+      - free [2906]
+      - free [2906] 2
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
+      - Alibaba (US) 🇮🇩
       - CV. Rumahweb 🇮🇩
       - Shenzhen Tencent 🇯🇵
-      - (ID) Akamai Connected Cloud 🇮🇩
-      - (ID) Amazon.com 🇮🇩
-      - serverssh-valva141 [2205]
-      - liburpanjang [2005]
+      - free [2906]
+      - free [2906] 2
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
+      - Alibaba (US) 🇮🇩
       - CV. Rumahweb 🇮🇩
       - Shenzhen Tencent 🇯🇵
-      - (ID) Akamai Connected Cloud 🇮🇩
-      - (ID) Amazon.com 🇮🇩
-      - serverssh-valva141 [2205]
-      - liburpanjang [2005]
+      - free [2906]
+      - free [2906] 2
 rules:
   - MATCH,PROXY
