@@ -15,211 +15,51 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
-  - name: (free) [VMess - ws] TLS ✅ [1405]
-    server: ikd.lolicon.biz.id
+  - name: serverssh-valva143 [0406]
+    server: sg1grpc.serverssh.web.id
     port: 443
     type: vmess
-    uuid: 69c3b154-de74-4be7-b38c-b3c653c9bc17
+    uuid: c5e78a37-9f03-4716-bca9-fd7682a6bfd7
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
     servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: ikd.lolicon.biz.id
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc
     udp: true
-  - name: tendo WS (CDN) TLS [2604]
-    server: server-tendo.store
+  - name: free [2906]
+    server: aws.parael.me
     port: 443
-    type: vmess
-    uuid: 17e5c025-8f35-4d12-b99b-3b7dacde9823
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: 7dd1383c-a2bb-4d01-9933-f8b18eaadce2
     skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: server-tendo.store
+    sni: live.iflix.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: trojan-grpc
     udp: true
-  - name: serverssh-valva140 [0105]
-    server: sg1ray.serverssh.web.id
+  - name: free [2906] 2
+    server: aws.parael.me
     port: 443
-    type: vmess
-    uuid: a2505198-1960-4a39-b2cb-b159e0d34725
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: 7dd1383c-a2bb-4d01-9933-f8b18eaadce2
     skip-cert-verify: true
-    servername: live.iflix.com
+    sni: live.iflix.com
     network: ws
     ws-opts:
-      path: /serverssh.net
+      path: /xraytrojanws
       headers:
-        Host: sg1ray.serverssh.web.id
-    udp: true
-  - name: natanvpn
-    server: 8.round.web.id
-    port: 443
-    type: vless
-    uuid: d9e9a832-3168-4d16-943d-3c6e3cea240b
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: 8.round.web.id
-    udp: true
-  - name: natanvpn 2
-    server: 6.round.web.id
-    port: 443
-    type: vless
-    uuid: 4f94fbec-6fab-44f7-a049-9a1c482504b1
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: 6.round.web.id
-    udp: true
-  - name: natanvpn 3
-    server: 5.round.web.id
-    port: 443
-    type: vless
-    uuid: 2c55657b-580e-4807-a20e-834674197570
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: 5.round.web.id
-    udp: true
-  - name: natanvpn 4
-    server: 4.round.web.id
-    port: 443
-    type: vmess
-    uuid: 455b62f7-bdd6-4d4d-9902-8ba70ff8b0d6
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: 4.round.web.id
-    udp: true
-  - name: natanvpn 5
-    server: 3.round.web.id
-    port: 443
-    type: vmess
-    uuid: a47fad0d-ca39-4fb4-87b3-602c4cce0a73
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: 3.round.web.id
-    udp: true
-  - name: natanvpn 6
-    server: 2.round.web.id
-    port: 443
-    type: vmess
-    uuid: db18bbc5-3796-4d1b-8134-11d5b0f144dc
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: 2.round.web.id
-    udp: true
-  - name: natanvpn 7
-    server: 1.round.web.id
-    port: 443
-    type: vmess
-    uuid: 14a1f213-6aac-4f03-9a22-ed1816cdbc22
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: 1.round.web.id
-    udp: true
-  - name: kangvps WS (CDN) TLS [3004]
-    server: web.berbagi.xyz
-    port: 443
-    type: vmess
-    uuid: ed896add-a8b4-4f13-9d85-4eeaed93e955
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: web.berbagi.xyz
-    udp: true
-  - name: vmess_ws_https_8500sisa18stock_VVIP
-    server: speed.sing-box.space
-    port: 443
-    type: vmess
-    uuid: 5af1f5e5-d748-4b51-b5f1-de6c49e6b1ef
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /amazing-steps-to-programming-languages/buy-vmess-ws-pm-telegram-at-synricha
-      headers:
-        Host: speed.sing-box.space
+        Host: aws.parael.me
     udp: true
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - (free) [VMess - ws] TLS ✅ [1405]
-      - tendo WS (CDN) TLS [2604]
-      - serverssh-valva140 [0105]
-      - natanvpn
-      - natanvpn 2
-      - natanvpn 3
-      - natanvpn 4
-      - natanvpn 5
-      - natanvpn 6
-      - natanvpn 7
-      - kangvps WS (CDN) TLS [3004]
-      - vmess_ws_https_8500sisa18stock_VVIP
+      - serverssh-valva143 [0406]
+      - free [2906]
+      - free [2906] 2
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -230,52 +70,25 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - (free) [VMess - ws] TLS ✅ [1405]
-      - tendo WS (CDN) TLS [2604]
-      - serverssh-valva140 [0105]
-      - natanvpn
-      - natanvpn 2
-      - natanvpn 3
-      - natanvpn 4
-      - natanvpn 5
-      - natanvpn 6
-      - natanvpn 7
-      - kangvps WS (CDN) TLS [3004]
-      - vmess_ws_https_8500sisa18stock_VVIP
+      - serverssh-valva143 [0406]
+      - free [2906]
+      - free [2906] 2
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - (free) [VMess - ws] TLS ✅ [1405]
-      - tendo WS (CDN) TLS [2604]
-      - serverssh-valva140 [0105]
-      - natanvpn
-      - natanvpn 2
-      - natanvpn 3
-      - natanvpn 4
-      - natanvpn 5
-      - natanvpn 6
-      - natanvpn 7
-      - kangvps WS (CDN) TLS [3004]
-      - vmess_ws_https_8500sisa18stock_VVIP
+      - serverssh-valva143 [0406]
+      - free [2906]
+      - free [2906] 2
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - (free) [VMess - ws] TLS ✅ [1405]
-      - tendo WS (CDN) TLS [2604]
-      - serverssh-valva140 [0105]
-      - natanvpn
-      - natanvpn 2
-      - natanvpn 3
-      - natanvpn 4
-      - natanvpn 5
-      - natanvpn 6
-      - natanvpn 7
-      - kangvps WS (CDN) TLS [3004]
-      - vmess_ws_https_8500sisa18stock_VVIP
+      - serverssh-valva143 [0406]
+      - free [2906]
+      - free [2906] 2
 rules:
   - MATCH,PROXY
