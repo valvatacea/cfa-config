@@ -14,7 +14,7 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
-  - : Alibaba (US) 🇮🇩
+  - name: Alibaba (US) 🇮🇩
     server: 162.159.128.79
     port: 443
     type: vless
