@@ -5,61 +5,96 @@ mixed-port: 7893
 tproxy-port: 7895
 ipv6: false
 mode: rule
-log-level: info
+log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
-external-ui : '/data/adb/box/clash/dashboard'
-secret: ''
-bind-address: '*'
+secret: ""
+bind-address: "*"
 unified-delay: true
 profile:
   store-selected: true
 proxies:
-  - name: serverssh-valva143 [0406]
-    server: sg1grpc.serverssh.web.id
+  - name: serverssh-valva147
+    server: sg1ray.serverssh.web.id
     port: 443
     type: vmess
-    uuid: c5e78a37-9f03-4716-bca9-fd7682a6bfd7
+    uuid: a2bc256f-4e68-43ee-beaa-acfd1a8712e1
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
     servername: live.iflix.com
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc
+    network: ws
+    ws-opts:
+      path: /serverssh.net
+      headers:
+        Host: sg1ray.serverssh.web.id
     udp: true
-  - name: free [2906]
-    server: aws.parael.me
+  - name: bansos [1106]
+    server: jk.vpnshare.xyz
     port: 443
     type: trojan
-    password: 7dd1383c-a2bb-4d01-9933-f8b18eaadce2
-    skip-cert-verify: true
-    sni: live.iflix.com
-    network: grpc
-    grpc-opts:
-      grpc-service-name: trojan-grpc
-    udp: true
-  - name: free [2906] 2
-    server: aws.parael.me
-    port: 443
-    type: trojan
-    password: 7dd1383c-a2bb-4d01-9933-f8b18eaadce2
+    password: 323a0030-6a80-425c-a567-41ceafa18756
     skip-cert-verify: true
     sni: live.iflix.com
     network: ws
     ws-opts:
-      path: /xraytrojanws
+      path: /trojan-ws
       headers:
-        Host: aws.parael.me
+        Host: jk.vpnshare.xyz
+    udp: true
+  - name: XRAY_TROJAN_TLS_free [0309]
+    server: free.parael.me
+    port: 443
+    type: trojan
+    password: 2b4b2287-4ba2-4139-a52e-596240c84abf
+    skip-cert-verify: true
+    sni: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /trojan-tls
+      headers:
+        Host: free.parael.me
+    udp: true
+  - name: XRAY_VLESS_TLS_free [0309]
+    server: free.parael.me
+    port: 443
+    type: vless
+    uuid: 611d0db8-1037-486d-b805-4c0f47cba0ec
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vless-tls
+      headers:
+        Host: free.parael.me
+    udp: true
+  - name: XRAY_VLESS_TLS_free [0309] 2
+    server: free.parael.me
+    port: 443
+    type: vless
+    uuid: 611d0db8-1037-486d-b805-4c0f47cba0ec
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vless-tls
+      headers:
+        Host: free.parael.me
     udp: true
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - serverssh-valva143 [0406]
-      - free [2906]
-      - free [2906] 2
+      - serverssh-valva147
+      - bansos [1106]
+      - XRAY_TROJAN_TLS_free [0309]
+      - XRAY_VLESS_TLS_free [0309]
+      - XRAY_VLESS_TLS_free [0309] 2
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -70,25 +105,31 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - serverssh-valva143 [0406]
-      - free [2906]
-      - free [2906] 2
+      - serverssh-valva147
+      - bansos [1106]
+      - XRAY_TROJAN_TLS_free [0309]
+      - XRAY_VLESS_TLS_free [0309]
+      - XRAY_VLESS_TLS_free [0309] 2
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - serverssh-valva143 [0406]
-      - free [2906]
-      - free [2906] 2
+      - serverssh-valva147
+      - bansos [1106]
+      - XRAY_TROJAN_TLS_free [0309]
+      - XRAY_VLESS_TLS_free [0309]
+      - XRAY_VLESS_TLS_free [0309] 2
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - serverssh-valva143 [0406]
-      - free [2906]
-      - free [2906] 2
+      - serverssh-valva147
+      - bansos [1106]
+      - XRAY_TROJAN_TLS_free [0309]
+      - XRAY_VLESS_TLS_free [0309]
+      - XRAY_VLESS_TLS_free [0309] 2
 rules:
   - MATCH,PROXY
