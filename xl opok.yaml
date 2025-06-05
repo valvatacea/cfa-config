@@ -5,12 +5,11 @@ mixed-port: 7893
 tproxy-port: 7895
 ipv6: false
 mode: rule
-log-level: info
+log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
-external-ui : '/data/adb/box/clash/dashboard'
-secret: ''
-bind-address: '*'
+secret: ""
+bind-address: "*"
 unified-delay: true
 profile:
   store-selected: true
@@ -45,44 +44,12 @@ proxies:
       headers:
         Host: aio.loophole.biz.id
     udp: true
-  - name: (ID) Akamai Connected Cloud 🇮🇩
-    server: ovo.id
-    port: 80
-    type: vless
-    uuid: e627d2b0-1eb1-4f7b-a862-5770055cff0d
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: aink.workerz.site
-    network: ws
-    ws-opts:
-      path: /Novan-ID6
-      headers:
-        Host: aink.workerz.site
-    udp: true
-  - name: (ID) Amazon.com 🇮🇩
-    server: ovo.id
-    port: 80
-    type: vless
-    uuid: a90654e1-1237-4446-a985-901b5ce2308b
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: aink.workerz.site
-    network: ws
-    ws-opts:
-      path: /Novan-ID2
-      headers:
-        Host: aink.workerz.site
-    udp: true
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
       - CV. Rumahweb 🇮🇩
       - Shenzhen Tencent 🇯🇵
-      - (ID) Akamai Connected Cloud 🇮🇩
-      - (ID) Amazon.com 🇮🇩
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -95,8 +62,6 @@ proxy-groups:
     proxies:
       - CV. Rumahweb 🇮🇩
       - Shenzhen Tencent 🇯🇵
-      - (ID) Akamai Connected Cloud 🇮🇩
-      - (ID) Amazon.com 🇮🇩
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
@@ -105,8 +70,6 @@ proxy-groups:
     proxies:
       - CV. Rumahweb 🇮🇩
       - Shenzhen Tencent 🇯🇵
-      - (ID) Akamai Connected Cloud 🇮🇩
-      - (ID) Amazon.com 🇮🇩
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
@@ -114,7 +77,5 @@ proxy-groups:
     proxies:
       - CV. Rumahweb 🇮🇩
       - Shenzhen Tencent 🇯🇵
-      - (ID) Akamai Connected Cloud 🇮🇩
-      - (ID) Amazon.com 🇮🇩
 rules:
   - MATCH,PROXY
