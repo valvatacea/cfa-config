@@ -1,5 +1,6 @@
 vless://2375f8e0-5739-4200-847a-4a4183cb68c6@162.159.128.79:443?path=%2Faioproxybot%2F8.215.59.6-443&security=tls&encryption=none&host=aio.eth0.dpdns.org&fp=randomized&type=ws&sni=aio.eth0.dpdns.org#Alibaba%20%28US%29%20%F0%9F%87%AE%F0%9F%87%A9
 vless://fbe8907b-664c-4b32-ac35-268cfac636d0@162.159.128.79:443?path=%2Faioproxybot%2F203.194.112.119-8443&security=tls&encryption=none&host=aio.eth0.dpdns.org&fp=randomized&type=ws&sni=aio.eth0.dpdns.org#CV.%20Rumahweb%20%F0%9F%87%AE%F0%9F%87%A9
 vless://ef149c00-2a47-4209-8f82-586342adb4d2@162.159.128.79:443?path=%2Faioproxybot%2F43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen%20Tencent%20%F0%9F%87%AF%F0%9F%87%B5
+vless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@162.159.128.79:443?path=%2Fbusiness&security=tls&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft%20SG%20Business%20Plan
 vless://548c40e7-6666-4270-ad02-9d93c1d04141@162.159.128.79:443?path=%2FClub-Gratis%2F&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS%20TLS%20%5B%20IG%20%5D
 vless://611d0db8-1037-486d-b805-4c0f47cba0ec@162.159.128.79:443?path=%2Fvless-tls&security=tls&encryption=none&host=free.parael.me&type=ws&sni=free.parael.me#XRAY_VLESS_TLS_free%20%5B0309%5D
