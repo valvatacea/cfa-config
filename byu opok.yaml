@@ -59,29 +59,50 @@ proxies:
       headers:
         Host: aio.loophole.biz.id
     udp: true
-  - name: free [2906]
+  - name: Microsoft SG Business Plan
     server: 162.159.128.79
     port: 443
-    type: trojan
-    password: 7dd1383c-a2bb-4d01-9933-f8b18eaadce2
+    type: vless
+    uuid: 908379e8-fef9-4bdb-bff9-bce0d22ae0dc
+    cipher: auto
+    tls: true
     skip-cert-verify: true
-    sni: aws.parael.me
-    network: grpc
-    grpc-opts:
-      grpc-service-name: trojan-grpc
-    udp: true
-  - name: free [2906] 2
-    server: 162.159.128.79
-    port: 443
-    type: trojan
-    password: 7dd1383c-a2bb-4d01-9933-f8b18eaadce2
-    skip-cert-verify: true
-    sni: aws.parael.me
+    servername: check.approvedcard.xyz
     network: ws
     ws-opts:
-      path: /xraytrojanws
+      path: /business
       headers:
-        Host: aws.parael.me
+        Host: check.approvedcard.xyz
+    udp: true
+  - name: VLESS TLS [ IG ]
+    server: 162.159.128.79
+    port: 443
+    type: vless
+    uuid: 548c40e7-6666-4270-ad02-9d93c1d04141
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: myxl.dpdns.org
+    network: ws
+    ws-opts:
+      path: /Club-Gratis/
+      headers:
+        Host: myxl.dpdns.org
+    udp: true
+  - name: XRAY_VLESS_TLS_free [0309]
+    server: 162.159.128.79
+    port: 443
+    type: vless
+    uuid: 611d0db8-1037-486d-b805-4c0f47cba0ec
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: free.parael.me
+    network: ws
+    ws-opts:
+      path: /vless-tls
+      headers:
+        Host: free.parael.me
     udp: true
 proxy-groups:
   - name: PROXY
@@ -90,8 +111,9 @@ proxy-groups:
       - Alibaba (US) 🇮🇩
       - CV. Rumahweb 🇮🇩
       - Shenzhen Tencent 🇯🇵
-      - free [2906]
-      - free [2906] 2
+      - Microsoft SG Business Plan
+      - VLESS TLS [ IG ]
+      - XRAY_VLESS_TLS_free [0309]
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -105,8 +127,9 @@ proxy-groups:
       - Alibaba (US) 🇮🇩
       - CV. Rumahweb 🇮🇩
       - Shenzhen Tencent 🇯🇵
-      - free [2906]
-      - free [2906] 2
+      - Microsoft SG Business Plan
+      - VLESS TLS [ IG ]
+      - XRAY_VLESS_TLS_free [0309]
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
@@ -116,8 +139,9 @@ proxy-groups:
       - Alibaba (US) 🇮🇩
       - CV. Rumahweb 🇮🇩
       - Shenzhen Tencent 🇯🇵
-      - free [2906]
-      - free [2906] 2
+      - Microsoft SG Business Plan
+      - VLESS TLS [ IG ]
+      - XRAY_VLESS_TLS_free [0309]
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
@@ -126,7 +150,8 @@ proxy-groups:
       - Alibaba (US) 🇮🇩
       - CV. Rumahweb 🇮🇩
       - Shenzhen Tencent 🇯🇵
-      - free [2906]
-      - free [2906] 2
+      - Microsoft SG Business Plan
+      - VLESS TLS [ IG ]
+      - XRAY_VLESS_TLS_free [0309]
 rules:
   - MATCH,PROXY
