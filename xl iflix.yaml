@@ -14,11 +14,11 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
-  - name: serverssh-valva147
+  - name: serverssh-valva148 [2106]
     server: sg1ray.serverssh.web.id
     port: 443
     type: vmess
-    uuid: a2bc256f-4e68-43ee-beaa-acfd1a8712e1
+    uuid: df8a1b5d-7ee8-4564-8464-f7b5686219d3
     alterId: 0
     cipher: auto
     tls: true
@@ -30,18 +30,21 @@ proxies:
       headers:
         Host: sg1ray.serverssh.web.id
     udp: true
-  - name: bansos [1106]
-    server: jk.vpnshare.xyz
+  - name: nadia
+    server: nadia.wilcardvpn.my.id
     port: 443
-    type: trojan
-    password: 323a0030-6a80-425c-a567-41ceafa18756
+    type: vmess
+    uuid: 21ff4f4f-2bb2-4ecc-a5c3-fc6121359592
+    alterId: 0
+    cipher: auto
+    tls: true
     skip-cert-verify: true
-    sni: live.iflix.com
+    servername: live.iflix.com
     network: ws
     ws-opts:
-      path: /trojan-ws
+      path: /vmess
       headers:
-        Host: jk.vpnshare.xyz
+        Host: nadia.wilcardvpn.my.id
     udp: true
   - name: XRAY_TROJAN_TLS_free [0309]
     server: free.parael.me
@@ -71,30 +74,14 @@ proxies:
       headers:
         Host: free.parael.me
     udp: true
-  - name: XRAY_VLESS_TLS_free [0309] 2
-    server: free.parael.me
-    port: 443
-    type: vless
-    uuid: 611d0db8-1037-486d-b805-4c0f47cba0ec
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /vless-tls
-      headers:
-        Host: free.parael.me
-    udp: true
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - serverssh-valva147
-      - bansos [1106]
+      - serverssh-valva148 [2106]
+      - nadia
       - XRAY_TROJAN_TLS_free [0309]
       - XRAY_VLESS_TLS_free [0309]
-      - XRAY_VLESS_TLS_free [0309] 2
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -105,31 +92,28 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - serverssh-valva147
-      - bansos [1106]
+      - serverssh-valva148 [2106]
+      - nadia
       - XRAY_TROJAN_TLS_free [0309]
       - XRAY_VLESS_TLS_free [0309]
-      - XRAY_VLESS_TLS_free [0309] 2
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - serverssh-valva147
-      - bansos [1106]
+      - serverssh-valva148 [2106]
+      - nadia
       - XRAY_TROJAN_TLS_free [0309]
       - XRAY_VLESS_TLS_free [0309]
-      - XRAY_VLESS_TLS_free [0309] 2
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - serverssh-valva147
-      - bansos [1106]
+      - serverssh-valva148 [2106]
+      - nadia
       - XRAY_TROJAN_TLS_free [0309]
       - XRAY_VLESS_TLS_free [0309]
-      - XRAY_VLESS_TLS_free [0309] 2
 rules:
   - MATCH,PROXY
