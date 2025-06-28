@@ -1,4 +1,6 @@
 vmess://eyJhZGQiOiJzZzFyYXkuc2VydmVyc3NoLndlYi5pZCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0Ijoic2cxcmF5LnNlcnZlcnNzaC53ZWIuaWQiLCJpZCI6IjEzMDNiN2QxLTg2YWYtNDE3OC1hNmQwLTJhYWJlYWUyYjEzMSIsIm5ldCI6IndzIiwicGF0aCI6Ii9zZXJ2ZXJzc2gubmV0IiwicG9ydCI6IjQ0MyIsInBzIjoic2VydmVyc3NoLXZhbHZhMTQ3Iiwic2N5IjoiYXV0byIsInNuaSI6ImxpdmUuaWZsaXguY29tIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-vless://2086f266-66f0-4b81-9e1a-20bd40bcc79c@1.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=1.round.web.id&type=ws&sni=live.iflix.com#natanvpn
-vless://2a2e6585-b022-4983-b53e-f2e01c80e5e4@7.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=7.round.web.id&type=ws&sni=live.iflix.com#natanvpn
-vless://4f0e165b-fc41-49a2-9440-a839e382f879@11.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=11.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+trojan://natanvpn@11.round.web.id:443?path=%2Ftrojan&security=tls&host=11.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+trojan://natanvpn@7.round.web.id:443?path=%2Ftrojan&security=tls&host=7.round.web.id&type=ws&sni=7.round.web.id#natanvpn
+trojan://natanvpn@3.round.web.id:443?path=%2Ftrojan&security=tls&host=3.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+trojan://natanvpn@2.round.web.id:443?path=%2Ftrojan&security=tls&host=2.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+trojan://natanvpn@1.round.web.id:443?path=%2Ftrojan&security=tls&host=1.round.web.id&type=ws&sni=live.iflix.com#natanvpn
