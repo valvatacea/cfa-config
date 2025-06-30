@@ -4,3 +4,8 @@ trojan://natanvpn@7.round.web.id:443?path=%2Ftrojan&security=tls&host=7.round.we
 trojan://natanvpn@3.round.web.id:443?path=%2Ftrojan&security=tls&host=3.round.web.id&type=ws&sni=live.iflix.com#natanvpn
 trojan://natanvpn@2.round.web.id:443?path=%2Ftrojan&security=tls&host=2.round.web.id&type=ws&sni=live.iflix.com#natanvpn
 trojan://natanvpn@1.round.web.id:443?path=%2Ftrojan&security=tls&host=1.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+vless://93b3b923-de5b-4d40-8548-87dc67a3bc03@7.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=7.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+vless://5e2d1ac6-5023-4a8d-aedc-87186af74385@11.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=11.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+vless://927fc392-4189-4cfe-b193-3523a470887d@3.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=3.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+vless://2b7819f0-b1ce-4a93-8f36-621b6afaee9c@2.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=2.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+vless://2f333212-8ab7-4f76-b367-bb93c093e926@1.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=1.round.web.id&type=ws&sni=live.iflix.com#natanvpn
