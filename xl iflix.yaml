@@ -1,0 +1,157 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+proxies:
+  - name: natanvpn
+    server: 1.round.web.id
+    port: 443
+    type: vless
+    uuid: a0662fee-bc47-4ef1-a711-a382a635a152
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: 1.round.web.id
+    udp: true
+  - name: natanvpn 2
+    server: 2.round.web.id
+    port: 443
+    type: vless
+    uuid: 195a0dc7-2065-4644-b804-e0010eb10ce9
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: 2.round.web.id
+    udp: true
+  - name: natanvpn 3
+    server: 3.round.web.id
+    port: 443
+    type: vless
+    uuid: 0775a547-5cec-408e-b290-eb50947c8ba9
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: 3.round.web.id
+    udp: true
+  - name: natanvpn 4
+    server: 4.round.web.id
+    port: 443
+    type: vless
+    uuid: 96fcd34c-c893-4064-b10a-19d9ac16603a
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: 4.round.web.id
+    udp: true
+  - name: natanvpn 5
+    server: 11.round.web.id
+    port: 443
+    type: vless
+    uuid: 083530ce-bec3-45e7-b8b6-7191e961a378
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: 11.round.web.id
+    udp: true
+  - name: vless-ws-tls [0412
+    server: free.mediafairy.site
+    port: 443
+    type: vless
+    uuid: a4ba8074-2c32-4875-b946-b3f452ddcf57
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vless-ws
+      headers:
+        Host: free.mediafairy.site
+    udp: true
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - natanvpn
+      - natanvpn 2
+      - natanvpn 3
+      - natanvpn 4
+      - natanvpn 5
+      - vless-ws-tls [0412
+      - LOAD-BALANCE
+      - BEST-PING
+      - FALLBACK
+      - DIRECT
+  - name: LOAD-BALANCE
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - natanvpn
+      - natanvpn 2
+      - natanvpn 3
+      - natanvpn 4
+      - natanvpn 5
+      - vless-ws-tls [0412
+  - name: BEST-PING
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+      - natanvpn
+      - natanvpn 2
+      - natanvpn 3
+      - natanvpn 4
+      - natanvpn 5
+      - vless-ws-tls [0412
+  - name: FALLBACK
+    type: fallback
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - natanvpn
+      - natanvpn 2
+      - natanvpn 3
+      - natanvpn 4
+      - natanvpn 5
+      - vless-ws-tls [0412
+rules:
+  - MATCH,PROXY
