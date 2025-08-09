@@ -14,74 +14,90 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
-  - name: serverssh-valva148 [2106]
-    server: sg1ray.serverssh.web.id
-    port: 443
-    type: vmess
-    uuid: df8a1b5d-7ee8-4564-8464-f7b5686219d3
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /serverssh.net
-      headers:
-        Host: sg1ray.serverssh.web.id
-    udp: true
-  - name: nadia
-    server: nadia.wilcardvpn.my.id
-    port: 443
-    type: vmess
-    uuid: 21ff4f4f-2bb2-4ecc-a5c3-fc6121359592
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: nadia.wilcardvpn.my.id
-    udp: true
-  - name: XRAY_TROJAN_TLS_free [0309]
-    server: free.parael.me
-    port: 443
-    type: trojan
-    password: 2b4b2287-4ba2-4139-a52e-596240c84abf
-    skip-cert-verify: true
-    sni: live.iflix.com
-    network: ws
-    ws-opts:
-      path: /trojan-tls
-      headers:
-        Host: free.parael.me
-    udp: true
-  - name: XRAY_VLESS_TLS_free [0309]
-    server: free.parael.me
+  - name: natanvpn
+    server: 1.round.web.id
     port: 443
     type: vless
-    uuid: 611d0db8-1037-486d-b805-4c0f47cba0ec
+    uuid: a0662fee-bc47-4ef1-a711-a382a635a152
     cipher: auto
     tls: true
     skip-cert-verify: true
     servername: live.iflix.com
     network: ws
     ws-opts:
-      path: /vless-tls
+      path: /vless
       headers:
-        Host: free.parael.me
+        Host: 1.round.web.id
+    udp: true
+  - name: natanvpn 2
+    server: 2.round.web.id
+    port: 443
+    type: vless
+    uuid: 195a0dc7-2065-4644-b804-e0010eb10ce9
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: 2.round.web.id
+    udp: true
+  - name: natanvpn 3
+    server: 3.round.web.id
+    port: 443
+    type: vless
+    uuid: 0775a547-5cec-408e-b290-eb50947c8ba9
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: 3.round.web.id
+    udp: true
+  - name: natanvpn 4
+    server: 4.round.web.id
+    port: 443
+    type: vless
+    uuid: 96fcd34c-c893-4064-b10a-19d9ac16603a
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: 4.round.web.id
+    udp: true
+  - name: natanvpn 5
+    server: 11.round.web.id
+    port: 443
+    type: vless
+    uuid: 083530ce-bec3-45e7-b8b6-7191e961a378
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: 11.round.web.id
     udp: true
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - serverssh-valva148 [2106]
-      - nadia
-      - XRAY_TROJAN_TLS_free [0309]
-      - XRAY_VLESS_TLS_free [0309]
+      - natanvpn
+      - natanvpn 2
+      - natanvpn 3
+      - natanvpn 4
+      - natanvpn 5
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
@@ -92,28 +108,31 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - serverssh-valva148 [2106]
-      - nadia
-      - XRAY_TROJAN_TLS_free [0309]
-      - XRAY_VLESS_TLS_free [0309]
+      - natanvpn
+      - natanvpn 2
+      - natanvpn 3
+      - natanvpn 4
+      - natanvpn 5
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - serverssh-valva148 [2106]
-      - nadia
-      - XRAY_TROJAN_TLS_free [0309]
-      - XRAY_VLESS_TLS_free [0309]
+      - natanvpn
+      - natanvpn 2
+      - natanvpn 3
+      - natanvpn 4
+      - natanvpn 5
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - serverssh-valva148 [2106]
-      - nadia
-      - XRAY_TROJAN_TLS_free [0309]
-      - XRAY_VLESS_TLS_free [0309]
+      - natanvpn
+      - natanvpn 2
+      - natanvpn 3
+      - natanvpn 4
+      - natanvpn 5
 rules:
   - MATCH,PROXY
