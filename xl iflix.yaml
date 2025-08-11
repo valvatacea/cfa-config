@@ -15,10 +15,10 @@ profile:
   store-selected: true
 proxies:
   - name: natanvpn
-    server: 1.round.web.id
+    server: 11.round.web.id
     port: 443
     type: vless
-    uuid: a0662fee-bc47-4ef1-a711-a382a635a152
+    uuid: d957b0ad-fa99-409b-9aad-d102287efba4
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -27,13 +27,13 @@ proxies:
     ws-opts:
       path: /vless
       headers:
-        Host: 1.round.web.id
+        Host: 11.round.web.id
     udp: true
   - name: natanvpn 2
-    server: 2.round.web.id
+    server: 4.round.web.id
     port: 443
     type: vless
-    uuid: 195a0dc7-2065-4644-b804-e0010eb10ce9
+    uuid: 5926b571-f81b-4d0f-a827-a09d0b7b6d01
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -42,13 +42,13 @@ proxies:
     ws-opts:
       path: /vless
       headers:
-        Host: 2.round.web.id
+        Host: 4.round.web.id
     udp: true
   - name: natanvpn 3
     server: 3.round.web.id
     port: 443
     type: vless
-    uuid: 0775a547-5cec-408e-b290-eb50947c8ba9
+    uuid: 2e637ac2-674b-4652-b03b-a47a71675178
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -60,10 +60,10 @@ proxies:
         Host: 3.round.web.id
     udp: true
   - name: natanvpn 4
-    server: 4.round.web.id
+    server: 2.round.web.id
     port: 443
     type: vless
-    uuid: 96fcd34c-c893-4064-b10a-19d9ac16603a
+    uuid: 112ce6c2-258f-42e2-936a-f4667f9f7a6c
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -72,13 +72,13 @@ proxies:
     ws-opts:
       path: /vless
       headers:
-        Host: 4.round.web.id
+        Host: 2.round.web.id
     udp: true
   - name: natanvpn 5
-    server: 11.round.web.id
+    server: 1.round.web.id
     port: 443
     type: vless
-    uuid: 083530ce-bec3-45e7-b8b6-7191e961a378
+    uuid: 2ea96bbe-e691-4b13-84f3-bfef12a6dbf3
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -87,7 +87,7 @@ proxies:
     ws-opts:
       path: /vless
       headers:
-        Host: 11.round.web.id
+        Host: 1.round.web.id
     udp: true
   - name: vless-ws-tls [0412
     server: free.mediafairy.site
