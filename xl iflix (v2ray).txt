@@ -2,3 +2,11 @@ vless://d78ac0ca-96fa-4b01-9b6d-b40284b5dfb2@sg2-full.privateip.net:443?path=%2F
 trojan://z_tGAa9ulvZMcquwx6EcGw@vip.ndygaming.store:443?path=%2Ftrojan&security=tls&alpn=http%2F1.1&host=vip.ndygaming.store&type=ws&sni=live.iflix.com#%28aswgaming%29%20%5BTrojan%20-%20ws%5D%20TLS%20%E2%9C%85%20iflix
 vless://20f0bd52-3dab-48d3-a288-32b7bde20c19@vip.ndygaming.store:443?path=%2Fvless&security=tls&alpn=http%2F1.1&encryption=none&host=vip.ndygaming.store&fp=chrome&type=ws&sni=live.iflix.com#%28aswgaming%29%20%5BVLESS%20-%20ws%5D%20TLS%20%E2%9C%85%20iflix
 vmess://eyJhZGQiOiJ2aXAubmR5Z2FtaW5nLnN0b3JlIiwiYWlkIjoiMCIsImFscG4iOiJodHRwLzEuMSIsImZwIjoiY2hyb21lIiwiaG9zdCI6InZpcC5uZHlnYW1pbmcuc3RvcmUiLCJpZCI6ImMxOTEyZDBjLTc2OGItNDM4Ni1hOGFlLTBhMmI2OGU4OTJlNiIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcyIsInBvcnQiOiI0NDMiLCJwcyI6Iihhc3dnYW1pbmcpIFtWTWVzcyAtIHdzXSBUTFMg4pyFIGlmbGl4Iiwic2N5IjoiYXV0byIsInNuaSI6ImxpdmUuaWZsaXguY29tIiwidGxzIjoidGxzIiwidHlwZSI6Ii0tLSIsInYiOiIyIn0=
+vless://309a0428-e66f-4514-a68c-c4f4529c9ee7@11.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=11.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+vless://ce3781ed-9bda-45f0-824d-8211faea56fa@1.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=1.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+vless://febb10e8-acb0-4167-b10f-38b995bc786a@7.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=7.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+vless://943e4475-7223-406d-994c-4151800114ba@6.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=6.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+vless://f5054379-69ad-4f75-9969-b8b0e2bbfd1b@5.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=5.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+vless://ccbbf583-b415-493f-bbb7-e0fd5f17a274@4.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=4.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+vless://183267ff-dfee-487a-9d6e-e63184cb3c00@3.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=3.round.web.id&type=ws&sni=live.iflix.com#natanvpn
+vless://e36eb75a-6820-4b8b-8e26-b49033724332@2.round.web.id:443?path=%2Fvless&security=tls&encryption=none&host=2.round.web.id&type=ws&sni=live.iflix.com#natanvpn
