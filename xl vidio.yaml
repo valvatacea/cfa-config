@@ -1,0 +1,138 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+proxies:
+  - name: 3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]
+    server: quiz.int.vidio.com
+    port: 443
+    type: vless
+    uuid: 489f2dff-9de4-410d-8c9f-2476d702ab64
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: rest.web.id
+    network: ws
+    ws-opts:
+      path: /203.194.112.119-2053
+      headers:
+        Host: rest.web.id
+    udp: true
+  - name: "- PT Mitra Visioner Pratama"
+    server: quiz.int.vidio.com
+    port: 443
+    type: vless
+    uuid: 1b314859-3219-49b6-9a31-5c45b2896e90
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: www.vlessworker.xyz
+    network: ws
+    ws-opts:
+      path: /172.252.8.168-443
+      headers:
+        Host: www.vlessworker.xyz
+    udp: true
+  - name: Shenzhen Tencent 🇯🇵
+    server: quiz.int.vidio.com
+    port: 443
+    type: vless
+    uuid: ef149c00-2a47-4209-8f82-586342adb4d2
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: aio.loophole.biz.id
+    network: ws
+    ws-opts:
+      path: /aioproxybot/43.163.207.12-52025
+      headers:
+        Host: aio.loophole.biz.id
+    udp: true
+  - name: VLESS TLS [ IG ]
+    server: quiz.int.vidio.com
+    port: 443
+    type: vless
+    uuid: 548c40e7-6666-4270-ad02-9d93c1d04141
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: myxl.dpdns.org
+    network: ws
+    ws-opts:
+      path: /Club-Gratis/
+      headers:
+        Host: myxl.dpdns.org
+    udp: true
+  - name: Microsoft SG Business Plan
+    server: quiz.int.vidio.com
+    port: 443
+    type: vless
+    uuid: 908379e8-fef9-4bdb-bff9-bce0d22ae0dc
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: check.approvedcard.xyz
+    network: ws
+    ws-opts:
+      path: /business
+      headers:
+        Host: check.approvedcard.xyz
+    udp: true
+proxy-groups:
+  - name: FASTSSH-SSHKIT-HOWDY
+    type: select
+    proxies:
+      - 3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]
+      - "- PT Mitra Visioner Pratama"
+      - Shenzhen Tencent 🇯🇵
+      - VLESS TLS [ IG ]
+      - Microsoft SG Business Plan
+      - LOAD-BALANCE
+      - BEST-PING
+      - FALLBACK
+      - DIRECT
+  - name: LOAD-BALANCE
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - 3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]
+      - "- PT Mitra Visioner Pratama"
+      - Shenzhen Tencent 🇯🇵
+      - VLESS TLS [ IG ]
+      - Microsoft SG Business Plan
+  - name: BEST-PING
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]
+      - "- PT Mitra Visioner Pratama"
+      - Shenzhen Tencent 🇯🇵
+      - VLESS TLS [ IG ]
+      - Microsoft SG Business Plan
+  - name: FALLBACK
+    type: fallback
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - 3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]
+      - "- PT Mitra Visioner Pratama"
+      - Shenzhen Tencent 🇯🇵
+      - VLESS TLS [ IG ]
+      - Microsoft SG Business Plan
+rules:
+  - MATCH,FASTSSH-SSHKIT-HOWDY
