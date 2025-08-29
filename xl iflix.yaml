@@ -14,201 +14,27 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
-- name: vless-ws-tls [1708]
-  server: sg2-full.privateip.net
-  port: 443
-  type: vless
-  uuid: d78ac0ca-96fa-4b01-9b6d-b40284b5dfb2
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: live.iflix.com
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: sg2-full.privateip.net
-  udp: true
-- name: (aswgaming) [Trojan - ws] TLS ✅ iflix
-  server: vip.ndygaming.store
-  port: 443
-  type: trojan
-  password: z_tGAa9ulvZMcquwx6EcGw
-  skip-cert-verify: true
-  sni: live.iflix.com
-  network: ws
-  ws-opts:
-    path: /trojan
-    headers:
-      Host: vip.ndygaming.store
-  udp: true
-- name: (aswgaming) [VLESS - ws] TLS ✅ iflix
-  server: vip.ndygaming.store
-  port: 443
-  type: vless
-  uuid: 20f0bd52-3dab-48d3-a288-32b7bde20c19
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: live.iflix.com
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: vip.ndygaming.store
-  udp: true
-- name: (aswgaming) [VMess - ws] TLS ✅ iflix
+- name: jatim-pride
   type: vmess
-  server: vip.ndygaming.store
+  server: sambal-ijo.premiumm.shop
   port: 443
-  uuid: c1912d0c-768b-4386-a8ae-0a2b68e892e6
+  uuid: kyo-store
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
   network: ws
-  servername: vip.ndygaming.store
+  servername: sambal-ijo.premiumm.shop
   ws-opts:
     path: /vmess
     headers:
-      Host: vip.ndygaming.store
-  udp: true
-- name: natanvpn
-  server: 11.round.web.id
-  port: 443
-  type: vless
-  uuid: 309a0428-e66f-4514-a68c-c4f4529c9ee7
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: live.iflix.com
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 11.round.web.id
-  udp: true
-- name: natanvpn-72
-  server: 1.round.web.id
-  port: 443
-  type: vless
-  uuid: ce3781ed-9bda-45f0-824d-8211faea56fa
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: live.iflix.com
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 1.round.web.id
-  udp: true
-- name: natanvpn-8
-  server: 7.round.web.id
-  port: 443
-  type: vless
-  uuid: febb10e8-acb0-4167-b10f-38b995bc786a
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: live.iflix.com
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 7.round.web.id
-  udp: true
-- name: natanvpn-93
-  server: 6.round.web.id
-  port: 443
-  type: vless
-  uuid: 943e4475-7223-406d-994c-4151800114ba
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: live.iflix.com
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 6.round.web.id
-  udp: true
-- name: natanvpn-27
-  server: 5.round.web.id
-  port: 443
-  type: vless
-  uuid: f5054379-69ad-4f75-9969-b8b0e2bbfd1b
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: live.iflix.com
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 5.round.web.id
-  udp: true
-- name: natanvpn-90
-  server: 4.round.web.id
-  port: 443
-  type: vless
-  uuid: ccbbf583-b415-493f-bbb7-e0fd5f17a274
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: live.iflix.com
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 4.round.web.id
-  udp: true
-- name: natanvpn-11
-  server: 3.round.web.id
-  port: 443
-  type: vless
-  uuid: 183267ff-dfee-487a-9d6e-e63184cb3c00
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: live.iflix.com
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 3.round.web.id
-  udp: true
-- name: natanvpn-47
-  server: 2.round.web.id
-  port: 443
-  type: vless
-  uuid: e36eb75a-6820-4b8b-8e26-b49033724332
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: live.iflix.com
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 2.round.web.id
+      Host: sambal-ijo.premiumm.shop
   udp: true
 proxy-groups:
 - name: Friendly_Teams
   type: select
   proxies:
-  - vless-ws-tls [1708]
-  - (aswgaming) [Trojan - ws] TLS ✅ iflix
-  - (aswgaming) [VLESS - ws] TLS ✅ iflix
-  - (aswgaming) [VMess - ws] TLS ✅ iflix
-  - natanvpn
-  - natanvpn-72
-  - natanvpn-8
-  - natanvpn-93
-  - natanvpn-27
-  - natanvpn-90
-  - natanvpn-11
-  - natanvpn-47
+  - jatim-pride
   - GAME
   - SOSMED
   - WA
@@ -222,98 +48,32 @@ proxy-groups:
 - name: GAME
   type: select
   proxies:
-  - vless-ws-tls [1708]
-  - (aswgaming) [Trojan - ws] TLS ✅ iflix
-  - (aswgaming) [VLESS - ws] TLS ✅ iflix
-  - (aswgaming) [VMess - ws] TLS ✅ iflix
-  - natanvpn
-  - natanvpn-72
-  - natanvpn-8
-  - natanvpn-93
-  - natanvpn-27
-  - natanvpn-90
-  - natanvpn-11
-  - natanvpn-47
+  - jatim-pride
   - DIRECT
 - name: SOSMED
   type: select
   proxies:
-  - vless-ws-tls [1708]
-  - (aswgaming) [Trojan - ws] TLS ✅ iflix
-  - (aswgaming) [VLESS - ws] TLS ✅ iflix
-  - (aswgaming) [VMess - ws] TLS ✅ iflix
-  - natanvpn
-  - natanvpn-72
-  - natanvpn-8
-  - natanvpn-93
-  - natanvpn-27
-  - natanvpn-90
-  - natanvpn-11
-  - natanvpn-47
+  - jatim-pride
   - DIRECT
 - name: WA
   type: select
   proxies:
-  - vless-ws-tls [1708]
-  - (aswgaming) [Trojan - ws] TLS ✅ iflix
-  - (aswgaming) [VLESS - ws] TLS ✅ iflix
-  - (aswgaming) [VMess - ws] TLS ✅ iflix
-  - natanvpn
-  - natanvpn-72
-  - natanvpn-8
-  - natanvpn-93
-  - natanvpn-27
-  - natanvpn-90
-  - natanvpn-11
-  - natanvpn-47
+  - jatim-pride
   - DIRECT
 - name: YOUTUBE
   type: select
   proxies:
-  - vless-ws-tls [1708]
-  - (aswgaming) [Trojan - ws] TLS ✅ iflix
-  - (aswgaming) [VLESS - ws] TLS ✅ iflix
-  - (aswgaming) [VMess - ws] TLS ✅ iflix
-  - natanvpn
-  - natanvpn-72
-  - natanvpn-8
-  - natanvpn-93
-  - natanvpn-27
-  - natanvpn-90
-  - natanvpn-11
-  - natanvpn-47
+  - jatim-pride
   - DIRECT
 - name: STREAMING-ID
   type: select
   proxies:
-  - vless-ws-tls [1708]
-  - (aswgaming) [Trojan - ws] TLS ✅ iflix
-  - (aswgaming) [VLESS - ws] TLS ✅ iflix
-  - (aswgaming) [VMess - ws] TLS ✅ iflix
-  - natanvpn
-  - natanvpn-72
-  - natanvpn-8
-  - natanvpn-93
-  - natanvpn-27
-  - natanvpn-90
-  - natanvpn-11
-  - natanvpn-47
+  - jatim-pride
   - DIRECT
 - name: AdsBLOCK
   type: select
   proxies:
-  - vless-ws-tls [1708]
-  - (aswgaming) [Trojan - ws] TLS ✅ iflix
-  - (aswgaming) [VLESS - ws] TLS ✅ iflix
-  - (aswgaming) [VMess - ws] TLS ✅ iflix
-  - natanvpn
-  - natanvpn-72
-  - natanvpn-8
-  - natanvpn-93
-  - natanvpn-27
-  - natanvpn-90
-  - natanvpn-11
-  - natanvpn-47
+  - jatim-pride
   - REJECT
 - name: LOAD-BALANCE
   type: load-balance
@@ -321,53 +81,20 @@ proxy-groups:
   url: http://hi.bonds.id/ping
   interval: 300
   proxies:
-  - vless-ws-tls [1708]
-  - (aswgaming) [Trojan - ws] TLS ✅ iflix
-  - (aswgaming) [VLESS - ws] TLS ✅ iflix
-  - (aswgaming) [VMess - ws] TLS ✅ iflix
-  - natanvpn
-  - natanvpn-72
-  - natanvpn-8
-  - natanvpn-93
-  - natanvpn-27
-  - natanvpn-90
-  - natanvpn-11
-  - natanvpn-47
+  - jatim-pride
 - name: BEST-PING
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
-  - vless-ws-tls [1708]
-  - (aswgaming) [Trojan - ws] TLS ✅ iflix
-  - (aswgaming) [VLESS - ws] TLS ✅ iflix
-  - (aswgaming) [VMess - ws] TLS ✅ iflix
-  - natanvpn
-  - natanvpn-72
-  - natanvpn-8
-  - natanvpn-93
-  - natanvpn-27
-  - natanvpn-90
-  - natanvpn-11
-  - natanvpn-47
+  - jatim-pride
 - name: FALLBACK
   type: fallback
   url: http://hi.bonds.id/ping
   interval: 300
   proxies:
-  - vless-ws-tls [1708]
-  - (aswgaming) [Trojan - ws] TLS ✅ iflix
-  - (aswgaming) [VLESS - ws] TLS ✅ iflix
-  - (aswgaming) [VMess - ws] TLS ✅ iflix
-  - natanvpn
-  - natanvpn-72
-  - natanvpn-8
-  - natanvpn-93
-  - natanvpn-27
-  - natanvpn-90
-  - natanvpn-11
-  - natanvpn-47
+  - jatim-pride
 rules:
 - RULE-SET,rule_portgames,GAME
 - RULE-SET,rule_Sosmed,SOSMED
