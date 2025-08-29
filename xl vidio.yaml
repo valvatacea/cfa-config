@@ -1,238 +1,125 @@
-port: 7890
-socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-tproxy-port: 7895
-ipv6: false
-mode: rule
-log-level: silent
 allow-lan: true
-external-controller: 0.0.0.0:9090
-secret: ''
 bind-address: '*'
-unified-delay: true
+external-controller: 0.0.0.0:9090
+ipv6: false
+log-level: silent
+mixed-port: 7893
+mode: rule
+port: 7890
 profile:
-  store-selected: true
+    store-selected: true
 proxies:
-- name: "3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]\nvless://1b314859-3219-49b6-9a31-5c45b2896e90@quiz.int.vidio.com:443?path=/172.252.8.168-443&security=tls&encryption=none&host=www.vlessworker.xyz&type=ws&sni=www.vlessworker.xyz#🇮🇩
-    - PT Mitra Visioner Pratama\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@quiz.int.vidio.com:443?path=/aioproxybot/43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
-    Tencent 🇯🇵\nvless://548c40e7-6666-4270-ad02-9d93c1d04141@quiz.int.vidio.com:443?path=/Club-Gratis/&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS
-    TLS [ IG ]\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@quiz.int.vidio.com:443?path=/business&security=tls&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
-    SG Business Plan"
-  server: quiz.int.vidio.com
-  port: 443
-  type: vless
-  uuid: 489f2dff-9de4-410d-8c9f-2476d702ab64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: rest.web.id
-  network: ws
-  ws-opts:
-    path: /203.194.112.119-2053
-    headers:
-      Host: rest.web.id
-  udp: true
+    - client-fingerprint: chrome
+      name: "3 \U0001F1EE\U0001F1E9 CV. Rumahweb Indonesia WS TLS [adi]"
+      network: ws
+      port: "443"
+      server: quiz.int.vidio.com
+      servername: rest.web.id
+      tls: true
+      type: vless
+      udp: true
+      uuid: 489f2dff-9de4-410d-8c9f-2476d702ab64
+      ws-opts:
+        headers:
+            Host: rest.web.id
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36
+        path: /203.194.112.119-2053
+      xudp: true
+    - client-fingerprint: chrome
+      name: "\U0001F1EE\U0001F1E9 - PT Mitra Visioner Pratama"
+      network: ws
+      port: "443"
+      server: quiz.int.vidio.com
+      servername: www.vlessworker.xyz
+      tls: true
+      type: vless
+      udp: true
+      uuid: 1b314859-3219-49b6-9a31-5c45b2896e90
+      ws-opts:
+        headers:
+            Host: www.vlessworker.xyz
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36
+        path: /172.252.8.168-443
+      xudp: true
+    - client-fingerprint: randomized
+      name: "Shenzhen Tencent \U0001F1EF\U0001F1F5"
+      network: ws
+      port: "443"
+      server: quiz.int.vidio.com
+      servername: aio.loophole.biz.id
+      tls: true
+      type: vless
+      udp: true
+      uuid: ef149c00-2a47-4209-8f82-586342adb4d2
+      ws-opts:
+        headers:
+            Host: aio.loophole.biz.id
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36
+        path: /aioproxybot/43.163.207.12-52025
+      xudp: true
+    - client-fingerprint: chrome
+      name: VLESS TLS [ IG ]
+      network: ws
+      port: "443"
+      server: quiz.int.vidio.com
+      servername: myxl.dpdns.org
+      tls: true
+      type: vless
+      udp: true
+      uuid: 548c40e7-6666-4270-ad02-9d93c1d04141
+      ws-opts:
+        headers:
+            Host: myxl.dpdns.org
+            User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G610M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36
+        path: /Club-Gratis/
+      xudp: true
+    - client-fingerprint: chrome
+      name: Microsoft SG Business Plan
+      network: ws
+      port: "443"
+      server: quiz.int.vidio.com
+      servername: check.approvedcard.xyz
+      tls: true
+      type: vless
+      udp: true
+      uuid: 908379e8-fef9-4bdb-bff9-bce0d22ae0dc
+      ws-opts:
+        headers:
+            Host: check.approvedcard.xyz
+            User-Agent: Mozilla/5.0 (Linux; Android 6.0; vivo 1606 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.124 Mobile Safari/537.36
+        path: /business
+      xudp: true
 proxy-groups:
-- name: Friendly_Teams
-  type: select
-  proxies:
-  - "3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]\nvless://1b314859-3219-49b6-9a31-5c45b2896e90@quiz.int.vidio.com:443?path=/172.252.8.168-443&security=tls&encryption=none&host=www.vlessworker.xyz&type=ws&sni=www.vlessworker.xyz#🇮🇩
-    - PT Mitra Visioner Pratama\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@quiz.int.vidio.com:443?path=/aioproxybot/43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
-    Tencent 🇯🇵\nvless://548c40e7-6666-4270-ad02-9d93c1d04141@quiz.int.vidio.com:443?path=/Club-Gratis/&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS
-    TLS [ IG ]\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@quiz.int.vidio.com:443?path=/business&security=tls&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
-    SG Business Plan"
-  - GAME
-  - SOSMED
-  - WA
-  - YOUTUBE
-  - STREAMING-ID
-  - AdsBLOCK
-  - LOAD-BALANCE
-  - BEST-PING
-  - FALLBACK
-  - DIRECT
-- name: GAME
-  type: select
-  proxies:
-  - "3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]\nvless://1b314859-3219-49b6-9a31-5c45b2896e90@quiz.int.vidio.com:443?path=/172.252.8.168-443&security=tls&encryption=none&host=www.vlessworker.xyz&type=ws&sni=www.vlessworker.xyz#🇮🇩
-    - PT Mitra Visioner Pratama\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@quiz.int.vidio.com:443?path=/aioproxybot/43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
-    Tencent 🇯🇵\nvless://548c40e7-6666-4270-ad02-9d93c1d04141@quiz.int.vidio.com:443?path=/Club-Gratis/&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS
-    TLS [ IG ]\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@quiz.int.vidio.com:443?path=/business&security=tls&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
-    SG Business Plan"
-  - DIRECT
-- name: SOSMED
-  type: select
-  proxies:
-  - "3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]\nvless://1b314859-3219-49b6-9a31-5c45b2896e90@quiz.int.vidio.com:443?path=/172.252.8.168-443&security=tls&encryption=none&host=www.vlessworker.xyz&type=ws&sni=www.vlessworker.xyz#🇮🇩
-    - PT Mitra Visioner Pratama\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@quiz.int.vidio.com:443?path=/aioproxybot/43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
-    Tencent 🇯🇵\nvless://548c40e7-6666-4270-ad02-9d93c1d04141@quiz.int.vidio.com:443?path=/Club-Gratis/&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS
-    TLS [ IG ]\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@quiz.int.vidio.com:443?path=/business&security=tls&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
-    SG Business Plan"
-  - DIRECT
-- name: WA
-  type: select
-  proxies:
-  - "3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]\nvless://1b314859-3219-49b6-9a31-5c45b2896e90@quiz.int.vidio.com:443?path=/172.252.8.168-443&security=tls&encryption=none&host=www.vlessworker.xyz&type=ws&sni=www.vlessworker.xyz#🇮🇩
-    - PT Mitra Visioner Pratama\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@quiz.int.vidio.com:443?path=/aioproxybot/43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
-    Tencent 🇯🇵\nvless://548c40e7-6666-4270-ad02-9d93c1d04141@quiz.int.vidio.com:443?path=/Club-Gratis/&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS
-    TLS [ IG ]\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@quiz.int.vidio.com:443?path=/business&security=tls&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
-    SG Business Plan"
-  - DIRECT
-- name: YOUTUBE
-  type: select
-  proxies:
-  - "3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]\nvless://1b314859-3219-49b6-9a31-5c45b2896e90@quiz.int.vidio.com:443?path=/172.252.8.168-443&security=tls&encryption=none&host=www.vlessworker.xyz&type=ws&sni=www.vlessworker.xyz#🇮🇩
-    - PT Mitra Visioner Pratama\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@quiz.int.vidio.com:443?path=/aioproxybot/43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
-    Tencent 🇯🇵\nvless://548c40e7-6666-4270-ad02-9d93c1d04141@quiz.int.vidio.com:443?path=/Club-Gratis/&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS
-    TLS [ IG ]\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@quiz.int.vidio.com:443?path=/business&security=tls&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
-    SG Business Plan"
-  - DIRECT
-- name: STREAMING-ID
-  type: select
-  proxies:
-  - "3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]\nvless://1b314859-3219-49b6-9a31-5c45b2896e90@quiz.int.vidio.com:443?path=/172.252.8.168-443&security=tls&encryption=none&host=www.vlessworker.xyz&type=ws&sni=www.vlessworker.xyz#🇮🇩
-    - PT Mitra Visioner Pratama\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@quiz.int.vidio.com:443?path=/aioproxybot/43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
-    Tencent 🇯🇵\nvless://548c40e7-6666-4270-ad02-9d93c1d04141@quiz.int.vidio.com:443?path=/Club-Gratis/&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS
-    TLS [ IG ]\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@quiz.int.vidio.com:443?path=/business&security=tls&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
-    SG Business Plan"
-  - DIRECT
-- name: AdsBLOCK
-  type: select
-  proxies:
-  - "3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]\nvless://1b314859-3219-49b6-9a31-5c45b2896e90@quiz.int.vidio.com:443?path=/172.252.8.168-443&security=tls&encryption=none&host=www.vlessworker.xyz&type=ws&sni=www.vlessworker.xyz#🇮🇩
-    - PT Mitra Visioner Pratama\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@quiz.int.vidio.com:443?path=/aioproxybot/43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
-    Tencent 🇯🇵\nvless://548c40e7-6666-4270-ad02-9d93c1d04141@quiz.int.vidio.com:443?path=/Club-Gratis/&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS
-    TLS [ IG ]\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@quiz.int.vidio.com:443?path=/business&security=tls&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
-    SG Business Plan"
-  - REJECT
-- name: LOAD-BALANCE
-  type: load-balance
-  strategy: consistent-hashing
-  url: http://hi.bonds.id/ping
-  interval: 300
-  proxies:
-  - "3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]\nvless://1b314859-3219-49b6-9a31-5c45b2896e90@quiz.int.vidio.com:443?path=/172.252.8.168-443&security=tls&encryption=none&host=www.vlessworker.xyz&type=ws&sni=www.vlessworker.xyz#🇮🇩
-    - PT Mitra Visioner Pratama\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@quiz.int.vidio.com:443?path=/aioproxybot/43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
-    Tencent 🇯🇵\nvless://548c40e7-6666-4270-ad02-9d93c1d04141@quiz.int.vidio.com:443?path=/Club-Gratis/&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS
-    TLS [ IG ]\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@quiz.int.vidio.com:443?path=/business&security=tls&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
-    SG Business Plan"
-- name: BEST-PING
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  proxies:
-  - "3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]\nvless://1b314859-3219-49b6-9a31-5c45b2896e90@quiz.int.vidio.com:443?path=/172.252.8.168-443&security=tls&encryption=none&host=www.vlessworker.xyz&type=ws&sni=www.vlessworker.xyz#🇮🇩
-    - PT Mitra Visioner Pratama\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@quiz.int.vidio.com:443?path=/aioproxybot/43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
-    Tencent 🇯🇵\nvless://548c40e7-6666-4270-ad02-9d93c1d04141@quiz.int.vidio.com:443?path=/Club-Gratis/&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS
-    TLS [ IG ]\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@quiz.int.vidio.com:443?path=/business&security=tls&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
-    SG Business Plan"
-- name: FALLBACK
-  type: fallback
-  url: http://hi.bonds.id/ping
-  interval: 300
-  proxies:
-  - "3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]\nvless://1b314859-3219-49b6-9a31-5c45b2896e90@quiz.int.vidio.com:443?path=/172.252.8.168-443&security=tls&encryption=none&host=www.vlessworker.xyz&type=ws&sni=www.vlessworker.xyz#🇮🇩
-    - PT Mitra Visioner Pratama\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@quiz.int.vidio.com:443?path=/aioproxybot/43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
-    Tencent 🇯🇵\nvless://548c40e7-6666-4270-ad02-9d93c1d04141@quiz.int.vidio.com:443?path=/Club-Gratis/&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS
-    TLS [ IG ]\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@quiz.int.vidio.com:443?path=/business&security=tls&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
-    SG Business Plan"
+    - name: Tunnel
+      proxies:
+        - Url Test
+        - Selector
+      type: select
+    - interval: 300
+      name: Url Test
+      proxies:
+        - "3 \U0001F1EE\U0001F1E9 CV. Rumahweb Indonesia WS TLS [adi]"
+        - "\U0001F1EE\U0001F1E9 - PT Mitra Visioner Pratama"
+        - "Shenzhen Tencent \U0001F1EF\U0001F1F5"
+        - VLESS TLS [ IG ]
+        - Microsoft SG Business Plan
+      type: url-test
+    - interval: 300
+      name: Selector
+      proxies:
+        - "3 \U0001F1EE\U0001F1E9 CV. Rumahweb Indonesia WS TLS [adi]"
+        - "\U0001F1EE\U0001F1E9 - PT Mitra Visioner Pratama"
+        - "Shenzhen Tencent \U0001F1EF\U0001F1F5"
+        - VLESS TLS [ IG ]
+        - Microsoft SG Business Plan
+      type: select
+redir-port: 7892
 rules:
-- RULE-SET,rule_portgames,GAME
-- RULE-SET,rule_Sosmed,SOSMED
-- RULE-SET,rule_netflix,STREAMING-ID
-- RULE-SET,rule_primevideo,STREAMING-ID
-- RULE-SET,rule_hbo,STREAMING-ID
-- RULE-SET,rule_hboasia,STREAMING-ID
-- RULE-SET,rule_iqiyi,STREAMING-ID
-- RULE-SET,rule_disneyplus,STREAMING-ID
-- RULE-SET,rule_Streaming,STREAMING-ID
-- RULE-SET,rule_basicads,AdsBLOCK
-- RULE-SET,rule_Youtube,YOUTUBE
-- DOMAIN-SUFFIX,static.whatsapp.net,WA
-- DOMAIN-SUFFIX,docker.whatsapp.biz,WA
-- DOMAIN-SUFFIX,whatsapp.com,WA
-- DOMAIN-SUFFIX,whatsapp.net,WA
-- DOMAIN-SUFFIX,g.whatsapp.net,WA
-- DOMAIN-SUFFIX,v.whatsapp.net,WA
-- DOMAIN-SUFFIX,mmg.whatsapp.net,WA
-- MATCH,Friendly_Teams
-rule-providers:
-  rule_portgames:
-    type: http
-    behavior: classical
-    path: ./rule_provider/rule_portgames.yaml
-    url: 
-      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_portgames.yaml
-    interval: 86400
-  rule_Sosmed:
-    type: http
-    behavior: classical
-    path: ./rule_provider/rule_sosmed.yaml
-    url: 
-      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_sosmed.yaml
-    interval: 86400
-  rule_Youtube:
-    type: http
-    behavior: domain
-    url: 
-      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_youtube.yaml
-    path: ./rule_provider/rule_youtube.yaml
-    interval: 86400
-  rule_netflix:
-    type: http
-    behavior: domain
-    url: 
-      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_netflix.yaml
-    path: ./rule_provider/rule_netflix.yaml
-    interval: 86400
-  rule_primevideo:
-    type: http
-    behavior: domain
-    url: 
-      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_primevideo.yaml
-    path: ./rule_provider/rule_primevideo.yaml
-    interval: 86400
-  rule_hbo:
-    type: http
-    behavior: classical
-    url: 
-      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hbo.yaml
-    path: ./rule_provider/rule_hbo.yaml
-    interval: 86400
-  rule_hboasia:
-    type: http
-    behavior: classical
-    url: 
-      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hboasia.yaml
-    path: ./rule_provider/rule_hboasia.yaml
-    interval: 86400
-  rule_iqiyi:
-    type: http
-    behavior: classical
-    url: 
-      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_iqiyi.yaml
-    path: ./rule_provider/rule_iqiyi.yaml
-    interval: 86400
-  rule_disneyplus:
-    type: http
-    behavior: classical
-    url: 
-      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_disneyplus.yaml
-    path: ./rule_provider/rule_disneyplus.yaml
-    interval: 86400
-  rule_Streaming:
-    type: http
-    behavior: classical
-    path: ./rule_provider/rule_streaming.yaml
-    url: 
-      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_streaming.yaml
-    interval: 86400
-  rule_basicads:
-    type: http
-    behavior: domain
-    url: 
-      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_basicads.yaml
-    path: ./rule_provider/rule_basicads.yaml
-    interval: 43200
+    - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
+    - AND,((NETWORK,UDP),(OR,((DST-PORT,443),(GEOSITE,youtube)))),REJECT
+    - GEOIP,PRIVATE,DIRECT,no-resolve
+    - MATCH,Tunnel
+secret: ""
+socks-port: 7891
+tproxy-port: 7895
+unified-delay: true
