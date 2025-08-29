@@ -14,27 +14,30 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
-- name: jatim-pride
-  type: vmess
-  server: sambal-ijo.premiumm.shop
-  port: 443
-  uuid: kyo-store
-  alterId: 0
+- name: "CV. Rumahweb 🇮🇩\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@ovo.id:80?path=/aioproxybot/43.163.207.12-52025&security=none&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
+    Tencent 🇯🇵\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@ovo.id:80?path=/business&security=none&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
+    SG Business Plan"
+  server: ovo.id
+  port: 80
+  type: vless
+  uuid: 7577025e-2e67-4aa5-958a-ba179cfc4849
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
+  servername: aio.loophole.biz.id
   network: ws
-  servername: live.iflix.com
   ws-opts:
-    path: /vmess
+    path: /aioproxybot/203.194.112.119-8443
     headers:
-      Host: sambal-ijo.premiumm.shop
+      Host: aio.loophole.biz.id.
   udp: true
 proxy-groups:
 - name: Friendly_Teams
   type: select
   proxies:
-  - jatim-pride
+  - "CV. Rumahweb 🇮🇩\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@ovo.id:80?path=/aioproxybot/43.163.207.12-52025&security=none&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
+    Tencent 🇯🇵\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@ovo.id:80?path=/business&security=none&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
+    SG Business Plan"
   - GAME
   - SOSMED
   - WA
@@ -48,32 +51,44 @@ proxy-groups:
 - name: GAME
   type: select
   proxies:
-  - jatim-pride
+  - "CV. Rumahweb 🇮🇩\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@ovo.id:80?path=/aioproxybot/43.163.207.12-52025&security=none&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
+    Tencent 🇯🇵\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@ovo.id:80?path=/business&security=none&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
+    SG Business Plan"
   - DIRECT
 - name: SOSMED
   type: select
   proxies:
-  - jatim-pride
+  - "CV. Rumahweb 🇮🇩\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@ovo.id:80?path=/aioproxybot/43.163.207.12-52025&security=none&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
+    Tencent 🇯🇵\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@ovo.id:80?path=/business&security=none&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
+    SG Business Plan"
   - DIRECT
 - name: WA
   type: select
   proxies:
-  - jatim-pride
+  - "CV. Rumahweb 🇮🇩\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@ovo.id:80?path=/aioproxybot/43.163.207.12-52025&security=none&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
+    Tencent 🇯🇵\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@ovo.id:80?path=/business&security=none&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
+    SG Business Plan"
   - DIRECT
 - name: YOUTUBE
   type: select
   proxies:
-  - jatim-pride
+  - "CV. Rumahweb 🇮🇩\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@ovo.id:80?path=/aioproxybot/43.163.207.12-52025&security=none&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
+    Tencent 🇯🇵\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@ovo.id:80?path=/business&security=none&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
+    SG Business Plan"
   - DIRECT
 - name: STREAMING-ID
   type: select
   proxies:
-  - jatim-pride
+  - "CV. Rumahweb 🇮🇩\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@ovo.id:80?path=/aioproxybot/43.163.207.12-52025&security=none&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
+    Tencent 🇯🇵\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@ovo.id:80?path=/business&security=none&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
+    SG Business Plan"
   - DIRECT
 - name: AdsBLOCK
   type: select
   proxies:
-  - jatim-pride
+  - "CV. Rumahweb 🇮🇩\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@ovo.id:80?path=/aioproxybot/43.163.207.12-52025&security=none&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
+    Tencent 🇯🇵\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@ovo.id:80?path=/business&security=none&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
+    SG Business Plan"
   - REJECT
 - name: LOAD-BALANCE
   type: load-balance
@@ -81,20 +96,26 @@ proxy-groups:
   url: http://hi.bonds.id/ping
   interval: 300
   proxies:
-  - jatim-pride
+  - "CV. Rumahweb 🇮🇩\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@ovo.id:80?path=/aioproxybot/43.163.207.12-52025&security=none&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
+    Tencent 🇯🇵\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@ovo.id:80?path=/business&security=none&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
+    SG Business Plan"
 - name: BEST-PING
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
-  - jatim-pride
+  - "CV. Rumahweb 🇮🇩\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@ovo.id:80?path=/aioproxybot/43.163.207.12-52025&security=none&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
+    Tencent 🇯🇵\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@ovo.id:80?path=/business&security=none&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
+    SG Business Plan"
 - name: FALLBACK
   type: fallback
   url: http://hi.bonds.id/ping
   interval: 300
   proxies:
-  - jatim-pride
+  - "CV. Rumahweb 🇮🇩\nvless://ef149c00-2a47-4209-8f82-586342adb4d2@ovo.id:80?path=/aioproxybot/43.163.207.12-52025&security=none&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen
+    Tencent 🇯🇵\nvless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@ovo.id:80?path=/business&security=none&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft
+    SG Business Plan"
 rules:
 - RULE-SET,rule_portgames,GAME
 - RULE-SET,rule_Sosmed,SOSMED
