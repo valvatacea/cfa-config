@@ -24,7 +24,7 @@ proxies:
   tls: true
   skip-cert-verify: true
   network: ws
-  servername: sambal-ijo.premiumm.shop
+  servername: live.iflix.com
   ws-opts:
     path: /vmess
     headers:
