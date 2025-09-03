@@ -8,131 +8,312 @@ mode: rule
 log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
-secret: ""
-bind-address: "*"
+secret: ''
+bind-address: '*'
 unified-delay: true
 profile:
   store-selected: true
 proxies:
-  - name: 3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]
-    server: quiz.int.vidio.com
-    port: 443
-    type: vless
-    uuid: 489f2dff-9de4-410d-8c9f-2476d702ab64
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: rest.web.id
-    network: ws
-    ws-opts:
-      path: /203.194.112.119-2053
-      headers:
-        Host: rest.web.id
-    udp: true
-  - name: "- PT Mitra Visioner Pratama"
-    server: quiz.int.vidio.com
-    port: 443
-    type: vless
-    uuid: 1b314859-3219-49b6-9a31-5c45b2896e90
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: www.vlessworker.xyz
-    network: ws
-    ws-opts:
-      path: /172.252.8.168-443
-      headers:
-        Host: www.vlessworker.xyz
-    udp: true
-  - name: Shenzhen Tencent 🇯🇵
-    server: quiz.int.vidio.com
-    port: 443
-    type: vless
-    uuid: ef149c00-2a47-4209-8f82-586342adb4d2
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: aio.loophole.biz.id
-    network: ws
-    ws-opts:
-      path: /aioproxybot/43.163.207.12-52025
-      headers:
-        Host: aio.loophole.biz.id
-    udp: true
-  - name: VLESS TLS [ IG ]
-    server: quiz.int.vidio.com
-    port: 443
-    type: vless
-    uuid: 548c40e7-6666-4270-ad02-9d93c1d04141
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: myxl.dpdns.org
-    network: ws
-    ws-opts:
-      path: /Club-Gratis/
-      headers:
-        Host: myxl.dpdns.org
-    udp: true
-  - name: Microsoft SG Business Plan
-    server: quiz.int.vidio.com
-    port: 443
-    type: vless
-    uuid: 908379e8-fef9-4bdb-bff9-bce0d22ae0dc
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: check.approvedcard.xyz
-    network: ws
-    ws-opts:
-      path: /business
-      headers:
-        Host: check.approvedcard.xyz
-    udp: true
+- name: irnet.web.id 🇸🇬
+  server: quiz.int.vidio.com
+  port: 443
+  type: vless
+  uuid: a304a9d7-f3f5-4361-b62b-f48cc52be602
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: irnet.web.id
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: irnet.web.id
+  udp: true
+- name: 🇮🇩 - PT Mitra Visioner Pratama
+  server: quiz.int.vidio.com
+  port: 443
+  type: vless
+  uuid: 1b314859-3219-49b6-9a31-5c45b2896e90
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: www.vlessworker.xyz
+  network: ws
+  ws-opts:
+    path: /172.252.8.168-443
+    headers:
+      Host: www.vlessworker.xyz
+  udp: true
+- name: Shenzhen Tencent 🇯🇵
+  server: quiz.int.vidio.com
+  port: 443
+  type: vless
+  uuid: ef149c00-2a47-4209-8f82-586342adb4d2
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: aio.loophole.biz.id
+  network: ws
+  ws-opts:
+    path: /aioproxybot/43.163.207.12-52025
+    headers:
+      Host: aio.loophole.biz.id
+  udp: true
+- name: VLESS TLS 🇸🇬
+  server: quiz.int.vidio.com
+  port: 443
+  type: vless
+  uuid: 548c40e7-6666-4270-ad02-9d93c1d04141
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: myxl.dpdns.org
+  network: ws
+  ws-opts:
+    path: /Club-Gratis/
+    headers:
+      Host: myxl.dpdns.org
+  udp: true
+- name: M247 Europe 🇸🇬
+  server: quiz.int.vidio.com
+  port: 443
+  type: vless
+  uuid: 4139ea07-0026-4fce-a9c2-0e08d9bb5acc
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: aio.datacore.dpdns.org
+  network: ws
+  ws-opts:
+    path: /aioproxybot/38.180.249.123-443
+    headers:
+      Host: aio.datacore.dpdns.org
+  udp: true
+- name: Alibaba (US) 🇸🇬
+  server: quiz.int.vidio.com
+  port: 443
+  type: vless
+  uuid: a86e5ed2-4db6-40ae-b359-d9c91a3a32da
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: aio.datacore.dpdns.org
+  network: ws
+  ws-opts:
+    path: /aioproxybot/47.236.29.162-443
+    headers:
+      Host: aio.datacore.dpdns.org
+  udp: true
 proxy-groups:
-  - name: FASTSSH-SSHKIT-HOWDY
-    type: select
-    proxies:
-      - 3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]
-      - "- PT Mitra Visioner Pratama"
-      - Shenzhen Tencent 🇯🇵
-      - VLESS TLS [ IG ]
-      - Microsoft SG Business Plan
-      - LOAD-BALANCE
-      - BEST-PING
-      - FALLBACK
-      - DIRECT
-  - name: LOAD-BALANCE
-    type: load-balance
-    strategy: consistent-hashing
-    url: http://hi.bonds.id/ping
-    interval: 300
-    proxies:
-      - 3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]
-      - "- PT Mitra Visioner Pratama"
-      - Shenzhen Tencent 🇯🇵
-      - VLESS TLS [ IG ]
-      - Microsoft SG Business Plan
-  - name: BEST-PING
-    type: url-test
-    url: http://hi.bonds.id/ping
-    interval: 300
-    tolerance: 50
-    proxies:
-      - 3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]
-      - "- PT Mitra Visioner Pratama"
-      - Shenzhen Tencent 🇯🇵
-      - VLESS TLS [ IG ]
-      - Microsoft SG Business Plan
-  - name: FALLBACK
-    type: fallback
-    url: http://hi.bonds.id/ping
-    interval: 300
-    proxies:
-      - 3 🇮🇩 CV. Rumahweb Indonesia WS TLS [adi]
-      - "- PT Mitra Visioner Pratama"
-      - Shenzhen Tencent 🇯🇵
-      - VLESS TLS [ IG ]
-      - Microsoft SG Business Plan
+- name: Friendly_Teams
+  type: select
+  proxies:
+  - irnet.web.id 🇸🇬
+  - 🇮🇩 - PT Mitra Visioner Pratama
+  - Shenzhen Tencent 🇯🇵
+  - VLESS TLS 🇸🇬
+  - M247 Europe 🇸🇬
+  - Alibaba (US) 🇸🇬
+  - GAME
+  - SOSMED
+  - WA
+  - YOUTUBE
+  - STREAMING-ID
+  - AdsBLOCK
+  - LOAD-BALANCE
+  - BEST-PING
+  - FALLBACK
+  - DIRECT
+- name: GAME
+  type: select
+  proxies:
+  - irnet.web.id 🇸🇬
+  - 🇮🇩 - PT Mitra Visioner Pratama
+  - Shenzhen Tencent 🇯🇵
+  - VLESS TLS 🇸🇬
+  - M247 Europe 🇸🇬
+  - Alibaba (US) 🇸🇬
+  - DIRECT
+- name: SOSMED
+  type: select
+  proxies:
+  - irnet.web.id 🇸🇬
+  - 🇮🇩 - PT Mitra Visioner Pratama
+  - Shenzhen Tencent 🇯🇵
+  - VLESS TLS 🇸🇬
+  - M247 Europe 🇸🇬
+  - Alibaba (US) 🇸🇬
+  - DIRECT
+- name: WA
+  type: select
+  proxies:
+  - irnet.web.id 🇸🇬
+  - 🇮🇩 - PT Mitra Visioner Pratama
+  - Shenzhen Tencent 🇯🇵
+  - VLESS TLS 🇸🇬
+  - M247 Europe 🇸🇬
+  - Alibaba (US) 🇸🇬
+  - DIRECT
+- name: YOUTUBE
+  type: select
+  proxies:
+  - irnet.web.id 🇸🇬
+  - 🇮🇩 - PT Mitra Visioner Pratama
+  - Shenzhen Tencent 🇯🇵
+  - VLESS TLS 🇸🇬
+  - M247 Europe 🇸🇬
+  - Alibaba (US) 🇸🇬
+  - DIRECT
+- name: STREAMING-ID
+  type: select
+  proxies:
+  - irnet.web.id 🇸🇬
+  - 🇮🇩 - PT Mitra Visioner Pratama
+  - Shenzhen Tencent 🇯🇵
+  - VLESS TLS 🇸🇬
+  - M247 Europe 🇸🇬
+  - Alibaba (US) 🇸🇬
+  - DIRECT
+- name: AdsBLOCK
+  type: select
+  proxies:
+  - irnet.web.id 🇸🇬
+  - 🇮🇩 - PT Mitra Visioner Pratama
+  - Shenzhen Tencent 🇯🇵
+  - VLESS TLS 🇸🇬
+  - M247 Europe 🇸🇬
+  - Alibaba (US) 🇸🇬
+  - REJECT
+- name: LOAD-BALANCE
+  type: load-balance
+  strategy: consistent-hashing
+  url: http://hi.bonds.id/ping
+  interval: 300
+  proxies:
+  - irnet.web.id 🇸🇬
+  - 🇮🇩 - PT Mitra Visioner Pratama
+  - Shenzhen Tencent 🇯🇵
+  - VLESS TLS 🇸🇬
+  - M247 Europe 🇸🇬
+  - Alibaba (US) 🇸🇬
+- name: BEST-PING
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - irnet.web.id 🇸🇬
+  - 🇮🇩 - PT Mitra Visioner Pratama
+  - Shenzhen Tencent 🇯🇵
+  - VLESS TLS 🇸🇬
+  - M247 Europe 🇸🇬
+  - Alibaba (US) 🇸🇬
+- name: FALLBACK
+  type: fallback
+  url: http://hi.bonds.id/ping
+  interval: 300
+  proxies:
+  - irnet.web.id 🇸🇬
+  - 🇮🇩 - PT Mitra Visioner Pratama
+  - Shenzhen Tencent 🇯🇵
+  - VLESS TLS 🇸🇬
+  - M247 Europe 🇸🇬
+  - Alibaba (US) 🇸🇬
 rules:
-  - MATCH,FASTSSH-SSHKIT-HOWDY
+- RULE-SET,rule_portgames,GAME
+- RULE-SET,rule_Sosmed,SOSMED
+- RULE-SET,rule_netflix,STREAMING-ID
+- RULE-SET,rule_primevideo,STREAMING-ID
+- RULE-SET,rule_hbo,STREAMING-ID
+- RULE-SET,rule_hboasia,STREAMING-ID
+- RULE-SET,rule_iqiyi,STREAMING-ID
+- RULE-SET,rule_disneyplus,STREAMING-ID
+- RULE-SET,rule_Streaming,STREAMING-ID
+- RULE-SET,rule_basicads,AdsBLOCK
+- RULE-SET,rule_Youtube,YOUTUBE
+- DOMAIN-SUFFIX,static.whatsapp.net,WA
+- DOMAIN-SUFFIX,docker.whatsapp.biz,WA
+- DOMAIN-SUFFIX,whatsapp.com,WA
+- DOMAIN-SUFFIX,whatsapp.net,WA
+- DOMAIN-SUFFIX,g.whatsapp.net,WA
+- DOMAIN-SUFFIX,v.whatsapp.net,WA
+- DOMAIN-SUFFIX,mmg.whatsapp.net,WA
+- MATCH,Friendly_Teams
+rule-providers:
+  rule_portgames:
+    type: http
+    behavior: classical
+    path: ./rule_provider/rule_portgames.yaml
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_portgames.yaml
+    interval: 86400
+  rule_Sosmed:
+    type: http
+    behavior: classical
+    path: ./rule_provider/rule_sosmed.yaml
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_sosmed.yaml
+    interval: 86400
+  rule_Youtube:
+    type: http
+    behavior: domain
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_youtube.yaml
+    path: ./rule_provider/rule_youtube.yaml
+    interval: 86400
+  rule_netflix:
+    type: http
+    behavior: domain
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_netflix.yaml
+    path: ./rule_provider/rule_netflix.yaml
+    interval: 86400
+  rule_primevideo:
+    type: http
+    behavior: domain
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_primevideo.yaml
+    path: ./rule_provider/rule_primevideo.yaml
+    interval: 86400
+  rule_hbo:
+    type: http
+    behavior: classical
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hbo.yaml
+    path: ./rule_provider/rule_hbo.yaml
+    interval: 86400
+  rule_hboasia:
+    type: http
+    behavior: classical
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hboasia.yaml
+    path: ./rule_provider/rule_hboasia.yaml
+    interval: 86400
+  rule_iqiyi:
+    type: http
+    behavior: classical
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_iqiyi.yaml
+    path: ./rule_provider/rule_iqiyi.yaml
+    interval: 86400
+  rule_disneyplus:
+    type: http
+    behavior: classical
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_disneyplus.yaml
+    path: ./rule_provider/rule_disneyplus.yaml
+    interval: 86400
+  rule_Streaming:
+    type: http
+    behavior: classical
+    path: ./rule_provider/rule_streaming.yaml
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_streaming.yaml
+    interval: 86400
+  rule_basicads:
+    type: http
+    behavior: domain
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_basicads.yaml
+    path: ./rule_provider/rule_basicads.yaml
+    interval: 43200
