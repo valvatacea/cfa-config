@@ -1,5 +1,4 @@
-vless://489f2dff-9de4-410d-8c9f-2476d702ab64@quiz.int.vidio.com:443?path=%2F203.194.112.119-2053&security=tls&encryption=none&host=rest.web.id&type=ws&sni=rest.web.id#3%20%F0%9F%87%AE%F0%9F%87%A9%20CV.%20Rumahweb%20Indonesia%20WS%20TLS%20%5Badi%5D
+vless://a304a9d7-f3f5-4361-b62b-f48cc52be602@quiz.int.vidio.com:443?path=%2F%3Fed%3D2048&security=tls&encryption=none&host=irnet.web.id&type=ws&sni=irnet.web.id#irnet.web.id
 vless://1b314859-3219-49b6-9a31-5c45b2896e90@quiz.int.vidio.com:443?path=%2F172.252.8.168-443&security=tls&encryption=none&host=www.vlessworker.xyz&type=ws&sni=www.vlessworker.xyz#%F0%9F%87%AE%F0%9F%87%A9%20-%20PT%20Mitra%20Visioner%20Pratama
 vless://ef149c00-2a47-4209-8f82-586342adb4d2@quiz.int.vidio.com:443?path=%2Faioproxybot%2F43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen%20Tencent%20%F0%9F%87%AF%F0%9F%87%B5
 vless://548c40e7-6666-4270-ad02-9d93c1d04141@quiz.int.vidio.com:443?path=%2FClub-Gratis%2F&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS%20TLS%20%5B%20IG%20%5D
-vless://908379e8-fef9-4bdb-bff9-bce0d22ae0dc@quiz.int.vidio.com:443?path=%2Fbusiness&security=tls&encryption=none&host=check.approvedcard.xyz&type=ws&sni=check.approvedcard.xyz#Microsoft%20SG%20Business%20Plan
