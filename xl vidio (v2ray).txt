@@ -1,4 +1,9 @@
-vless://a304a9d7-f3f5-4361-b62b-f48cc52be602@quiz.int.vidio.com:443?path=%2F%3Fed%3D2048&security=tls&encryption=none&host=irnet.web.id&type=ws&sni=irnet.web.id#irnet.web.id%20%F0%9F%87%B8%F0%9F%87%AC
+vless://154556e2-31e1-4fd7-86e1-d5d2eeda4c31@quiz.int.vidio.com:443?path=%2Fvless&security=tls&encryption=none&host=1.round.web.id&type=ws&sni=1.round.web.id#natanvpn
+vless://bc4272f2-b4b4-42bb-b269-3d89ba77c50b@quiz.int.vidio.com:443?path=%2Fvless&security=tls&encryption=none&host=2.round.web.id&type=ws&sni=2.round.web.id#natanvpn
+vless://271fcd85-9132-4d05-a243-a602fbd43b5e@quiz.int.vidio.com:443?path=%2Fvless&security=tls&encryption=none&host=3.round.web.id&type=ws&sni=3.round.web.id#natanvpn
+vless://7c27b4db-3a04-4949-a9b2-0ad18de4c1bd@quiz.int.vidio.com:443?path=%2Fvless&security=tls&encryption=none&host=4.round.web.id&type=ws&sni=4.round.web.id#natanvpn
+vless://b1762db5-90c0-4066-8b7f-b1d45d35f612@quiz.int.vidio.com:443?path=%2Fvless&security=tls&encryption=none&host=7.round.web.id&type=ws&sni=7.round.web.id#natanvpn
+vless://6df79af5-a9c8-4a2d-9ce2-9297463f3254@quiz.int.vidio.com:443?path=%2Fvless&security=tls&encryption=none&host=11.round.web.id&type=ws&sni=11.round.web.id#natanvpn
 vless://1b314859-3219-49b6-9a31-5c45b2896e90@quiz.int.vidio.com:443?path=%2F172.252.8.168-443&security=tls&encryption=none&host=www.vlessworker.xyz&type=ws&sni=www.vlessworker.xyz#%F0%9F%87%AE%F0%9F%87%A9%20-%20PT%20Mitra%20Visioner%20Pratama
 vless://ef149c00-2a47-4209-8f82-586342adb4d2@quiz.int.vidio.com:443?path=%2Faioproxybot%2F43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen%20Tencent%20%F0%9F%87%AF%F0%9F%87%B5
 vless://548c40e7-6666-4270-ad02-9d93c1d04141@quiz.int.vidio.com:443?path=%2FClub-Gratis%2F&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS%20TLS%20%F0%9F%87%B8%F0%9F%87%AC
