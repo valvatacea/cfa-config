@@ -14,20 +14,95 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
-- name: irnet.web.id 🇸🇬
+- name: natanvpn
   server: quiz.int.vidio.com
   port: 443
   type: vless
-  uuid: a304a9d7-f3f5-4361-b62b-f48cc52be602
+  uuid: 154556e2-31e1-4fd7-86e1-d5d2eeda4c31
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: irnet.web.id
+  servername: 1.round.web.id
   network: ws
   ws-opts:
-    path: /?ed=2048
+    path: /vless
     headers:
-      Host: irnet.web.id
+      Host: 1.round.web.id
+  udp: true
+- name: natanvpn-25
+  server: quiz.int.vidio.com
+  port: 443
+  type: vless
+  uuid: bc4272f2-b4b4-42bb-b269-3d89ba77c50b
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 2.round.web.id
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 2.round.web.id
+  udp: true
+- name: natanvpn-63
+  server: quiz.int.vidio.com
+  port: 443
+  type: vless
+  uuid: 271fcd85-9132-4d05-a243-a602fbd43b5e
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 3.round.web.id
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 3.round.web.id
+  udp: true
+- name: natanvpn-66
+  server: quiz.int.vidio.com
+  port: 443
+  type: vless
+  uuid: 7c27b4db-3a04-4949-a9b2-0ad18de4c1bd
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 4.round.web.id
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 4.round.web.id
+  udp: true
+- name: natanvpn-52
+  server: quiz.int.vidio.com
+  port: 443
+  type: vless
+  uuid: b1762db5-90c0-4066-8b7f-b1d45d35f612
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 7.round.web.id
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 7.round.web.id
+  udp: true
+- name: natanvpn-32
+  server: quiz.int.vidio.com
+  port: 443
+  type: vless
+  uuid: 6df79af5-a9c8-4a2d-9ce2-9297463f3254
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 11.round.web.id
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 11.round.web.id
   udp: true
 - name: 🇮🇩 - PT Mitra Visioner Pratama
   server: quiz.int.vidio.com
@@ -108,7 +183,12 @@ proxy-groups:
 - name: Friendly_Teams
   type: select
   proxies:
-  - irnet.web.id 🇸🇬
+  - natanvpn
+  - natanvpn-25
+  - natanvpn-63
+  - natanvpn-66
+  - natanvpn-52
+  - natanvpn-32
   - 🇮🇩 - PT Mitra Visioner Pratama
   - Shenzhen Tencent 🇯🇵
   - VLESS TLS 🇸🇬
@@ -127,7 +207,12 @@ proxy-groups:
 - name: GAME
   type: select
   proxies:
-  - irnet.web.id 🇸🇬
+  - natanvpn
+  - natanvpn-25
+  - natanvpn-63
+  - natanvpn-66
+  - natanvpn-52
+  - natanvpn-32
   - 🇮🇩 - PT Mitra Visioner Pratama
   - Shenzhen Tencent 🇯🇵
   - VLESS TLS 🇸🇬
@@ -137,7 +222,12 @@ proxy-groups:
 - name: SOSMED
   type: select
   proxies:
-  - irnet.web.id 🇸🇬
+  - natanvpn
+  - natanvpn-25
+  - natanvpn-63
+  - natanvpn-66
+  - natanvpn-52
+  - natanvpn-32
   - 🇮🇩 - PT Mitra Visioner Pratama
   - Shenzhen Tencent 🇯🇵
   - VLESS TLS 🇸🇬
@@ -147,7 +237,12 @@ proxy-groups:
 - name: WA
   type: select
   proxies:
-  - irnet.web.id 🇸🇬
+  - natanvpn
+  - natanvpn-25
+  - natanvpn-63
+  - natanvpn-66
+  - natanvpn-52
+  - natanvpn-32
   - 🇮🇩 - PT Mitra Visioner Pratama
   - Shenzhen Tencent 🇯🇵
   - VLESS TLS 🇸🇬
@@ -157,7 +252,12 @@ proxy-groups:
 - name: YOUTUBE
   type: select
   proxies:
-  - irnet.web.id 🇸🇬
+  - natanvpn
+  - natanvpn-25
+  - natanvpn-63
+  - natanvpn-66
+  - natanvpn-52
+  - natanvpn-32
   - 🇮🇩 - PT Mitra Visioner Pratama
   - Shenzhen Tencent 🇯🇵
   - VLESS TLS 🇸🇬
@@ -167,7 +267,12 @@ proxy-groups:
 - name: STREAMING-ID
   type: select
   proxies:
-  - irnet.web.id 🇸🇬
+  - natanvpn
+  - natanvpn-25
+  - natanvpn-63
+  - natanvpn-66
+  - natanvpn-52
+  - natanvpn-32
   - 🇮🇩 - PT Mitra Visioner Pratama
   - Shenzhen Tencent 🇯🇵
   - VLESS TLS 🇸🇬
@@ -177,7 +282,12 @@ proxy-groups:
 - name: AdsBLOCK
   type: select
   proxies:
-  - irnet.web.id 🇸🇬
+  - natanvpn
+  - natanvpn-25
+  - natanvpn-63
+  - natanvpn-66
+  - natanvpn-52
+  - natanvpn-32
   - 🇮🇩 - PT Mitra Visioner Pratama
   - Shenzhen Tencent 🇯🇵
   - VLESS TLS 🇸🇬
@@ -190,7 +300,12 @@ proxy-groups:
   url: http://hi.bonds.id/ping
   interval: 300
   proxies:
-  - irnet.web.id 🇸🇬
+  - natanvpn
+  - natanvpn-25
+  - natanvpn-63
+  - natanvpn-66
+  - natanvpn-52
+  - natanvpn-32
   - 🇮🇩 - PT Mitra Visioner Pratama
   - Shenzhen Tencent 🇯🇵
   - VLESS TLS 🇸🇬
@@ -202,7 +317,12 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-  - irnet.web.id 🇸🇬
+  - natanvpn
+  - natanvpn-25
+  - natanvpn-63
+  - natanvpn-66
+  - natanvpn-52
+  - natanvpn-32
   - 🇮🇩 - PT Mitra Visioner Pratama
   - Shenzhen Tencent 🇯🇵
   - VLESS TLS 🇸🇬
@@ -213,7 +333,12 @@ proxy-groups:
   url: http://hi.bonds.id/ping
   interval: 300
   proxies:
-  - irnet.web.id 🇸🇬
+  - natanvpn
+  - natanvpn-25
+  - natanvpn-63
+  - natanvpn-66
+  - natanvpn-52
+  - natanvpn-32
   - 🇮🇩 - PT Mitra Visioner Pratama
   - Shenzhen Tencent 🇯🇵
   - VLESS TLS 🇸🇬
