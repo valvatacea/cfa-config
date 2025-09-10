@@ -1,5 +1,6 @@
 vless://4a1ea362-0ecb-4d86-bd99-5bc8f6addd73@quiz.int.vidio.com:443?path=%2Fws&security=tls&encryption=none&host=sg2-full.privateip.net&type=ws&sni=sg2-full.privateip.net#vless-ws-tls%20%5B1109%5D
 vless://54346ed7-4faa-42bf-9548-b0f8c961f610@quiz.int.vidio.com:443?path=%2Fvless&security=tls&encryption=none&host=7.round.web.id&type=ws&sni=7.round.web.id#natanvpn%20%5B1309%5D
+vless://2491631b-e3ef-47bf-b7a7-c3a611224385@quiz.int.vidio.com:443?path=%2Fzelp%2Fvless&security=tls&encryption=none&host=gyatt.hiniature.xyz&type=ws&sni=gyatt.hiniature.xyz#user_2491631b
 vless://1b314859-3219-49b6-9a31-5c45b2896e90@quiz.int.vidio.com:443?path=%2F172.252.8.168-443&security=tls&encryption=none&host=www.vlessworker.xyz&type=ws&sni=www.vlessworker.xyz#%F0%9F%87%AE%F0%9F%87%A9%20-%20PT%20Mitra%20Visioner%20Pratama
 vless://ef149c00-2a47-4209-8f82-586342adb4d2@quiz.int.vidio.com:443?path=%2Faioproxybot%2F43.163.207.12-52025&security=tls&encryption=none&host=aio.loophole.biz.id&fp=randomized&type=ws&sni=aio.loophole.biz.id#Shenzhen%20Tencent%20%F0%9F%87%AF%F0%9F%87%B5
 vless://548c40e7-6666-4270-ad02-9d93c1d04141@quiz.int.vidio.com:443?path=%2FClub-Gratis%2F&security=tls&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS%20TLS%20%F0%9F%87%B8%F0%9F%87%AC
