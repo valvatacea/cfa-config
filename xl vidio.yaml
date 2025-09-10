@@ -104,6 +104,36 @@ proxies:
     headers:
       Host: myxl.dpdns.org
   udp: true
+- name: M247 Europe 🇸🇬
+  server: quiz.int.vidio.com
+  port: 443
+  type: vless
+  uuid: 4139ea07-0026-4fce-a9c2-0e08d9bb5acc
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: aio.datacore.dpdns.org
+  network: ws
+  ws-opts:
+    path: /aioproxybot/38.180.249.123-443
+    headers:
+      Host: aio.datacore.dpdns.org
+  udp: true
+- name: Alibaba (US) 🇸🇬
+  server: quiz.int.vidio.com
+  port: 443
+  type: vless
+  uuid: a86e5ed2-4db6-40ae-b359-d9c91a3a32da
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: aio.datacore.dpdns.org
+  network: ws
+  ws-opts:
+    path: /aioproxybot/47.236.29.162-443
+    headers:
+      Host: aio.datacore.dpdns.org
+  udp: true
 proxy-groups:
 - name: Friendly_Teams
   type: select
@@ -114,6 +144,8 @@ proxy-groups:
   - 🇮🇩 - PT Mitra Visioner Pratama
   - Shenzhen Tencent 🇯🇵
   - VLESS TLS 🇸🇬
+  - M247 Europe 🇸🇬
+  - Alibaba (US) 🇸🇬
   - BEST-PING
   - DIRECT
 - name: BEST-PING
@@ -128,5 +160,7 @@ proxy-groups:
   - 🇮🇩 - PT Mitra Visioner Pratama
   - Shenzhen Tencent 🇯🇵
   - VLESS TLS 🇸🇬
+  - M247 Europe 🇸🇬
+  - Alibaba (US) 🇸🇬
 rules:
 - MATCH,Friendly_Teams
