@@ -1,2 +1,0 @@
-vmess://eyJhZGQiOiJvdm8uaWQiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6InRyaWNrcy5ueXlsc3RvcmUueHl6IiwiaWQiOiJhMDc3OTEyNC1hYTIzLTQwYjUtOTE0OS0wNWZiNTU5YTc2Y2QiLCJuZXQiOiJ3cyIsInBhdGgiOiIvdm1lc3MiLCJwb3J0IjoiODAiLCJwcyI6IlNHIEVwc2lsb24iLCJzY3kiOiJ6ZXJvIiwic25pIjoidHJpY2tzLm55eWxzdG9yZS54eXoiLCJ0bHMiOiIiLCJ0eXBlIjoiLS0tIiwidiI6IjIifQ==
-vless://548c40e7-6666-4270-ad02-9d93c1d04141@ovo.id:80?path=%2FClub-Gratis%2F&security=none&encryption=none&host=myxl.dpdns.org&type=ws&sni=myxl.dpdns.org#VLESS%20TLS%20%5B%20IG%20%5D
