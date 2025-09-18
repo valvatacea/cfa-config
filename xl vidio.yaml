@@ -14,6 +14,95 @@ unified-delay: true
 profile:
   store-selected: true
 proxies:
+- name: natanvpn
+  server: quiz.int.vidio.com
+  port: 443
+  type: vless
+  uuid: 4995532f-27d3-497d-be52-0c1a6374ddd1
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 2.round.web.id
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 2.round.web.id
+  udp: true
+- name: natanvpn-90
+  server: img.email1.vidio.com
+  port: 443
+  type: vless
+  uuid: c7aa95a3-eeae-4944-bfdf-0bb0f2e32e43
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 7.round.web.id
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 7.round.web.id
+  udp: true
+- name: natanvpn-4
+  server: img.email1.vidio.com
+  port: 443
+  type: vless
+  uuid: 2c51a730-0a2c-4684-9f12-a4a29173bd8b
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 1.round.web.id
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 1.round.web.id
+  udp: true
+- name: tesbugya-vidio
+  type: vmess
+  server: 104.18.213.235
+  port: 443
+  uuid: 85c7476b-ce59-48aa-ae8f-c3c56ee6afc3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  servername: ava.game.naver.com.biznet.vpnstore28.my.id
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: ava.game.naver.com.biznet.vpnstore28.my.id
+  udp: true
+- name: sshocean-val200_trj_ws
+  server: quiz.int.vidio.com
+  port: 443
+  type: trojan
+  password: a92aec3d-000c-4495-b5ec-fb69104618d2
+  skip-cert-verify: true
+  sni: uk1.xtls.site
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uk1.xtls.site
+  udp: true
+- name: sshocean-val200-ws
+  server: img.email1.vidio.com
+  port: 443
+  type: vless
+  uuid: I_Love_%F0%9F%87%B5%F0%9F%87%B8_sshOcean_0d65
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: us1.xvless.online
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: us1.xvless.online
+  udp: true
 - name: SG Epsilon
   type: vmess
   server: quiz.int.vidio.com
@@ -29,50 +118,6 @@ proxies:
     path: /vmess
     headers:
       Host: tricks.nyylstore.xyz
-  udp: true
-- name: (sgvpn) [VLESS - ws] TLS ✅
-  server: quiz.int.vidio.com
-  port: 443
-  type: vless
-  uuid: 3119ca36-a1b7-49dd-83c3-d5ea1fc15be3
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sg.lolicon.biz.id
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: sg.lolicon.biz.id
-  udp: true
-- name: (sgvpn) [VMess - ws] TLS ✅
-  type: vmess
-  server: quiz.int.vidio.com
-  port: 443
-  uuid: f5fd817f-c29e-4a8d-9284-f86830f33537
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  servername: sg.lolicon.biz.id
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: sg.lolicon.biz.id
-  udp: true
-- name: (sgvpn) [Trojan - ws] TLS ✅
-  server: quiz.int.vidio.com
-  port: 443
-  type: trojan
-  password: O3BeB2wUy13wFR5WeXKRVQ
-  skip-cert-verify: true
-  sni: sg.lolicon.biz.id
-  network: ws
-  ws-opts:
-    path: /trojan
-    headers:
-      Host: sg.lolicon.biz.id
   udp: true
 - name: 🇮🇩 - PT Mitra Visioner Pratama
   server: quiz.int.vidio.com
@@ -153,10 +198,13 @@ proxy-groups:
 - name: Friendly_Teams
   type: select
   proxies:
+  - natanvpn
+  - natanvpn-90
+  - natanvpn-4
+  - tesbugya-vidio
+  - sshocean-val200_trj_ws
+  - sshocean-val200-ws
   - SG Epsilon
-  - (sgvpn) [VLESS - ws] TLS ✅
-  - (sgvpn) [VMess - ws] TLS ✅
-  - (sgvpn) [Trojan - ws] TLS ✅
   - 🇮🇩 - PT Mitra Visioner Pratama
   - Shenzhen Tencent 🇯🇵
   - VLESS TLS 🇸🇬
@@ -170,10 +218,13 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
+  - natanvpn
+  - natanvpn-90
+  - natanvpn-4
+  - tesbugya-vidio
+  - sshocean-val200_trj_ws
+  - sshocean-val200-ws
   - SG Epsilon
-  - (sgvpn) [VLESS - ws] TLS ✅
-  - (sgvpn) [VMess - ws] TLS ✅
-  - (sgvpn) [Trojan - ws] TLS ✅
   - 🇮🇩 - PT Mitra Visioner Pratama
   - Shenzhen Tencent 🇯🇵
   - VLESS TLS 🇸🇬
