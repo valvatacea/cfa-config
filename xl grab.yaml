@@ -73,7 +73,7 @@ proxies:
     headers:
       Host: speed.olinol.de5.net
   udp: true
-- name: ID MVNET VLESS LIFETIME-45
+- name: ID MVNET VLESS LIFETIME-5
   server: 104.18.39.91
   port: 443
   type: vless
@@ -193,6 +193,37 @@ proxies:
     headers:
       Host: aio.eth0.dpdns.org
   udp: true
+- name: SG Epsilon
+  type: vmess
+  server: 104.18.39.91
+  port: 443
+  uuid: a0779124-aa23-40b5-9149-05fb559a76cd
+  alterId: 0
+  cipher: zero
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  servername: tricks.nyylstore.xyz
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: tricks.nyylstore.xyz
+  udp: true
+- name: VLESS TLS [ IG ]
+  server: 104.18.39.91
+  port: 443
+  type: vless
+  uuid: 548c40e7-6666-4270-ad02-9d93c1d04141
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: myxl.dpdns.org
+  network: ws
+  ws-opts:
+    path: /Club-Gratis/
+    headers:
+      Host: myxl.dpdns.org
+  udp: true
 proxy-groups:
 - name: Friendly_Teams
   type: select
@@ -201,7 +232,7 @@ proxy-groups:
   - TROJAN_WS_FREE3 [2610]
   - VMESS_TLS_FREE [2610]
   - ID MVNET VLESS LIFETIME
-  - ID MVNET VLESS LIFETIME-45
+  - ID MVNET VLESS LIFETIME-5
   - 🇸🇬 - OVH SAS
   - 🇸🇬 - DigitalOcean LLC
   - 🇺🇸 - Microsoft Corporation
@@ -209,6 +240,8 @@ proxy-groups:
   - 🇮🇩 - Amazoncom Inc
   - CV. Rumahweb 🇮🇩
   - Alibaba (US) 🇮🇩
+  - SG Epsilon
+  - VLESS TLS [ IG ]
   - GAME
   - SOSMED
   - WA
@@ -226,7 +259,7 @@ proxy-groups:
   - TROJAN_WS_FREE3 [2610]
   - VMESS_TLS_FREE [2610]
   - ID MVNET VLESS LIFETIME
-  - ID MVNET VLESS LIFETIME-45
+  - ID MVNET VLESS LIFETIME-5
   - 🇸🇬 - OVH SAS
   - 🇸🇬 - DigitalOcean LLC
   - 🇺🇸 - Microsoft Corporation
@@ -234,6 +267,8 @@ proxy-groups:
   - 🇮🇩 - Amazoncom Inc
   - CV. Rumahweb 🇮🇩
   - Alibaba (US) 🇮🇩
+  - SG Epsilon
+  - VLESS TLS [ IG ]
   - DIRECT
 - name: SOSMED
   type: select
@@ -242,7 +277,7 @@ proxy-groups:
   - TROJAN_WS_FREE3 [2610]
   - VMESS_TLS_FREE [2610]
   - ID MVNET VLESS LIFETIME
-  - ID MVNET VLESS LIFETIME-45
+  - ID MVNET VLESS LIFETIME-5
   - 🇸🇬 - OVH SAS
   - 🇸🇬 - DigitalOcean LLC
   - 🇺🇸 - Microsoft Corporation
@@ -250,6 +285,8 @@ proxy-groups:
   - 🇮🇩 - Amazoncom Inc
   - CV. Rumahweb 🇮🇩
   - Alibaba (US) 🇮🇩
+  - SG Epsilon
+  - VLESS TLS [ IG ]
   - DIRECT
 - name: WA
   type: select
@@ -258,7 +295,7 @@ proxy-groups:
   - TROJAN_WS_FREE3 [2610]
   - VMESS_TLS_FREE [2610]
   - ID MVNET VLESS LIFETIME
-  - ID MVNET VLESS LIFETIME-45
+  - ID MVNET VLESS LIFETIME-5
   - 🇸🇬 - OVH SAS
   - 🇸🇬 - DigitalOcean LLC
   - 🇺🇸 - Microsoft Corporation
@@ -266,6 +303,8 @@ proxy-groups:
   - 🇮🇩 - Amazoncom Inc
   - CV. Rumahweb 🇮🇩
   - Alibaba (US) 🇮🇩
+  - SG Epsilon
+  - VLESS TLS [ IG ]
   - DIRECT
 - name: YOUTUBE
   type: select
@@ -274,7 +313,7 @@ proxy-groups:
   - TROJAN_WS_FREE3 [2610]
   - VMESS_TLS_FREE [2610]
   - ID MVNET VLESS LIFETIME
-  - ID MVNET VLESS LIFETIME-45
+  - ID MVNET VLESS LIFETIME-5
   - 🇸🇬 - OVH SAS
   - 🇸🇬 - DigitalOcean LLC
   - 🇺🇸 - Microsoft Corporation
@@ -282,6 +321,8 @@ proxy-groups:
   - 🇮🇩 - Amazoncom Inc
   - CV. Rumahweb 🇮🇩
   - Alibaba (US) 🇮🇩
+  - SG Epsilon
+  - VLESS TLS [ IG ]
   - DIRECT
 - name: STREAMING-ID
   type: select
@@ -290,7 +331,7 @@ proxy-groups:
   - TROJAN_WS_FREE3 [2610]
   - VMESS_TLS_FREE [2610]
   - ID MVNET VLESS LIFETIME
-  - ID MVNET VLESS LIFETIME-45
+  - ID MVNET VLESS LIFETIME-5
   - 🇸🇬 - OVH SAS
   - 🇸🇬 - DigitalOcean LLC
   - 🇺🇸 - Microsoft Corporation
@@ -298,6 +339,8 @@ proxy-groups:
   - 🇮🇩 - Amazoncom Inc
   - CV. Rumahweb 🇮🇩
   - Alibaba (US) 🇮🇩
+  - SG Epsilon
+  - VLESS TLS [ IG ]
   - DIRECT
 - name: AdsBLOCK
   type: select
@@ -306,7 +349,7 @@ proxy-groups:
   - TROJAN_WS_FREE3 [2610]
   - VMESS_TLS_FREE [2610]
   - ID MVNET VLESS LIFETIME
-  - ID MVNET VLESS LIFETIME-45
+  - ID MVNET VLESS LIFETIME-5
   - 🇸🇬 - OVH SAS
   - 🇸🇬 - DigitalOcean LLC
   - 🇺🇸 - Microsoft Corporation
@@ -314,6 +357,8 @@ proxy-groups:
   - 🇮🇩 - Amazoncom Inc
   - CV. Rumahweb 🇮🇩
   - Alibaba (US) 🇮🇩
+  - SG Epsilon
+  - VLESS TLS [ IG ]
   - REJECT
 - name: LOAD-BALANCE
   type: load-balance
@@ -325,7 +370,7 @@ proxy-groups:
   - TROJAN_WS_FREE3 [2610]
   - VMESS_TLS_FREE [2610]
   - ID MVNET VLESS LIFETIME
-  - ID MVNET VLESS LIFETIME-45
+  - ID MVNET VLESS LIFETIME-5
   - 🇸🇬 - OVH SAS
   - 🇸🇬 - DigitalOcean LLC
   - 🇺🇸 - Microsoft Corporation
@@ -333,6 +378,8 @@ proxy-groups:
   - 🇮🇩 - Amazoncom Inc
   - CV. Rumahweb 🇮🇩
   - Alibaba (US) 🇮🇩
+  - SG Epsilon
+  - VLESS TLS [ IG ]
 - name: BEST-PING
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -343,7 +390,7 @@ proxy-groups:
   - TROJAN_WS_FREE3 [2610]
   - VMESS_TLS_FREE [2610]
   - ID MVNET VLESS LIFETIME
-  - ID MVNET VLESS LIFETIME-45
+  - ID MVNET VLESS LIFETIME-5
   - 🇸🇬 - OVH SAS
   - 🇸🇬 - DigitalOcean LLC
   - 🇺🇸 - Microsoft Corporation
@@ -351,6 +398,8 @@ proxy-groups:
   - 🇮🇩 - Amazoncom Inc
   - CV. Rumahweb 🇮🇩
   - Alibaba (US) 🇮🇩
+  - SG Epsilon
+  - VLESS TLS [ IG ]
 - name: FALLBACK
   type: fallback
   url: http://hi.bonds.id/ping
@@ -360,7 +409,7 @@ proxy-groups:
   - TROJAN_WS_FREE3 [2610]
   - VMESS_TLS_FREE [2610]
   - ID MVNET VLESS LIFETIME
-  - ID MVNET VLESS LIFETIME-45
+  - ID MVNET VLESS LIFETIME-5
   - 🇸🇬 - OVH SAS
   - 🇸🇬 - DigitalOcean LLC
   - 🇺🇸 - Microsoft Corporation
@@ -368,6 +417,8 @@ proxy-groups:
   - 🇮🇩 - Amazoncom Inc
   - CV. Rumahweb 🇮🇩
   - Alibaba (US) 🇮🇩
+  - SG Epsilon
+  - VLESS TLS [ IG ]
 rules:
 - RULE-SET,rule_portgames,GAME
 - RULE-SET,rule_Sosmed,SOSMED
