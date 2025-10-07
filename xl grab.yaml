@@ -1,0 +1,468 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ''
+bind-address: '*'
+unified-delay: true
+profile:
+  store-selected: true
+proxies:
+- name: XRAY_VLESS_TLS_FREE2 [2610]
+  server: 104.18.39.91
+  port: 443
+  type: vless
+  uuid: 8ae51c54-8a6b-4841-83ec-dea8cfb5e266
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: jakarta.parael.me
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: jakarta.parael.me
+  udp: true
+- name: TROJAN_WS_FREE3 [2610]
+  server: 104.18.39.91
+  port: 443
+  type: trojan
+  password: 8978f80b-2e7e-4374-a0a9-331bf4afa597
+  skip-cert-verify: true
+  sni: jakarta.parael.me
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: jakarta.parael.me
+  udp: true
+- name: VMESS_TLS_FREE [2610]
+  type: vmess
+  server: 104.18.39.91
+  port: 443
+  uuid: d80a2dae-9af8-49d3-9faa-62ed611fbc4e
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  servername: jakarta.parael.me
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: jakarta.parael.me
+  udp: true
+- name: ID MVNET VLESS LIFETIME
+  server: 104.18.39.91
+  port: 443
+  type: vless
+  uuid: 6f02eec7-d231-4243-ad50-df59d8063d84
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: speed.olinol.de5.net
+  network: ws
+  ws-opts:
+    path: /lifetime
+    headers:
+      Host: speed.olinol.de5.net
+  udp: true
+- name: ID MVNET VLESS LIFETIME-45
+  server: 104.18.39.91
+  port: 443
+  type: vless
+  uuid: 6f02eec7-d231-4243-ad50-df59d8063d84
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: olinol.de5.net.speed.olinol.de5.net
+  network: ws
+  ws-opts:
+    path: /lifetime
+    headers:
+      Host: olinol.de5.net.speed.olinol.de5.net
+  udp: true
+- name: 🇸🇬 - OVH SAS
+  server: grabacademy-merchants-profiling.grab.com
+  port: 443
+  type: vless
+  uuid: bbe13818-3d82-4127-aa2a-cbc209a6b7e4
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: vpn.vpnjatim.pp.ua
+  network: ws
+  ws-opts:
+    path: /51.79.134.207-443
+    headers:
+      Host: vpn.vpnjatim.pp.ua
+  udp: true
+- name: 🇸🇬 - DigitalOcean LLC
+  server: 104.18.39.91
+  port: 443
+  type: vless
+  uuid: bbe13818-3d82-4127-aa2a-cbc209a6b7e4
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: vpn.vpnjatim.pp.ua
+  network: ws
+  ws-opts:
+    path: /104.248.145.216-443
+    headers:
+      Host: vpn.vpnjatim.pp.ua
+  udp: true
+- name: 🇺🇸 - Microsoft Corporation
+  server: 104.18.39.91
+  port: 443
+  type: vless
+  uuid: 1b314859-3219-49b6-9a31-5c45b2896e90
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: www.vlessworker.xyz
+  network: ws
+  ws-opts:
+    path: /20.121.115.188-443
+    headers:
+      Host: www.vlessworker.xyz
+  udp: true
+- name: 🇮🇩 - PT Telekomunikasi Indonesia
+  server: 104.18.39.91
+  port: 443
+  type: vless
+  uuid: 1b314859-3219-49b6-9a31-5c45b2896e90
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: www.vlessworker.xyz
+  network: ws
+  ws-opts:
+    path: /36.95.152.58-12137
+    headers:
+      Host: www.vlessworker.xyz
+  udp: true
+- name: 🇮🇩 - Amazoncom Inc
+  server: 104.18.39.91
+  port: 443
+  type: vless
+  uuid: 1b314859-3219-49b6-9a31-5c45b2896e90
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: www.vlessworker.xyz
+  network: ws
+  ws-opts:
+    path: /43.218.77.16-1443
+    headers:
+      Host: www.vlessworker.xyz
+  udp: true
+- name: CV. Rumahweb 🇮🇩
+  server: 104.18.39.91
+  port: 443
+  type: vless
+  uuid: fbe8907b-664c-4b32-ac35-268cfac636d0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: aio.eth0.dpdns.org
+  network: ws
+  ws-opts:
+    path: /aioproxybot/203.194.112.119-8443
+    headers:
+      Host: aio.eth0.dpdns.org
+  udp: true
+- name: Alibaba (US) 🇮🇩
+  server: 104.18.39.91
+  port: 443
+  type: vless
+  uuid: 2375f8e0-5739-4200-847a-4a4183cb68c6
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: aio.eth0.dpdns.org
+  network: ws
+  ws-opts:
+    path: /aioproxybot/203.194.112.119-8443
+    headers:
+      Host: aio.eth0.dpdns.org
+  udp: true
+proxy-groups:
+- name: Friendly_Teams
+  type: select
+  proxies:
+  - XRAY_VLESS_TLS_FREE2 [2610]
+  - TROJAN_WS_FREE3 [2610]
+  - VMESS_TLS_FREE [2610]
+  - ID MVNET VLESS LIFETIME
+  - ID MVNET VLESS LIFETIME-45
+  - 🇸🇬 - OVH SAS
+  - 🇸🇬 - DigitalOcean LLC
+  - 🇺🇸 - Microsoft Corporation
+  - 🇮🇩 - PT Telekomunikasi Indonesia
+  - 🇮🇩 - Amazoncom Inc
+  - CV. Rumahweb 🇮🇩
+  - Alibaba (US) 🇮🇩
+  - GAME
+  - SOSMED
+  - WA
+  - YOUTUBE
+  - STREAMING-ID
+  - AdsBLOCK
+  - LOAD-BALANCE
+  - BEST-PING
+  - FALLBACK
+  - DIRECT
+- name: GAME
+  type: select
+  proxies:
+  - XRAY_VLESS_TLS_FREE2 [2610]
+  - TROJAN_WS_FREE3 [2610]
+  - VMESS_TLS_FREE [2610]
+  - ID MVNET VLESS LIFETIME
+  - ID MVNET VLESS LIFETIME-45
+  - 🇸🇬 - OVH SAS
+  - 🇸🇬 - DigitalOcean LLC
+  - 🇺🇸 - Microsoft Corporation
+  - 🇮🇩 - PT Telekomunikasi Indonesia
+  - 🇮🇩 - Amazoncom Inc
+  - CV. Rumahweb 🇮🇩
+  - Alibaba (US) 🇮🇩
+  - DIRECT
+- name: SOSMED
+  type: select
+  proxies:
+  - XRAY_VLESS_TLS_FREE2 [2610]
+  - TROJAN_WS_FREE3 [2610]
+  - VMESS_TLS_FREE [2610]
+  - ID MVNET VLESS LIFETIME
+  - ID MVNET VLESS LIFETIME-45
+  - 🇸🇬 - OVH SAS
+  - 🇸🇬 - DigitalOcean LLC
+  - 🇺🇸 - Microsoft Corporation
+  - 🇮🇩 - PT Telekomunikasi Indonesia
+  - 🇮🇩 - Amazoncom Inc
+  - CV. Rumahweb 🇮🇩
+  - Alibaba (US) 🇮🇩
+  - DIRECT
+- name: WA
+  type: select
+  proxies:
+  - XRAY_VLESS_TLS_FREE2 [2610]
+  - TROJAN_WS_FREE3 [2610]
+  - VMESS_TLS_FREE [2610]
+  - ID MVNET VLESS LIFETIME
+  - ID MVNET VLESS LIFETIME-45
+  - 🇸🇬 - OVH SAS
+  - 🇸🇬 - DigitalOcean LLC
+  - 🇺🇸 - Microsoft Corporation
+  - 🇮🇩 - PT Telekomunikasi Indonesia
+  - 🇮🇩 - Amazoncom Inc
+  - CV. Rumahweb 🇮🇩
+  - Alibaba (US) 🇮🇩
+  - DIRECT
+- name: YOUTUBE
+  type: select
+  proxies:
+  - XRAY_VLESS_TLS_FREE2 [2610]
+  - TROJAN_WS_FREE3 [2610]
+  - VMESS_TLS_FREE [2610]
+  - ID MVNET VLESS LIFETIME
+  - ID MVNET VLESS LIFETIME-45
+  - 🇸🇬 - OVH SAS
+  - 🇸🇬 - DigitalOcean LLC
+  - 🇺🇸 - Microsoft Corporation
+  - 🇮🇩 - PT Telekomunikasi Indonesia
+  - 🇮🇩 - Amazoncom Inc
+  - CV. Rumahweb 🇮🇩
+  - Alibaba (US) 🇮🇩
+  - DIRECT
+- name: STREAMING-ID
+  type: select
+  proxies:
+  - XRAY_VLESS_TLS_FREE2 [2610]
+  - TROJAN_WS_FREE3 [2610]
+  - VMESS_TLS_FREE [2610]
+  - ID MVNET VLESS LIFETIME
+  - ID MVNET VLESS LIFETIME-45
+  - 🇸🇬 - OVH SAS
+  - 🇸🇬 - DigitalOcean LLC
+  - 🇺🇸 - Microsoft Corporation
+  - 🇮🇩 - PT Telekomunikasi Indonesia
+  - 🇮🇩 - Amazoncom Inc
+  - CV. Rumahweb 🇮🇩
+  - Alibaba (US) 🇮🇩
+  - DIRECT
+- name: AdsBLOCK
+  type: select
+  proxies:
+  - XRAY_VLESS_TLS_FREE2 [2610]
+  - TROJAN_WS_FREE3 [2610]
+  - VMESS_TLS_FREE [2610]
+  - ID MVNET VLESS LIFETIME
+  - ID MVNET VLESS LIFETIME-45
+  - 🇸🇬 - OVH SAS
+  - 🇸🇬 - DigitalOcean LLC
+  - 🇺🇸 - Microsoft Corporation
+  - 🇮🇩 - PT Telekomunikasi Indonesia
+  - 🇮🇩 - Amazoncom Inc
+  - CV. Rumahweb 🇮🇩
+  - Alibaba (US) 🇮🇩
+  - REJECT
+- name: LOAD-BALANCE
+  type: load-balance
+  strategy: consistent-hashing
+  url: http://hi.bonds.id/ping
+  interval: 300
+  proxies:
+  - XRAY_VLESS_TLS_FREE2 [2610]
+  - TROJAN_WS_FREE3 [2610]
+  - VMESS_TLS_FREE [2610]
+  - ID MVNET VLESS LIFETIME
+  - ID MVNET VLESS LIFETIME-45
+  - 🇸🇬 - OVH SAS
+  - 🇸🇬 - DigitalOcean LLC
+  - 🇺🇸 - Microsoft Corporation
+  - 🇮🇩 - PT Telekomunikasi Indonesia
+  - 🇮🇩 - Amazoncom Inc
+  - CV. Rumahweb 🇮🇩
+  - Alibaba (US) 🇮🇩
+- name: BEST-PING
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - XRAY_VLESS_TLS_FREE2 [2610]
+  - TROJAN_WS_FREE3 [2610]
+  - VMESS_TLS_FREE [2610]
+  - ID MVNET VLESS LIFETIME
+  - ID MVNET VLESS LIFETIME-45
+  - 🇸🇬 - OVH SAS
+  - 🇸🇬 - DigitalOcean LLC
+  - 🇺🇸 - Microsoft Corporation
+  - 🇮🇩 - PT Telekomunikasi Indonesia
+  - 🇮🇩 - Amazoncom Inc
+  - CV. Rumahweb 🇮🇩
+  - Alibaba (US) 🇮🇩
+- name: FALLBACK
+  type: fallback
+  url: http://hi.bonds.id/ping
+  interval: 300
+  proxies:
+  - XRAY_VLESS_TLS_FREE2 [2610]
+  - TROJAN_WS_FREE3 [2610]
+  - VMESS_TLS_FREE [2610]
+  - ID MVNET VLESS LIFETIME
+  - ID MVNET VLESS LIFETIME-45
+  - 🇸🇬 - OVH SAS
+  - 🇸🇬 - DigitalOcean LLC
+  - 🇺🇸 - Microsoft Corporation
+  - 🇮🇩 - PT Telekomunikasi Indonesia
+  - 🇮🇩 - Amazoncom Inc
+  - CV. Rumahweb 🇮🇩
+  - Alibaba (US) 🇮🇩
+rules:
+- RULE-SET,rule_portgames,GAME
+- RULE-SET,rule_Sosmed,SOSMED
+- RULE-SET,rule_netflix,STREAMING-ID
+- RULE-SET,rule_primevideo,STREAMING-ID
+- RULE-SET,rule_hbo,STREAMING-ID
+- RULE-SET,rule_hboasia,STREAMING-ID
+- RULE-SET,rule_iqiyi,STREAMING-ID
+- RULE-SET,rule_disneyplus,STREAMING-ID
+- RULE-SET,rule_Streaming,STREAMING-ID
+- RULE-SET,rule_basicads,AdsBLOCK
+- RULE-SET,rule_Youtube,YOUTUBE
+- DOMAIN-SUFFIX,static.whatsapp.net,WA
+- DOMAIN-SUFFIX,docker.whatsapp.biz,WA
+- DOMAIN-SUFFIX,whatsapp.com,WA
+- DOMAIN-SUFFIX,whatsapp.net,WA
+- DOMAIN-SUFFIX,g.whatsapp.net,WA
+- DOMAIN-SUFFIX,v.whatsapp.net,WA
+- DOMAIN-SUFFIX,mmg.whatsapp.net,WA
+- MATCH,Friendly_Teams
+rule-providers:
+  rule_portgames:
+    type: http
+    behavior: classical
+    path: ./rule_provider/rule_portgames.yaml
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_portgames.yaml
+    interval: 86400
+  rule_Sosmed:
+    type: http
+    behavior: classical
+    path: ./rule_provider/rule_sosmed.yaml
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_sosmed.yaml
+    interval: 86400
+  rule_Youtube:
+    type: http
+    behavior: domain
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_youtube.yaml
+    path: ./rule_provider/rule_youtube.yaml
+    interval: 86400
+  rule_netflix:
+    type: http
+    behavior: domain
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_netflix.yaml
+    path: ./rule_provider/rule_netflix.yaml
+    interval: 86400
+  rule_primevideo:
+    type: http
+    behavior: domain
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_primevideo.yaml
+    path: ./rule_provider/rule_primevideo.yaml
+    interval: 86400
+  rule_hbo:
+    type: http
+    behavior: classical
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hbo.yaml
+    path: ./rule_provider/rule_hbo.yaml
+    interval: 86400
+  rule_hboasia:
+    type: http
+    behavior: classical
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hboasia.yaml
+    path: ./rule_provider/rule_hboasia.yaml
+    interval: 86400
+  rule_iqiyi:
+    type: http
+    behavior: classical
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_iqiyi.yaml
+    path: ./rule_provider/rule_iqiyi.yaml
+    interval: 86400
+  rule_disneyplus:
+    type: http
+    behavior: classical
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_disneyplus.yaml
+    path: ./rule_provider/rule_disneyplus.yaml
+    interval: 86400
+  rule_Streaming:
+    type: http
+    behavior: classical
+    path: ./rule_provider/rule_streaming.yaml
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_streaming.yaml
+    interval: 86400
+  rule_basicads:
+    type: http
+    behavior: domain
+    url: 
+      https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_basicads.yaml
+    path: ./rule_provider/rule_basicads.yaml
+    interval: 43200
