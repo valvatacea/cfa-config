@@ -1,4 +1,5 @@
 proxy-groups:
+#add
 - name: Porn
   type: select
   disable-udp: false
@@ -12,11 +13,21 @@ proxy-groups:
 
 
 rules:
+#add
 - RULE-SET,rule_porn,Porn
 - RULE-SET,rule_nsfw,Porn
 - RULE-SET,rule_tiktok,Tiktok
 
 rule-providers:
+  #replace
+  rule_Sosmed:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_sosmed.yaml"
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_sosmed.yaml
+    interval: 86400
+
+  #add
   rule_tiktok:
     type: http
     behavior: domain
