@@ -5,11 +5,19 @@ proxy-groups:
   disable-udp: false
   proxies:
   - REJECT
+  - DIRECT
 - name: Tiktok
   type: select
   disable-udp: false
   proxies:
   - REJECT
+  - DIRECT
+- name: Instagram
+  type: select
+  disable-udp: false
+  proxies:
+  - REJECT
+  - DIRECT
 
 
 rules:
@@ -17,6 +25,7 @@ rules:
 - RULE-SET,rule_porn,Porn
 - RULE-SET,rule_nsfw,Porn
 - RULE-SET,rule_tiktok,Tiktok
+- RULE-SET,rule_instagram,Instagram
 
 rule-providers:
   #replace
@@ -24,7 +33,7 @@ rule-providers:
     type: http
     behavior: classical
     path: "./rule_provider/rule_sosmed.yaml"
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_sosmed.yaml
+    url: https://raw.githubusercontent.com/valvatacea/cfa-config/main/rule_provider/rule_sosmed.yaml
     interval: 86400
 
   #add
