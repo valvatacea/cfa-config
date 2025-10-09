@@ -40,8 +40,14 @@ rule-providers:
   rule_tiktok:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_tiktok.yaml
+    url: https://raw.githubusercontent.com/valvatacea/cfa-config/main/rule_provider/rule_tiktok.yaml
     path: "./rule_provider/rule_tiktok.yaml"
+    interval: 86400
+  rule_instagram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_instagram.yaml
+    path: "./rule_provider/rule_instagram.yaml"
     interval: 86400
   rule_porn:
     type: http
