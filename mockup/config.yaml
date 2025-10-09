@@ -1,0 +1,37 @@
+proxy-groups:
+- name: Porn
+  type: select
+  disable-udp: false
+  proxies:
+  - REJECT
+- name: Tiktok
+  type: select
+  disable-udp: false
+  proxies:
+  - REJECT
+
+
+rules:
+- RULE-SET,rule_porn,Porn
+- RULE-SET,rule_nsfw,Porn
+- RULE-SET,rule_tiktok,Tiktok
+
+rule-providers:
+  rule_tiktok:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_tiktok.yaml
+    path: "./rule_provider/rule_tiktok.yaml"
+    interval: 86400
+  rule_porn:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_porn.yaml
+    path: "./rule_provider/rule_porn.yaml"
+    interval: 86400
+  rule_nsfw:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_nsfw.yaml
+    path: "./rule_provider/rule_nsfw.yaml"
+    interval: 43200
