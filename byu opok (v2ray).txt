@@ -1,6 +1,3 @@
-vless://8ae51c54-8a6b-4841-83ec-dea8cfb5e266@162.159.128.79:443?path=%2Fvless&security=tls&encryption=none&host=jakarta.parael.me&type=ws&sni=jakarta.parael.me#XRAY_VLESS_TLS_FREE2%20%5B2610%5D
-trojan://8978f80b-2e7e-4374-a0a9-331bf4afa597@162.159.128.79:443?path=%2Ftrojan-ws&security=tls&host=jakarta.parael.me&type=ws&sni=jakarta.parael.me#TROJAN_WS_FREE3%20%5B2610%5D
-vmess://eyJhZGQiOiIxNjIuMTU5LjEyOC43OSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiamFrYXJ0YS5wYXJhZWwubWUiLCJpZCI6ImQ4MGEyZGFlLTlhZjgtNDlkMy05ZmFhLTYyZWQ2MTFmYmM0ZSIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcyIsInBvcnQiOiI0NDMiLCJwcyI6IlZNRVNTX1RMU19GUkVFIFsyNjEwXSIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiLS0tIiwidiI6IjIifQ==
 vless://6f02eec7-d231-4243-ad50-df59d8063d84@162.159.128.79:443?path=%2Flifetime&security=tls&encryption=none&host=speed.olinol.de5.net&type=ws&sni=speed.olinol.de5.net#ID%20MVNET%20VLESS%20LIFETIME
 vless://6f02eec7-d231-4243-ad50-df59d8063d84@162.159.128.79:443?path=%2Flifetime&security=tls&encryption=none&host=olinol.de5.net.speed.olinol.de5.net&type=ws&sni=olinol.de5.net.speed.olinol.de5.net#ID%20MVNET%20VLESS%20LIFETIME
 vless://bbe13818-3d82-4127-aa2a-cbc209a6b7e4@162.159.128.79:443?path=%2F51.79.134.207-443&security=tls&encryption=none&host=vpn.vpnjatim.pp.ua&type=ws&sni=vpn.vpnjatim.pp.ua#%F0%9F%87%B8%F0%9F%87%AC%20-%20OVH%20SAS
